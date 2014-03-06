@@ -1,4 +1,6 @@
 bmass	retention
+# Regression equation for time and digestion-limited herbivores.
+# gutret.h= 0.57 + 6.95 bmass.kg^0.33 + (0.33 + 0.43 * bmass^0.33)^0.5
 1.789e-4	1.291e-19
 2.764e-4	2.883e-19
 4.157e-4	4.442e-19
@@ -29,3 +31,5 @@ bmass	retention
 288.483	2.698e-13
 179.465	2.698e-13
 730.748	9.412e-15
+
+

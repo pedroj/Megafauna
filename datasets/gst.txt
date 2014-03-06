@@ -1,0 +1,184 @@
+# Genetics datset. Mixing Duminil et al. 2007 and our own compiliation for brazilian species.
+# Excluded Microthlaspi perfoliatum (Gst=1.0)
+n	sp	gst_nr	syndr	syndrcontr	contr1	contr2	hightax	subclass	ord	fam	spgen	longev	gform	polldisp	seeddisp	seedwt
+1	Abies alba	0.0880	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	49	LP	T	A	W	76.800
+2	Abies fraseri	0.0020	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	49	LP	T	A	W	7.100
+3	Abies mariesii	0.1440	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	49	LP	T	A	W	29.810
+4	Abies sachalinensis	0.0150	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	49	LP	T	A	W	9.320
+5	Acacia acuminata	0.1010	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Fabales	Fabaceae	1200	LP	S	E	NA	16.200
+6	Allium vineale	0.3900	G	Abiotic	Abiotic	Abiotic	M	Liliidae	Asparagales	Alliaceae	690	SP	G	E	G	1.000
+7	Alnus cordata	0.1240	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fagales	Betulaceae	25	LP	T	A	W	6.800
+8	Alnus glutinosa	0.2000	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fagales	Betulaceae	25	LP	T	A	W	2.100
+9	Anacamptis palustris	0.1790	W	Abiotic	Abiotic	Abiotic	M	Liliidae	Asparagales	Orchidaceae	33	SP	F	E	W	0.001
+10	Arabidopsis thaliana	0.6163	G	Abiotic	Abiotic	Abiotic	D	Rosidae	Brassicales	Brassicaceae	20	A	F	E	G	0.020
+11	Argania spinosa	0.1800	AI	Endozoochoric	Zoochoric	Zoochoric	D	Asteridae	Ericales	Sapotaceae	1	LP	T	E	AI	3000.000
+12	Aucoumea klaineana	0.1400	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Sapindales	Burseraceae	1	LP	T	E	W	98.000
+13	Beta vulgaris	0.1000	W	Abiotic	Abiotic	Abiotic	D	Caryophyllidae	Caryophyllales	Chenopodiaceae	12	B	F	A	W	5.000
+14	Betula pendula	0.0320	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fagales	Betulaceae	35	LP	T	A	W	0.250
+15	Caesalpinia echinata	0.5800	G	Abiotic	Abiotic	Abiotic	D	Rosidae	Fabales	Fabaceae	150	LP	T	E	G	303.000
+16	Calluna vulgaris	0.0470	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Ericales	Ericaceae	1	LP	S	AE	NA	0.030
+17	Carpinus betulus	0.0740	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fagales	Betulaceae	26	LP	T	A	W	35.500
+18	Caryocar brasiliensis	0.2900	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Malpighiales	Caryocaraceae	15	LP	T	Z	G	50.270
+19	Castanea sativa	0.1970	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	10	LP	T	AE	AC	9944.000
+20	Cedrela odorata	0.5500	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Sapindales	Meliaceae	8	LP	T	E	W	17.000
+21	Coreopsis grandiflora	0.0720	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Asterales	Asteraceae	50	A	F	E	W	2.580
+22	Coreopsis nuecensis	0.1000	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Asterales	Asteraceae	15	A	F	E	W	1.221
+23	Corylus avellana	0.1970	AC	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Betulaceae	15	LP	S	A	AI	1262.400
+24	Cunninghamia konishii	0.0290	AC	Synzoochoric	Zoochoric	Zoochoric	G	Coniferopsida	Coniferales	Taxodiaceae	2	LP	T	A	AC	11.430
+25	Cunninghamia lanceolata	0.0600	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Taxodiaceae	2	LP	T	A	W	4.830
+26	Dactylis glomerata	0.2300	G	Abiotic	Abiotic	Abiotic	M	Liliidae	Poales	Poaceae	3	SP	G	A	G	0.850
+27	Dactylorhiza maculata	0.0990	W	Abiotic	Abiotic	Abiotic	M	Liliidae	Asparagales	Orchidaceae	30	SP	F	E	W	0.001
+28	Dicorynia guaianensis	0.0430	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fabales	Fabaceae	2	LP	T	E	W	500.000
+29	Eritrichium nanum	0.1870	G	Abiotic	Abiotic	Abiotic	D	Asteridae	Lamiales	Boraginaceae	30	SP	F	E	G	NA
+30	Eucalyptus angustissima complex	0.1060	G	Abiotic	Abiotic	Abiotic	D	Rosidae	Myrtales	Myrtaceae	600	LP	T	E	G	1.500
+31	Eucalyptus brownii	0.0520	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Myrtales	Myrtaceae	600	LP	T	EZ	W	0.560
+32	Eucalyptus kochii	0.0450	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Myrtales	Myrtaceae	600	LP	T	E	W	2.220
+33	Eucalyptus nitens	0.3000	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Myrtales	Myrtaceae	600	LP	T	EZ	W	2.800
+34	Eugenia uniflora	0.2110	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Myrtales	Myrtaceae	550	LP	T	E	NA	4.000
+35	Fagus crenata	0.0380	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	10	LP	T	A	AC	178.570
+36	Fagus sylvatica	0.0590	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	10	LP	T	A	AC	274.100
+37	Fraxinus excelsior	0.0870	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Lamiales	Oleaceae	65	LP	T	A	W	76.300
+38	Gliricidia sepium	0.1700	G	Abiotic	Abiotic	Abiotic	D	Rosidae	Fabales	Fabaceae	4	LP	T	E	G	103.000
+39	Glycine soja	0.4760	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Fabales	Fabaceae	18	A	F	E	AI	48.019
+40	Gymnadenia conopsea	0.4500	W	Abiotic	Abiotic	Abiotic	M	Liliidae	Orchidales	Orchidaceae	10	SP	F	E	W	0.008
+41	Helianthus annuus	0.1590	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Asteridae	Asterales	Asteraceae	50	A	F	E	AA	44.500
+42	Helianthus deserticola	0.2490	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Asteridae	Asterales	Asteraceae	50	A	F	E	AA	5.300
+43	Helianthus petiolaris	0.1940	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Asteridae	Asterales	Asteraceae	50	A	F	E	AA	2.000
+44	Heuchera grossularifolia	0.6710	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Saxifragales	Saxifragaceae	55	SP	F	E	W	0.049
+45	Hordeum spontaneum	0.4840	AA	Epizoochoric	Epizoochoric	Zoochoric	M	Liliidae	Poales	Poaceae	20	A	G	A	AA	41.900
+46	Ipomopsis aggregata cplx	0.1450	AI	Endozoochoric	Zoochoric	Zoochoric	D	Asteridae	Ericales	Polemoniaceae	26	SP	F	Z	AI	2.071
+47	Juniperus thurifera	0.3900	AI	Endozoochoric	Zoochoric	Zoochoric	G	Coniferopsida	Coniferales	Cupressaceae	50	LP	T	A	AI	126.700
+48	Kandelia candel	0.0640	G	Abiotic	Abiotic	Abiotic	D	Rosidae	Malpighiales	Rhizophoraceae	1	LP	T	E	G	NA
+49	Lambertia orbifolia	0.4410	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Rosidae	Proteales	Proteaceae	9	LP	S	Z	AA	20.000
+50	Larix sibirica	0.0820	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	9	LP	T	A	W	9.600
+51	Lemna minor	0.4070	AA	Epizoochoric	Epizoochoric	Zoochoric	M	Arecidae	Alismatales	Araceae	7	SP	F	W	AA	NA
+52	Liriodendron tulipifera	0.2110	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Magnoliidae	Magnoliales	Magnoliaceae	2	LP	T	E	AA	65.600
+53	Lolium perenne	0.1100	G	Abiotic	Abiotic	Abiotic	M	Liliidae	Poales	Poaceae	8	SP	G	A	G	1.790
+54	Lolium rigidum	0.1700	G	Abiotic	Abiotic	Abiotic	M	Liliidae	Poales	Poaceae	8	SP	G	A	G	2.280
+55	Melaleuca alternifolia cplx	0.1200	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Myrtales	Myrtaceae	220	LP	T	E	W	0.590
+56	Michelia formosana	0.4710	AI	Endozoochoric	Zoochoric	Zoochoric	D	Magnoliidae	Magnoliales	Magnoliaceae	30	LP	T	E	AI	119.183
+#57	Microthlaspi perfoliatum	1.0000	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Brassicales	Brassicaceae	60	A	F	E	W	0.400
+58	Nothofagus nervosa	0.0830	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fagales	Fagaceae	35	LP	T	A	W	16.460
+59	Olea europaea	0.2470	AI	Endozoochoric	Zoochoric	Zoochoric	D	Asteridae	Lamiales	Oleaceae	30	LP	T	E	AI	221.000
+60	Parnassia palustris	0.1600	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Rosidae	Saxifragales	Saxifragaceae	15	SP	F	E	AA	0.030
+61	Phacelia dubia	0.0200	AI	Endozoochoric	Zoochoric	Zoochoric	D	Asteridae	Solanales	Hydrophyllaceae	150	A	F	E	AI	0.800
+62	Picea abies	0.0520	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	40	LP	T	A	W	7.443
+63	Picea glauca	0.0370	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	40	LP	T	A	W	3.645
+64	Picea mariana	0.0590	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	40	LP	T	A	W	1.300
+65	Pinus albicaulis	0.0610	AC	Synzoochoric	Zoochoric	Zoochoric	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	AC	147.800
+66	Pinus banksiana	0.0180	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	3.600
+67	Pinus brutia	0.1560	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	47.360
+68	Pinus canariensis	0.0910	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	170.940
+69	Pinus chiapensis	0.2257	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	NA	42.800
+70	Pinus contorta	0.0930	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	4.400
+71	Pinus densata	0.0860	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	42.800
+72	Pinus flexilis	0.0940	AC	Synzoochoric	Zoochoric	Zoochoric	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	AC	81.600
+73	Pinus halepensis	0.3790	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	23.700
+74	Pinus leucodermis	0.0540	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	22.620
+75	Pinus monticola	0.1480	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	19.300
+76	Pinus mugo	0.0134	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	6.000
+77	Pinus muricata	0.4500	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	13.680
+78	Pinus parviflora	0.0440	AC	Synzoochoric	Zoochoric	Zoochoric	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	AC	94.700
+79	Pinus pinaster	0.1670	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	53.520
+80	Pinus radiata	0.1620	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	31.900
+81	Pinus resinosa	0.0000	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	8.400
+82	Pinus sylvestris	0.0330	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	93	LP	T	A	W	6.000
+83	Potamogeton pectinatus	0.4960	AA	Epizoochoric	Epizoochoric	Zoochoric	M	Alismatidae	Alismatales	Potamogetonaceae	90	SP	F	W	AA	0.618
+84	Prunus avium	0.0520	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Rosales	Rosaceae	200	LP	T	E	AI	118.200
+85	Pseudotsuga menziesii	0.2310	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	6	LP	T	A	W	11.000
+86	Quercus alba complex	0.0300	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	3173.000
+87	Quercus ilex	0.1020	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	2311.000
+88	Quercus petraea	0.0320	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	2577.200
+89	Quercus pubescens	0.0270	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	2560.056
+90	Quercus robur	0.0240	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	3817.000
+91	Quercus rubra	0.0920	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	2981.000
+92	Quercus suber	0.1100	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	A	AC	2609.000
+93	Quercus glauca	0.0560	AC	Synzoochoric	Zoochoric	Zoochoric	D	Rosidae	Fagales	Fagaceae	400	LP	T	E	AC	526.320
+94	Raphanus sativus	0.0330	G	Abiotic	Abiotic	Abiotic	D	Rosidae	Brassicales	Brassicaceae	3	B	F	E	G	10.750
+95	Rumex nivalis	0.2097	G	Abiotic	Abiotic	Abiotic	D	Caryophyllidae	Caryophyllales	Polygonaceae	200	SP	F	A	G	1.000
+96	Santalum spicatum	0.0870	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	Santalales	Santalaceae	25	LP	S	E	AI	234.000
+97	Saxifraga oppositifolia	0.1520	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Saxifragales	Saxifragaceae	440	SP	F	E	W	0.089
+98	Senecio gallicus	0.1510	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Asteridae	Asterales	Asteraceae	1250	A	F	E	AA	0.446
+99	Senecio glaucus	0.1200	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Asteridae	Asterales	Asteraceae	1250	A	F	E	AA	0.446
+100	Senecio leucanthemifolius	0.3000	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Asterales	Asteraceae	1250	A	F	E	W	0.446
+101	Senecio vernalis	0.0410	AA	Epizoochoric	Epizoochoric	Zoochoric	D	Asteridae	Asterales	Asteraceae	1250	A	F	E	AA	0.446
+102	Silene alba	0.1280	AI	Endozoochoric	Zoochoric	Zoochoric	D	Caryophyllidae	Caryophyllales	Caryophyllaceae	700	A	F	E	AI	0.930
+103	Silene hifacensis	0.5813	G	Abiotic	Abiotic	Abiotic	D	Caryophyllidae	Caryophyllales	Caryophyllaceae	700	SP	F	E	NA	0.500
+104	Silene paradoxa	0.4000	G	Abiotic	Abiotic	Abiotic	D	Caryophyllidae	Caryophyllales	Caryophyllaceae	700	B	F	E	W	1.000
+105	Silene vulgaris	0.2200	AI	Endozoochoric	Zoochoric	Zoochoric	D	Caryophyllidae	Caryophyllales	Caryophyllaceae	700	A	F	E	AI	1.800
+106	Sorbus aucuparia	0.0600	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Rosales	Rosaceae	193	LP	T	E	AI	34.000
+107	Sorbus torminalis	0.1530	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Rosales	Rosaceae	193	LP	T	E	AI	5.500
+108	Tabebuia heterophylla	0.3648	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Lamiales	Bignoniaceae	100	LP	T	E	W	48.414
+109	Tellima grandiflora	0.2880	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Saxifragales	Saxifragaceae	1	SP	F	E	W	0.036
+110	Thymus vulgaris	0.0380	AI	Endozoochoric	Zoochoric	Zoochoric	D	Asteridae	Lamiales	Lamiaceae	350	SP	F	E	AI	1.000
+111	Tolmeia menziesii	0.3890	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Saxifragales	Saxifragaceae	1	SP	F	E	W	NA
+112	Tragopogon dubius	0.4840	W	Abiotic	Abiotic	Abiotic	D	Asteridae	Asterales	Asteraceae	110	B	F	E	W	18.713
+113	Trillium grandiflorum	0.3500	AI	Endozoochoric	Zoochoric	Zoochoric	M	Liliidae	Liliales	Melanthiaceae	42	SP	F	E	AI	10.700
+114	Tsuga canadensis	0.1400	W	Abiotic	Abiotic	Abiotic	G	Coniferopsida	Coniferales	Pinaceae	14	LP	T	A	W	2.700
+115	Vitis vinifera	0.1370	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	NA	Vitaceae	65	LP	V	A	AI	36.300
+116	Vouacapoua americana	0.0800	AC	Synzoochoric	Zoochoric	Megafauna dependent	D	Rosidae	Fabales	Fabaceae	3	LP	T	E	AA	6260.000
+117	Copaifera langsdorffii	0.0350	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Fabales	Caesalpinoideae	NA	LP	T	E	AI	NA
+118	Euterpe edulis	0.4200	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	Arecaceae	NA	LP	T	E	AI	NA
+119	Trichilia pallida	NA	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	Meliaceae	NA	LP	T	E	AI	NA
+120	Dipteryx alata	0.1900	M	Megafauna	Megafauna	Megafauna independent	D	Rosidae	Fabales	Papilionoideae	NA	LP	T	E	M	NA
+121	Caryocar brasiliensis	0.2600	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	Caryocaraceae	NA	LP	T	Z	M	NA
+122	Theobroma grandiflorum	0.3000	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	Sterculiaceae	NA	LP	T	E	M	NA
+123	Hymenaea stigonocarpa	0.6900	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Fabales	Fabaceae	NA	LP	T	Z	M	NA
+124	Eugenia dysenterica	0.1500	AI	Megafauna	Megafauna	Megafauna independent	D	Rosidae	Myrtales	Myrtaceae	NA	LP	T	E	AI	NA
+125	Annona crassiflora	0.1900	AI	Endozoochoric	Zoochoric	Megafauna independent	D	NA	NA	Annonaceae	NA	SP	S	E	AI	NA
+126	Eugenia dysenterica	0.2600	AI	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Myrtales	Myrtaceae	NA	LP	T	E	AI	NA
+127	Solanum lycocarpum	NA	AI	Endozoochoric	Zoochoric	Megafauna independent	D	NA	NA	Solanaceae	NA	SP	S	E	AI	NA
+128	Myrciaria floribunda	0.0970	AI	Endozoochoric	Zoochoric	Zoochoric	D	Rosidae	Myrtales	Myrtaceae	NA	LP	T	E	AI	NA
+129	Zeyheria montana	0.1600	W	Abiotic	Abiotic	Abiotic	D	NA	NA	Bignoniaceae	NA	LP	T	E	W	NA
+130	Plathymenia reticulata	0.1600	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fabales	Mimosoidae	NA	LP	T	NA	W	NA
+131	Baccharis coccinna	0.1700	W	Abiotic	Abiotic	Abiotic	D	NA	NA	Asteraceae	NA	LP	T	E	W	NA
+132	Annona crassiflora	0.1270	M	Megafauna	Megafauna	Megafauna independent	D	NA	NA	Annonaceae	NA	LP	T	NA	AI	NA
+133	Caryocar brasiliensis	0.0700	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	Caryocaraceae	NA	LP	T	NA	M	NA
+134	Copaifera langsdorffii	NA	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	LP	T	NA	M	NA
+135	Chorisia speciosa	0.2730	W	Abiotic	Abiotic	Abiotic	D	NA	NA	Bombacaceae	NA	LP	T	Z	W	NA
+136	Dipteryx alata	0.1610	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Fabales	Papilionoideae	NA	LP	T	E	M	NA
+137	Dipteryx alata	0.4700	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	LP	T	NA	M	NA
+138	Eremanthus erythropappus	NA	W	Abiotic	Abiotic	Abiotic	D	NA	NA	Asteraceae 	NA	LP	T	E	NA	NA
+139	Eugenia dysenterica	0.2500	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Myrtales	Myrtaceae	NA	LP	T	E	AI	NA
+140	Hancornia speciosa	0.1967	AI	Endozoochoric	Zoochoric	Megafauna independent	D	NA	NA	NA	NA	LP	T	NA	NA	NA
+141	Mauritia flexuosa	0.1230	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	LP	T	NA	NA	NA
+142	Qualea grandiflora	NA	W	Abiotic	Abiotic	Abiotic	D	NA	NA	Vochysiaceae	NA	LP	T	NA	NA	NA
+143	Solanum crinitum	0.0080	AI	Endozoochoric	Zoochoric	Megafauna independent	D	NA	NA	Solanaceae	NA	SP	S	NA	AI	NA
+144	Solanum lycocarpum	0.0530	AI	Endozoochoric	Zoochoric	Megafauna independent	D	NA	NA	Solanaceae	NA	SP	S	NA	AI	NA
+145	Tabebuia ochracea	0.0320	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	LP	T	Z	W	NA
+146	Tibouchina papyrus	0.7120	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	LP	T	E	W	NA
+147	Dimorphandra mollis	0.1030	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+148	Bowdichia virgiloides	0.0692	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+149	Acrocomia aculeata	0.2500	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+150	Enterolobium contortisiliquum	NA	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+151	Euterpe edulis	0.1160	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+152	Zizyphus joazeiro	0.3802	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+153	Cassia grandis	NA	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+154	Acrocomia aculeata	0.1720	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+155	Syagrus oleracea	NA	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+156	Araucaria angustifolia	0.1500	AC	Synzoochoric	Zoochoric	Zoochoric	G	NA	NA	NA	NA	NA	NA	NA	NA	NA
+157	Chrysophyllum gonocarpum	0.3020	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+158	Anemopaegma arvense	0.2830	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+159	Gossypium mustelinum	0.3270	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+160	Eschweilera ovata	0.0250	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+161	Bertoletia excelsa	0.1533	AC	Synzoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+162	Xylopia brasiliensis	0.0920	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+163	Chryptocarya aschersoniana	0.4150	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+164	Schizolobium parahyba	0.1049	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+165	Virola officinalis	0.0750	AI	Endozoochoric	Zoochoric	Zoochoric	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+166	Dipteryx alata	0.1500	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Fabales	Papilionoideae	NA	LP	T	E	M	NA
+167	Dipteryx alata	0.2560	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Fabales	Papilionoideae	NA	LP	T	E	M	NA
+168	Acrocomia aculeata	0.2029	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+169	Anacardium humile	0.0640	AI	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+170	Annona crassiflora	0.1880	M	Megafauna	Zoochoric	Megafauna independent	D	NA	NA	Annonaceae	NA	SP	S	E	AI	NA
+171	Annona crassiflora	0.2260	M	Megafauna	Zoochoric	Megafauna independent	D	NA	NA	Annonaceae	NA	SP	S	E	AI	NA
+172	Eugenia dysenterica	0.1540	M	Megafauna	Megafauna	Megafauna dependent	D	Rosidae	Myrtales	Myrtaceae	NA	LP	T	E	AI	NA
+173	Hymenaea courbaril	0.6500	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+174	Lychnophora ericoides	0.3570	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+175	Mandevilla velutina	0.1880	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+176	Mauritia flexuosa	0.2300	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	LP	T	NA	NA	NA
+177	Palicourea coriacea	0.2300	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fabales	Mimosoidae	NA	LP	T	NA	W	NA
+178	Plathymenia reticulata	0.1230	W	Abiotic	Abiotic	Abiotic	D	Rosidae	Fabales	Mimosoidae	NA	LP	T	NA	W	NA
+179	Solanum lycocarpum	0.1470	M	AI	Endozoochoric	Megafauna independent	D	NA	NA	Solanaceae	NA	SP	S	NA	AI	NA
+180	Stryphnodendron adstringens	0.2906	M	Megafauna	Megafauna	Megafauna dependent	D	NA	NA	NA	NA	NA	NA	NA	NA	NA
+181	Tibouchina papyrus	0.3439	W	Abiotic	Abiotic	Abiotic	D	NA	NA	NA	NA	LP	T	E	W	NA
