@@ -1,4 +1,7 @@
 bmass	gutcapac
+# Body mass (kg) vs. digestive organ capacity (wet g).
+# Dataset obtained from digitization of figure in van Soest (1982).
+#
 # Regression equation for time and digestion-limited herbivores.
 # Body mass (kg) vs. Digestive organ capacity (g wet)
 # gutcapac= 90.0 bmass.kg^1.01. N= 61; r= 0.98
