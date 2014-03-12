@@ -1,4 +1,4 @@
 Megafauna
 =========
 
-Frugivory and seed dispersal by extinct megafauna-project
+Frugivory and seed dispersal by extinct megafauna-project.
