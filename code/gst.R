@@ -33,8 +33,8 @@ ggplot(gst, aes(factor(syndr), gst_nr, fill=factor(syndr))) +
     ylab("Population genetic differentiation")
 
 # Megafauna dependent, megafauna independent, extant frugivores
-pp1<- gst %.%
-    filter(contr2=="Megafauna dependent" |
+ppz<- gst %.% 
+      filter(contr2=="Megafauna dependent" |
            contr2=="Megafauna independent" |
            contr2== "Zoochoric") %.%
     select(contr2, gst_nr)
