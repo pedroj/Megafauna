@@ -26,12 +26,15 @@ bmass_MOM <-read.table("./datasets/MOMv3.3.txt", header=TRUE, sep="\t",
 
 # Body mass range up to 15000 kg
 extinct<- bmass_MOM %.%     # Selecting just the extinct taxa.
-    filter(status=="extinct") %.%
-    select(family, genus, species, meanbodymass)
+    dplyr::filter(status=="extinct") %.%
+    dplyr::select(family, genus, species, meanbodymass)
+extinct<- # Selecting just the extinct taxa.
+    dplyr::filter(bmass_MOM, status=="extinct") %.%
+    dplyr::select(family, genus, species, meanbodymass)
 
 # Selecting just the extinct frugivores.
 extinct.frug.megafauna<- bmass_MOM %.% 
-    filter(status=="extinct", 
+    dplyr::filter(status=="extinct", 
            family== "Elephantidae" |
            family== "Equidae" |
            family== "Gomphotheriidae" |
@@ -40,37 +43,37 @@ extinct.frug.megafauna<- bmass_MOM %.%
            family== "Megalonychidae" |
            family== "Megatheriidae" |
            family== "Mylodontidae") %.%
-    select(family, genus, species, meanbodymass)
+    dplyr::select(family, genus, species, meanbodymass)
 colnames(extinct.frug.megafauna)<- c("family", "genus", "species", "bmass")
 
 # Selecting different genera with dplyr. *** Body masses in g ***.
 eremoth<- bmass_MOM %.%
-    filter(genus=="Eremotherium") %.%
-    select(species, meanbodymass) %.%
+    dplyr::filter(genus=="Eremotherium") %.%
+    dplyr::select(species, meanbodymass) %.%
     summarise(mean(meanbodymass))
 toxodontids<- bmass_MOM %.%
-    filter(family=="Toxodontidae") %.%
-    select(genus, species, meanbodymass) %.%
+    dplyr::filter(family=="Toxodontidae") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
     summarise(mean(meanbodymass))
 equids<- bmass_MOM %.%
-    filter(family=="Equidae", status=="extinct") %.%
-    select(genus, species, meanbodymass) %.%
+    dplyr::filter(family=="Equidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
     summarise(mean(meanbodymass))
 megatherids<- bmass_MOM %.%
-    filter(family=="Megatheriidae", status=="extinct") %.%
-    select(genus, species, meanbodymass) %.%
+    dplyr::filter(family=="Megatheriidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
     summarise(mean(meanbodymass))
 gomphotherids<- bmass_MOM %.%
-    filter(family=="Gomphotheriidae", status=="extinct") %.%
-    select(genus, species, meanbodymass) %.%
+    dplyr::filter(family=="Gomphotheriidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
     summarise(mean(meanbodymass))
 elephantids<- bmass_MOM %.%
-    filter(family=="Elephantidae", status=="extinct") %.%
-    select(genus, species, meanbodymass) %.%
+    dplyr::filter(family=="Elephantidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
     summarise(mean(meanbodymass)) 
 mylo<- bmass_MOM %.%
-    filter(family=="Mylodontidae", status=="extinct") %.%
-    select(genus, species, meanbodymass) %.%
+    dplyr::filter(family=="Mylodontidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
     summarise(mean(meanbodymass))
 tags<- c("Eremotherium", "Toxodontidae", "Equidae", "Megatheriidae",
          "Gomphotheriidae", "Elephantidae", "Mylodontidae")

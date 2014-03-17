@@ -34,10 +34,8 @@ ggplot(gst, aes(factor(syndr), gst_nr, fill=factor(syndr))) +
 
 # Megafauna dependent, megafauna independent, extant frugivores
 ppz<- gst %.% 
-      filter(contr2=="Megafauna dependent" |
-           contr2=="Megafauna independent" |
-           contr2== "Zoochoric") %.%
-    select(contr2, gst_nr)
+      filter(contr2=="Megafauna dependent" |contr2=="Megafauna independent" |contr2=="Zoochoric") %.%
+    select(gst$contr2, gst$gst_nr)
 m3<- lm(asin(pp1$gst_nr)~ pp1$contr2)
 summary(m3)
 anova(m3)
