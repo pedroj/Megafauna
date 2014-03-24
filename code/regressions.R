@@ -18,7 +18,7 @@ library(dplyr)
 #
 #-------------------------------------------------------------------------
 # Body mass data for extinct taxa.
-# Body mass (g) of Late Quaternary mammals MOM database (Smith et al 2003).
+# Body mass (g) of Late Quaternary mammals MOM database.
 # Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. Ecology 84:3403–3403.
 # Body mass in g.
 bmass_MOM <-read.table("./datasets/MOMv3.3.txt", header=TRUE, sep="\t",
