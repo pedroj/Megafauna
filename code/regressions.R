@@ -28,11 +28,8 @@ bmass_MOM <-read.table("./datasets/MOMv3.3.txt", header=TRUE, sep="\t",
 extinct<- bmass_MOM %.%     # Selecting just the extinct taxa.
     dplyr::filter(status=="extinct") %.%
     dplyr::select(family, genus, species, meanbodymass)
-extinct<- # Selecting just the extinct taxa.
-    dplyr::filter(bmass_MOM, status=="extinct") %.%
-    dplyr::select(family, genus, species, meanbodymass)
 
-# Selecting just the extinct frugivores.
+# Selecting just the extinct frugivores. Body masses in g.
 extinct.frug.megafauna<- bmass_MOM %.% 
     dplyr::filter(status=="extinct", 
            family== "Elephantidae" |
@@ -89,6 +86,7 @@ colnames(topredict)<- c("taxa","bmass") # Body mass in g!
 # Body mass in kg; digestive capacity in g wet content.
 dig.organ <-read.table("./datasets/Body mass (kg) vs Gut capc (g wet).txt", 
                        header=TRUE,sep="\t",dec=".",na.strings=".")
+# NOTE: dig.organ has Body mass (kg); Gut capc (g wet)
 str(dig.organ)
 # dig.organ <- data.frame(cbind(logbmass=dig.organ$bmass,
 #                               loggutcapac=dig.organ$gutcapac,
