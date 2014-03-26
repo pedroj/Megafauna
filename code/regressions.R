@@ -14,6 +14,7 @@
 library(ggplot2)
 library(Hmisc)
 library(scales)
+library(grDevices)
 library(dplyr)
 #
 #-------------------------------------------------------------------------
@@ -143,13 +144,13 @@ p0<- ggplot(gut_with_pred, aes(x= log10(bmass),
 p0 # The plot
 
 p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
-                    y= log10(prediction$predgutcap/1000), 
+                    y= log10(prediction$predgutcap), 
                     color="white", size=2)) +
                     theme(legend.position = "none")
 
 # Plots with averaged data for Extinct megafauna families
 p0 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass/1000), 
-    y= log10(predfammean$predgutcap/1000))) + 
+    y= log10(predfammean$predgutcap))) + 
       geom_point(color="pink", size=1.5) +
     theme(legend.position = "none")
 #-------------------------------------------------------------------------
