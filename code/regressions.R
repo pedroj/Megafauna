@@ -351,7 +351,7 @@ head(predfammean) # Now the dataset holds all variables.
 
 # Plots with averaged data for Extinct megafauna families
 p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass), 
-    y= log10(predfammean$retention)), size=4, color= "pink") +
+    y= log10(predfammean$retention)), size=4, color= "pink", alpha=0.5) +
     geom_vline(xintercept= log10(predfammean$bmass), 
         linetype="dotted")
 
