@@ -11,12 +11,14 @@
 # Van Soest, P. J. 1996. Allometry and ecology of feeding behavior and digestive capacity in herbivores: A review. Zoo Biology 15:455–479.
 # Owen-Smith, R. N. 1988. Megaherbivores. Cambridge University Press, Cambridge, UK.
 
-library(ggplot2)
-library(Hmisc)
-library(scales)
-library(grDevices)
-library(dplyr)
+require(ggplot2)
+require(Hmisc)
+require(scales)
+require(grDevices)
+require(dplyr)
 #
+#-------------------------------------------------------------------------
+# BODY MASS SUMMARY DATASETS. EXTANT AND EXTINCT SPECIES.
 #-------------------------------------------------------------------------
 # Body mass data for extinct taxa.
 # Body mass (g) of Late Quaternary mammals MOM database.
@@ -81,6 +83,8 @@ topredict<- data.frame(taxa=tags,
                               elephantids, mylo))
 colnames(topredict)<- c("taxa","bmass") # Body mass in g!
 
+#-------------------------------------------------------------------------
+# DIGESTIVE ORGAN CAPACITY.
 #-------------------------------------------------------------------------
 # Body mass (kg) vs. digestive organ capacity (wet g).
 # Dataset obtained from digitization of figure in van Soest (1982).
@@ -153,6 +157,9 @@ p0 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass/1000),
     y= log10(predfammean$predgutcap))) + 
       geom_point(color="pink", size=1.5) +
     theme(legend.position = "none")
+
+#-------------------------------------------------------------------------
+# RETENTION TIME IN THE GUT.
 #-------------------------------------------------------------------------
 # Body mass (kg) vs. mean retention time (h).
 
@@ -175,22 +182,13 @@ predretfit1=  1.0193 +
               0.2356 * log10(extinct.frug.megafauna$bmass)
 prediction<- data.frame(prediction, 10^predretfit1)
 head(prediction) # Now the dataset holds all variables.
-
-ret_with_pred<- data.frame(mean.retention, 
-    predict(lm_fit1, interval= 'prediction'))
-p1<- ggplot(ret_with_pred, aes(x= log10(bmass), 
-    y= log10(retention))) + 
-    geom_point() +
-    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
-    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
-        alpha= 0.2) +
-    scale_fill_manual('Interval', values= c('green', 'blue')) +
-    coord_cartesian(xlim= c(-4,5), ylim= c(-0.5,2.5)) +
-    theme(legend.position= c(0.20, 0.85))
-p1 # The plot
+colnames(prediction)<- c("family","genus","species","bmass",
+                         "predgutcap","predret") # Body mass in g!
 
 # New estimations
-# Log10-scaled axes. Confidence interval for the regression slope.
+# Log10-scaled axes. Confidence interval for both the regression slope
+# and the prediction interval.
+
 p0<- ggplot(ret_with_pred, aes(x= log10(bmass), 
     y= log10(retention))) + 
     geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
@@ -202,19 +200,19 @@ p0<- ggplot(ret_with_pred, aes(x= log10(bmass),
     xlab("log10(Body mass) (g)") +
     ylab("log10(Gut retention time) (h)") +
     ggtitle("Gut retention time for Megafauna frugivores") +
-    coord_cartesian(xlim= c(-4,5), ylim= c(-0.5,2.5)) +
+    coord_cartesian(xlim= c(-4,8), ylim= c(-0.5,3)) +
     theme(legend.position= c(0.20, 0.85))
 p0 # The plot
 
 p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass), 
-    y= predretfit1-2.65)) 
+    y= predretfit1)) 
 p1
 
 # Plots with averaged data for Extinct megafauna families
-p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass/1000), 
-    y= log10(predfammean$predretfam)), size=4, color= "pink")  
-  #  theme(legend.position = "none")
-
+p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass), 
+    y= log10(predfammean$predretfam)+0.45), size=4, color= "pink") +
+     geom_vline(xintercept= log10(predfammean$bmass), 
+                            linetype="dotted")
 #--------------------------------------------------------------------------
 # Datatset with body mass (g) and estimated gut capacity (wet g).
 # Using van Soest regression equation.
@@ -226,75 +224,123 @@ predret= 0.57 + 6.95 * ((extinct.frug.megafauna$bmass/1000)^0.33) +
     (0.33 + 0.43 * (extinct.frug.megafauna$bmass/1000^0.33))^0.5
 prediction<- data.frame(prediction, predret)
 head(prediction) # Now the dataset holds all variables.
+colnames(prediction)<-  c("family","genus","species","bmass",
+    "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
+# Body mass in g!
+# predgutcap, in g
+# predret.vanSoest: raw equation bmass vs retention time.
+# predret.vanSoest.timelim: regr. equation van Soest, expanded with parameters
+#                           for time and digestion-limited herbivores.
 
 R> prediction
-family            genus          species    bmass predgutcap predret
-1          Equidae            Equus         capensis   350000   38085.19 172.702
-2          Equidae        Hipparion          libycum   150000   16294.59 118.130
-3     Elephantidae          Elephas         iolensis  6500000  711441.48 661.334
-4             <NA>       Diprotodon            minor   900000   98118.52 265.169
-5             <NA>       Diprotodon          optatum  1500000  163698.03 335.122
-6             <NA>         Euowenia            grata   750000   81735.62 244.000
-7             <NA>       Euryzygoma           dunese   500000   54446.25 202.929
-8             <NA>      Nototherium        mitchelli   500000   54446.25 202.929
-9             <NA>     Palorchestes            azeal   500000   54446.25 202.929
-10            <NA>     Palorchestes           parvus   100000   10854.25  98.674
-11            <NA>      Zygomaturus         trilobus   750000   81735.62 244.000
-12            <NA> Plesiorycteropus germainepetterae     7810     843.41  32.812
-13            <NA> Plesiorycteropus madagascariensis    13220    1429.14  40.988
-14         Equidae            Equus          alaskae   372000   40484.06 177.519
-15         Equidae            Equus       laurentius   648000   70598.94 228.287
-16         Equidae            Equus         caballus   250000   27185.41 148.438
-17         Equidae            Equus        fraternus   259000   28166.08 150.814
-18         Equidae            Equus     niobrarensis   334000   36340.76 169.096
-19         Equidae            Equus      complicatus   400000   43537.56 183.434
-20         Equidae            Equus        giganteus   400000   43537.56 183.434
-21         Equidae            Equus         hemionus   250000   27185.41 148.438
-22         Equidae            Equus     conversidens   306000   33288.40 162.557
-23         Equidae            Equus     occidentalis   574000   62521.55 216.044
-24         Equidae            Equus           scotti   555000   60447.95 212.767
-25    Elephantidae        Mammuthus        imperator 10000000 1095468.77 809.113
-26    Elephantidae        Mammuthus      primigenius  5500000  601787.85 611.722
-27    Elephantidae        Mammuthus          columbi  8000000  875983.99 728.775
-28 Gomphotheriidae      Cuvieronius             spp.  5000000  546975.59 585.137
-29      Mammutidae           Mammut       americanum  4523800  494782.58 558.489
-30  Megalonychidae        Megalonyx      jeffersonii   600000   65359.32 220.437
-31   Megatheriidae     Eremotherium         rusconii  3500000  382609.88 495.696
-32   Megatheriidae   Nothrotheriops        shastense   300000   32634.39 161.114
-33    Mylodontidae    Glossotherium          harlani  1587000  173212.04 343.925
-34 Macraucheniidae     Macrauchenia      patachonica   988000  107732.43 276.722
-35 Macraucheniidae     Windhausenia             spp.   700000   76276.06 236.450
-36         Equidae            Equus     santaeelenae   350000   38085.19 172.702
-37         Equidae            Equus         lasallei   350000   38085.19 172.702
-38         Equidae            Equus          neogeus   378000   41138.34 178.806
-39         Equidae            Equus           andium   220000   23917.05 140.169
-40         Equidae            Equus        insulatus   351000   38194.23 172.924
-41         Equidae        Hippidion         saldiasi   265000   28819.89 152.373
-42         Equidae        Hippidion       principale   511000   55646.49 204.941
-43         Equidae     Onohippidium             spp.   310700   33800.72 163.676
-44 Gomphotheriidae      Cuvieronius             spp.  5000000  546975.59 585.137
-45 Gomphotheriidae    Haplomastodon       chimborazi  6000000  656610.09 637.069
-46 Gomphotheriidae    Notiomastodon             spp.  6193000  677773.96 646.556
-47 Gomphotheriidae    Stegomastodon         superbus  7580000  829905.31 710.611
-48  Megalonychidae        Nothropus             spp.   100000   10854.25  98.674
-49  Megalonychidae    Nothrotherium             spp.   150000   16294.59 118.130
-50  Megalonychidae          Ocnopus             spp.   300000   32634.39 161.114
-51  Megalonychidae         Valgipes             spp.   200000   21738.62 134.314
-
+family           genus       species    bmass predgutcap
+1          Equidae           Equus      capensis   350000      38085
+2          Equidae       Hipparion       libycum   150000      16295
+3     Elephantidae         Elephas      iolensis  6500000     711441
+4          Equidae           Equus       alaskae   372000      40484
+5          Equidae           Equus    laurentius   648000      70599
+6          Equidae           Equus      caballus   250000      27185
+7          Equidae           Equus     fraternus   259000      28166
+8          Equidae           Equus  niobrarensis   334000      36341
+9          Equidae           Equus   complicatus   400000      43538
+10         Equidae           Equus     giganteus   400000      43538
+11         Equidae           Equus      hemionus   250000      27185
+12         Equidae           Equus  conversidens   306000      33288
+13         Equidae           Equus  occidentalis   574000      62522
+14         Equidae           Equus        scotti   555000      60448
+15    Elephantidae       Mammuthus     imperator 10000000    1095469
+16    Elephantidae       Mammuthus   primigenius  5500000     601788
+17    Elephantidae       Mammuthus       columbi  8000000     875984
+18 Gomphotheriidae     Cuvieronius          spp.  5000000     546976
+19      Mammutidae          Mammut    americanum  4523800     494783
+20  Megalonychidae       Megalonyx   jeffersonii   600000      65359
+21   Megatheriidae    Eremotherium      rusconii  3500000     382610
+22   Megatheriidae  Nothrotheriops     shastense   300000      32634
+23    Mylodontidae   Glossotherium       harlani  1587000     173212
+24 Macraucheniidae    Macrauchenia   patachonica   988000     107732
+25 Macraucheniidae    Windhausenia          spp.   700000      76276
+26         Equidae           Equus  santaeelenae   350000      38085
+27         Equidae           Equus      lasallei   350000      38085
+28         Equidae           Equus       neogeus   378000      41138
+29         Equidae           Equus        andium   220000      23917
+30         Equidae           Equus     insulatus   351000      38194
+31         Equidae       Hippidion      saldiasi   265000      28820
+32         Equidae       Hippidion    principale   511000      55646
+33         Equidae    Onohippidium          spp.   310700      33801
+34 Gomphotheriidae     Cuvieronius          spp.  5000000     546976
+35 Gomphotheriidae   Haplomastodon    chimborazi  6000000     656610
+36 Gomphotheriidae   Notiomastodon          spp.  6193000     677774
+37 Gomphotheriidae   Stegomastodon      superbus  7580000     829905
+38  Megalonychidae       Nothropus          spp.   100000      10854
+39  Megalonychidae   Nothrotherium          spp.   150000      16295
+40  Megalonychidae         Ocnopus          spp.   300000      32634
+41  Megalonychidae        Valgipes          spp.   200000      21739
+42   Megatheriidae    Eremotherium   laurillardi   800000      87196
+43   Megatheriidae    Eremotherium      rusconii  3500000     382610
+44   Megatheriidae     Megatherium    americanum  6265000     685670
+45   Megatheriidae Paramegatherium          spp.  3500000     382610
+46    Mylodontidae   Glossotherium      myloides  1200000     130900
+47    Mylodontidae   Glossotherium      robustum  1713000     186993
+48    Mylodontidae        Lestodon       armatus  3397000     371328
+49    Mylodontidae         Mylodon        listai  1000000     109044
+50    Mylodontidae      Scelidodon          spp.  1000000     109044
+51    Mylodontidae  Scelidotherium leptocephalum  1119000     122047
+predret.vanSoest predret.vanSoest.timelim
+1            211.58                  172.702
+2            173.30                  118.130
+3            421.14                  661.334
+4            214.64                  177.519
+5            244.63                  228.287
+6            195.46                  148.438
+7            197.09                  150.814
+8            209.26                  169.096
+9            218.35                  183.434
+10           218.35                  183.434
+11           195.46                  148.438
+12           204.99                  162.557
+13           237.74                  216.044
+14           235.86                  212.767
+15           466.12                  809.113
+16           404.88                  611.722
+17           442.25                  728.775
+18           395.89                  585.137
+19           386.67                  558.489
+20           240.23                  220.437
+21           363.98                  495.696
+22           204.04                  161.114
+23           302.10                  343.925
+24           270.19                  276.722
+25           249.12                  236.450
+26           211.58                  172.702
+27           211.58                  172.702
+28           215.46                  178.806
+29           189.66                  140.169
+30           211.73                  172.924
+31           198.16                  152.373
+32           231.32                  204.941
+33           205.73                  163.676
+34           395.89                  585.137
+35           413.27                  637.069
+36           416.36                  646.556
+37           436.67                  710.611
+38           157.51                   98.674
+39           173.30                  118.130
+40           204.04                  161.114
+41           185.45                  134.314
+42           257.08                  251.287
+43           363.98                  495.696
+44           417.50                  650.056
+45           363.98                  495.696
+46           282.85                  302.487
+47           307.59                  356.235
+48           361.43                  488.871
+49           270.96                  278.254
+50           270.96                  278.254
+51           278.23                  292.952
+R> 
+#
+# AVERAGED VALUES FOR FAMILIES.
+#
 # Dataset with predicted mean values by family.
-predretfam= 0.57 + 6.95 * ((topredict$bmass/1000)^0.33) + 
-    (0.33 + 0.43 * (topredict$bmass/1000^0.33))^0.5
-predfammean<- data.frame(predfammean, predretfam)
-
-# Predicted mean values for extinct megafauna.
-R> predfammean
-taxa   bmass predgutcap predretfam
-1    Eremotherium 2600000     309754     431.90
-2    Toxodontidae  830000      99007     255.54
-3         Equidae  440001      52523     191.51
-4   Megatheriidae  775000      92454     247.67
-5 Gomphotheriidae  830000      99007     255.54
-6    Elephantidae 2412500     287440     417.21
-7    Mylodontidae  678571      80962     233.13
 
 
