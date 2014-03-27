@@ -213,7 +213,7 @@ p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass),
     y= log10(predfammean$predretfam)+0.45), size=4, color= "pink") +
      geom_vline(xintercept= log10(predfammean$bmass), 
                             linetype="dotted")
-#--------------------------------------------------------------------------
+#-------------------------------------------------------------------------
 # Datatset with body mass (g) and estimated gut capacity (wet g).
 # Using van Soest regression equation.
 # Regression equation for time and digestion-limited herbivores.
@@ -223,9 +223,9 @@ p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass),
 predret= 0.57 + 6.95 * ((extinct.frug.megafauna$bmass/1000)^0.33) + 
     (0.33 + 0.43 * (extinct.frug.megafauna$bmass/1000^0.33))^0.5
 prediction<- data.frame(prediction, predret)
-head(prediction) # Now the dataset holds all variables.
 colnames(prediction)<-  c("family","genus","species","bmass",
     "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
+head(prediction) # Now the dataset holds all variables.
 # Body mass in g!
 # predgutcap, in g
 # predret.vanSoest: raw equation bmass vs retention time.
@@ -339,8 +339,40 @@ predret.vanSoest predret.vanSoest.timelim
 51           278.23                  292.952
 R> 
 #
-# AVERAGED VALUES FOR FAMILIES.
-#
+# AVERAGED VALUES FOR FAMILIES. -----------------------------------------
 # Dataset with predicted mean values by family.
+str(prediction)
+predfammean<- prediction %.% group_by(family) %.% summarise(mean(bmass), 
+    mean(predgutcap), mean(predret.vanSoest), 
+    mean(predret.vanSoest.timelim))
+colnames(predfammean)<- c("family","bmass", "gutcapacity",
+                      "retention","ret.timelim") 
+head(predfammean) # Now the dataset holds all variables.
+
+# Plots with averaged data for Extinct megafauna families
+p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass), 
+    y= log10(predfammean$retention)), size=4, color= "pink") +
+    geom_vline(xintercept= log10(predfammean$bmass), 
+        linetype="dotted")
+
+# Based on regressions. -------------------------------------------------
+# Gut capacity (g).
+predfammean<- data.frame(topredict, 
+        predgutcap= 10^(2.0316 + 
+                1.0020*log10(topredict$bmass/1000)))
+
+# Gut retention time. Raw model, van Soest.
+predfamret= 10^(1.0193 + 
+    0.2356 * log10(topredict$bmass/1000))
+
+# Gut retention time. Model for time-limited foragers, van Soest.
+predfamrettimelim= 0.57 + 6.95 * ((topredict$bmass/1000)^0.33) + 
+    (0.33 + 0.43 * (topredict$bmass/1000^0.33))^0.5
+
+predfammean<- data.frame(predfammean, predfamret, predfamrettimelim)
+colnames(predfammean)<-  c("family","genus","species","bmass",
+    "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
+head(predfammean) # Now the dataset holds all variables.
+# -----------------------------------------------------------------------
 
 
