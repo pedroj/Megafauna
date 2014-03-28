@@ -44,7 +44,8 @@ extinct.frug.megafauna<- bmass_MOM %.%
            family== "Megatheriidae" |
            family== "Mylodontidae") %.%
     dplyr::select(family, genus, species, meanbodymass)
-colnames(extinct.frug.megafauna)<- c("family", "genus", "species", "bmass")
+colnames(extinct.frug.megafauna)<- c("family", "genus", 
+                                     "species", "bmass")
 
 # Selecting different genera with dplyr. *** Body masses in g ***.
 eremoth<- bmass_MOM %.%

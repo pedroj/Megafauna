@@ -1,0 +1,328 @@
+---
+title: "Megafauna_1"
+author: "Pedro Jordano"
+date: "marzo 28, 2014"
+output:
+  html_document:
+    fig_height: 4
+    fig_width: 6
+    theme: journal
+---
+## Pleistocene megafauna extinctions: functional loss of mutualistic seed dispersal services
+### Mauro Galetti, Paulo R. Guimarães Jr., Mathias Pires, Pedro Jordano
+#### Regression models. Body mass vs digestive variables. Megafauna.
+##### Pedro. Sevilla, 18 Feb 2014.
+
+I used the body mass (g) dataset from:  
+Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. Ecology 84:3403–3403.   
+and from:  
+Fariña, R. A., S. F. Vizcaíno, and M. S. Bargo. 2004. Body mass estimations in Lujanian (late Pleistocene-early Holocene of South America) mammal megafauna. Mastozoología Neotropical 5:87–108.
+
+Our objective is to fit gut capacity (wet weight of content, in g) and gut retention time (in h) to body mass across the full range of body mass for terrestrial mammals. Then we use both the confidence interval for slope and the prediction interval (95%) to estimate the value and range of expected gut capacity and gut retention time of extinct megafauna.  
+For these I used the regressions in van Soest (1996).
+Van Soest, P. J. 1982. Nutritional Ecology of the Ruminant. Cornell University Press, NY, USA.
+
+Van Soest, P. J. 1996. Allometry and ecology of feeding behavior and digestive capacity in herbivores: A review. Zoo Biology 15:455–479.
+Owen-Smith, R. N. 1988. Megaherbivores. Cambridge University Press, Cambridge, UK.
+
+```{r packages, message=FALSE,warning=FALSE}
+require(ggplot2)
+require(Hmisc)
+require(scales)
+require(grDevices)
+require(dplyr)
+```
+
+### Body mass data summary. Extant and extinct taxa.
+#### Body mass data for extinct taxa.
+Body mass (g) of Late Quaternary mammals MOM database.  
+Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. Ecology 84:3403–3403.
+
+#### *Body mass in g.*
+```{r data_bodymass}
+bmass_MOM <-read.table("./datasets/MOMv3.3.txt", header=TRUE, sep="\t",
+    dec=".",na.strings="-999")
+
+# Body mass range up to 15000 kg
+extinct<- bmass_MOM %.%     # Selecting just the extinct taxa.
+    dplyr::filter(status=="extinct") %.%
+    dplyr::select(family, genus, species, meanbodymass)
+head(extinct)
+dim(extinct)
+
+# Selecting just the extinct frugivores. Body masses in g.
+extinct.frug.megafauna<- bmass_MOM %.% 
+    dplyr::filter(status=="extinct", 
+           family== "Elephantidae" |
+           family== "Equidae" |
+           family== "Gomphotheriidae" |
+           family== "Macraucheniidae" |
+           family== "Mammutidae" | 
+           family== "Megalonychidae" |
+           family== "Megatheriidae" |
+           family== "Mylodontidae") %.%
+    dplyr::select(family, genus, species, meanbodymass)
+colnames(extinct.frug.megafauna)<- c("family", "genus", 
+                                     "species", "bmass")
+head(extinct.frug.megafauna)
+dim(extinct.frug.megafauna)
+
+# Here I'm subsetting different functional groups based on genus.
+# Selecting different genera with dplyr. *** Body masses in g ***.
+# We use these values later to predict average functional traits for 
+# genera and families.
+
+eremoth<- bmass_MOM %.%
+    dplyr::filter(genus=="Eremotherium") %.%
+    dplyr::select(species, meanbodymass) %.%
+    summarise(mean(meanbodymass))
+toxodontids<- bmass_MOM %.%
+    dplyr::filter(family=="Toxodontidae") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
+    summarise(mean(meanbodymass))
+equids<- bmass_MOM %.%
+    dplyr::filter(family=="Equidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
+    summarise(mean(meanbodymass))
+megatherids<- bmass_MOM %.%
+    dplyr::filter(family=="Megatheriidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
+    summarise(mean(meanbodymass))
+gomphotherids<- bmass_MOM %.%
+    dplyr::filter(family=="Gomphotheriidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
+    summarise(mean(meanbodymass))
+elephantids<- bmass_MOM %.%
+    dplyr::filter(family=="Elephantidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
+    summarise(mean(meanbodymass)) 
+mylo<- bmass_MOM %.%
+    dplyr::filter(family=="Mylodontidae", status=="extinct") %.%
+    dplyr::select(genus, species, meanbodymass) %.%
+    summarise(mean(meanbodymass))
+tags<- c("Eremotherium", "Toxodontidae", "Equidae", "Megatheriidae",
+         "Gomphotheriidae", "Elephantidae", "Mylodontidae")
+topredict<- data.frame(taxa=tags, 
+                 bmass= rbind(eremoth, toxodontids, equids, 
+                              megatherids, gomphotherids, 
+                              elephantids, mylo))
+colnames(topredict)<- c("taxa","bmass") # Body mass in g!
+
+```
+
+### Digestive organ capacity. Extant and extinct taxa.
+#### Body mass data for extinct taxa.
+Body mass (kg) vs. digestive organ capacity (wet g).
+Dataset obtained from digitization of figure in van Soest (1982).
+___NOTE: Body mass in kg; digestive capacity in g wet content.___
+
+```{r data_gut_capac}
+dig.organ<- read.table("./datasets/Body mass (kg) vs Gut capc (g wet).txt", 
+                       header=TRUE,sep="\t",dec=".",na.strings=".")
+# NOTE: dig.organ has Body mass (kg); Gut capacity (g wet).
+str(dig.organ)
+summary(dig.organ)
+#
+# dig.organ <- data.frame(cbind(dig.organ$bmass,
+#                               dig.organ$gutcapac,
+#                               logbmass=log10(dig.organ$bmass),
+#                               loggutcapac=log10(dig.organ$gutcapac)))
+
+```
+
+### Regressions.
+#### Digestive organ capacity vs. body mass.
+_Linear model with log-transformed values._
+```{r gut_capacity}
+lm_fit0<- lm(log10(gutcapac) ~ log10(bmass), data= dig.organ)
+summary(lm_fit0)
+
+gut_with_pred<- data.frame(dig.organ,      # Predicted values for plotting.
+    predict(lm_fit0, interval= 'prediction'))
+
+```
+
+Numerical predictions of functional traits from body mass. We want predictions for the range of body masses between 1000 kg and 15000 kg for extinct megafauna; below this range we can use the regression fitted to the extant species.  
+I used the body mass data in Smith et al (2003) and Fariña et al. (2004).
+___NOTE: The data for body mass are in g.___
+
+The datatset generated is `prediction`, with body mass (g) and estimated gut capacity (wet g).  
+Just the EXTINCT MEGAFAUNA FRUGIVOROUS species. I also generate the predicted mean values for different families.
+
+```{r gut_capac_predict}
+prediction<- data.frame(extinct.frug.megafauna, 
+             predgutcap= 10^(2.0316 + 
+                     1.0020*log10(extinct.frug.megafauna$bmass/1000)))
+head(prediction)
+
+# Dataset with predicted mean values by family.
+predfammean<- data.frame(topredict, 
+    predgutcap= 10^(2.0316 + 
+            1.0020*log10(topredict$bmass/1000)))
+
+```
+
+## PLOTS. Body mass vs. digestive capacity.
+#### Without log scales.
+```{r gut_capac_plots}
+ggplot(dig.organ, aes(bmass, gutcapac)) + 
+    stat_summary(fun.data= mean_cl_normal) + 
+    scale_x_log10() + scale_y_log10() +
+    geom_smooth(method= 'lm')
+
+# Log10-scaled axes. Confidence interval for the regression slope.
+p0<- ggplot(gut_with_pred, aes(x= log10(bmass), 
+    y= log10(gutcapac))) + 
+    geom_point(color="black", size=2) +
+    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
+    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
+        alpha= 0.2) +
+    scale_fill_manual('Interval', values= c('green', 'blue')) +
+    xlab("log10(Body mass) (kg)") +
+    ylab("log10(Gut capacity) (wet g)") +
+    ggtitle("Gut capacity estimation for Megafauna frugivores") +
+    coord_cartesian(xlim= c(-4.5,5), ylim= c(-3,7.5)) +
+    theme(legend.position= c(0.20, 0.85))
+p0 # The plot
+
+p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
+                    y= log10(prediction$predgutcap), 
+                    color="white", size=2)) +
+                    theme(legend.position = "none")
+
+# Plots with averaged data for Extinct megafauna families
+p0 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass/1000), 
+    y= log10(predfammean$predgutcap))) + 
+      geom_point(color="pink", size=1.5) +
+    theme(legend.position = "none")
+
+```
+
+### Retention time in the gut. Extant and extinct taxa.
+#### Body mass (kg) vs. gut retention time (h).
+
+___Dataset___
+```{r data_retention_time}
+mean.retention <-read.table("./datasets/Body mass (kg)-Mean gut retention (h).txt",
+                            header=TRUE,sep="\t",dec=".",na.strings=".")
+
+str(mean.retention)
+head(mean.retention)
+
+```
+
+_Linear model with log-transformed values._
+___Refitting with newly digitized data (7Mar2014).___
+
+Regression equation for time and digestion-limited herbivores.  
+Body mass (kg) vs. Mean gut retention time (h). Log10-scaled axes. Confidence interval for the regression slope. Body mass range up to 15000 kg
+
+Datatset with body mass (kg) and estimated retention time (h).
+Using van Soest regression equation after I refitted it (lm_fit1). Just the EXTINCT MEGAFAUNA FRUGIVOROUS species.
+
+Estimated values are added to `prediction` dataset.
+```{r gut_retention}
+lm_fit1<- lm(log10(retention) ~ log10(bmass), data= mean.retention)
+summary(lm_fit1)
+
+predretfit1=  1.0193 + 
+              0.2356 * log10(extinct.frug.megafauna$bmass)
+prediction<- data.frame(prediction, 10^predretfit1)
+
+head(prediction) # Now the dataset holds all variables.
+colnames(prediction)<- c("family","genus","species","bmass",
+                         "predgutcap","predret") # Body mass in g!
+
+## PLOTS. Body mass (kg) vs. estimated retention time (h).
+#### Without log scales.
+# New estimations. Log10-scaled axes. Confidence interval for both the 
+# regression slope and the prediction interval.
+
+p0<- ggplot(ret_with_pred, aes(x= log10(bmass), 
+    y= log10(retention))) + 
+    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
+    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
+        alpha= 0.2) +
+    geom_point(color="white", size=4) +
+    geom_point(color="black", size=2) +
+    scale_fill_manual('Interval', values= c('green', 'blue')) +
+    xlab("log10(Body mass) (g)") +
+    ylab("log10(Gut retention time) (h)") +
+    ggtitle("Gut retention time for Megafauna frugivores") +
+    coord_cartesian(xlim= c(-4,8), ylim= c(-0.5,3)) +
+    theme(legend.position= c(0.20, 0.85))
+p0 # The plot
+
+p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass), 
+    y= predretfit1)) 
+p1
+
+# NOT RUN.
+# Plots with averaged data for Extinct megafauna families
+#p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass), 
+#    y= log10(predfammean$predretfam)+0.45), size=4, color= "pink") +
+#     geom_vline(xintercept= log10(predfammean$bmass), 
+#                            linetype="dotted")
+
+```
+
+### Dataset for prediction of functional traits, by taxon.
+Datatset with body mass (g) and estimated gut capacity (wet g). Using van Soest regression equation, refitted to the body mass data (Smith et al. 2003). Using both the raw regression equation and the Regression equation for time- and digestion-limited herbivores.
+
+`gutret.h= 0.57 + 6.95*bmass.kg^0.33 + (0.33 + 0.43 * bmass^0.33)^0.5`
+
+Predict specific values of gut retention from body mass data. Just the EXTINCT MEGAFAUNA FRUGIVOROUS species.
+```{r gut_retention_time_predict}
+predret= 0.57 + 6.95 * ((extinct.frug.megafauna$bmass/1000)^0.33) + 
+         (0.33 + 0.43 * (extinct.frug.megafauna$bmass/1000^0.33))^0.5
+prediction<- data.frame(prediction, predret)
+
+colnames(prediction)<-  c("family","genus","species","bmass",
+    "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
+
+str(prediction) # Now the dataset holds all variables.
+
+prediction
+
+```
+
+### CODE NOT RUN.
+##### AVERAGED VALUES FOR FAMILIES. 
+##### Dataset with predicted mean values by family.
+```{r not_run,warning=FALSE,error=FALSE,eval=FALSE}
+str(prediction)
+predfammean<- prediction %.% group_by(family) %.% summarise(mean(bmass), 
+    mean(predgutcap), mean(predret.vanSoest), 
+    mean(predret.vanSoest.timelim))
+colnames(predfammean)<- c("family","bmass", "gutcapacity",
+                      "retention","ret.timelim") 
+head(predfammean) # Now the dataset holds all variables.
+
+# Plots with averaged data for Extinct megafauna families
+p1 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass), 
+    y= log10(predfammean$retention)), size=4, color= "pink", alpha=0.5) +
+    geom_vline(xintercept= log10(predfammean$bmass), 
+        linetype="dotted")
+
+# Based on regressions. -------------------------------------------------
+# Gut capacity (g).
+predfammean<- data.frame(topredict, 
+        predgutcap= 10^(2.0316 + 
+                1.0020*log10(topredict$bmass/1000)))
+
+# Gut retention time. Raw model, van Soest.
+predfamret= 10^(1.0193 + 
+    0.2356 * log10(topredict$bmass/1000))
+
+# Gut retention time. Model for time-limited foragers, van Soest.
+predfamrettimelim= 0.57 + 6.95 * ((topredict$bmass/1000)^0.33) + 
+    (0.33 + 0.43 * (topredict$bmass/1000^0.33))^0.5
+
+predfammean<- data.frame(predfammean, predfamret, predfamrettimelim)
+colnames(predfammean)<-  c("family","genus","species","bmass",
+    "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
+head(predfammean) # Now the dataset holds all variables.
+# -----------------------------------------------------------------------
+
+```
+
