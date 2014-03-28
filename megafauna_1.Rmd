@@ -137,7 +137,8 @@ _Linear model with log-transformed values._
 lm_fit0<- lm(log10(gutcapac) ~ log10(bmass), data= dig.organ)
 summary(lm_fit0)
 
-gut_with_pred<- data.frame(dig.organ,      # Predicted values for plotting.
+gut_with_pred<- data.frame(dig.organ,      # Predicted values for
+                                           # plotting.
     predict(lm_fit0, interval= 'prediction'))
 
 ```
@@ -165,10 +166,6 @@ predfammean<- data.frame(topredict,
 ## PLOTS. Body mass vs. digestive capacity.
 #### Without log scales.
 ```{r gut_capac_plots}
-ggplot(dig.organ, aes(bmass, gutcapac)) + 
-    stat_summary(fun.data= mean_cl_normal) + 
-    scale_x_log10() + scale_y_log10() +
-    geom_smooth(method= 'lm')
 
 # Log10-scaled axes. Confidence interval for the regression slope.
 p0<- ggplot(gut_with_pred, aes(x= log10(bmass), 
@@ -177,23 +174,32 @@ p0<- ggplot(gut_with_pred, aes(x= log10(bmass),
     geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
     geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
         alpha= 0.2) +
+    geom_point(color="white", size=4) +
+    geom_point(color="black", size=2) +
     scale_fill_manual('Interval', values= c('green', 'blue')) +
     xlab("log10(Body mass) (kg)") +
     ylab("log10(Gut capacity) (wet g)") +
     ggtitle("Gut capacity estimation for Megafauna frugivores") +
     coord_cartesian(xlim= c(-4.5,5), ylim= c(-3,7.5)) +
     theme(legend.position= c(0.20, 0.85))
-p0 # The plot
+p0 # The plot with extant species.
 
-p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
+p1<- p0 + geom_point(data= prediction, 
+                    aes(x= log10(prediction$bmass/1000), 
                     y= log10(prediction$predgutcap), 
-                    color="white", size=2)) +
+                    color="white", size=2, alpha=0.30)) +
                     theme(legend.position = "none")
+
+# This is the plot. Overlayed  
+p1
 
 # Plots with averaged data for Extinct megafauna families
 p0 + geom_point(data= predfammean, aes(x= log10(predfammean$bmass/1000), 
-    y= log10(predfammean$predgutcap))) + 
-      geom_point(color="pink", size=1.5) +
+    y= log10(predfammean$predgutcap),
+    color="white", size=5, alpha=0.40)) + 
+    xlab("log10(Body mass) (kg)") +
+    ylab("log10(Gut capacity) (wet g)") +
+    ggtitle("Gut capacity estimation for Megafauna frugivores. Family means") +
     theme(legend.position = "none")
 
 ```
@@ -215,15 +221,19 @@ _Linear model with log-transformed values._
 ___Refitting with newly digitized data (7Mar2014).___
 
 Regression equation for time and digestion-limited herbivores.  
-Body mass (kg) vs. Mean gut retention time (h). Log10-scaled axes. Confidence interval for the regression slope. Body mass range up to 15000 kg
+Body mass (kg) vs. Mean gut retention time (h). Log10-scaled axes. Confidence interval for the regression slope. Body mass range up to 15000 kg.
+Using van Soest regression equation after I refitted it (`lm_fit1`).
+Thus I used `lm_fit1` estiamted on van Soest dataset (redigitized). Then applied the regression equation to predict Gut Retention Time for just the EXTINCT MEGAFAUNA FRUGIVOROUS species, which are in the `extinct.frug.megafauna` dataset.
 
 Datatset with body mass (kg) and estimated retention time (h).
-Using van Soest regression equation after I refitted it (lm_fit1). Just the EXTINCT MEGAFAUNA FRUGIVOROUS species.
-
 Estimated values are added to `prediction` dataset.
+
 ```{r gut_retention}
 lm_fit1<- lm(log10(retention) ~ log10(bmass), data= mean.retention)
 summary(lm_fit1)
+ret_with_pred<- data.frame(mean.retention,  # Predicted values for
+                                            #plotting.
+    predict(lm_fit1, interval= 'prediction'))
 
 predretfit1=  1.0193 + 
               0.2356 * log10(extinct.frug.megafauna$bmass)
@@ -267,11 +277,22 @@ p1
 ```
 
 ### Dataset for prediction of functional traits, by taxon.
-Datatset with body mass (g) and estimated gut capacity (wet g). Using van Soest regression equation, refitted to the body mass data (Smith et al. 2003). Using both the raw regression equation and the Regression equation for time- and digestion-limited herbivores.
+Datatset with body mass (g) and estimated gut capacity (wet g). Using van Soest regression equation, refitted to the body mass data (Smith et al. 2003). For gut retention time I'm using both the raw regression equation (yielding the `predret.vanSoest` predicted values) and the regression equation for time- and digestion-limited herbivores (yielding the `predret.vanSoest.timelim` predicted values).
 
+The regression equation for time- and digestion-limited herbivores is:
 `gutret.h= 0.57 + 6.95*bmass.kg^0.33 + (0.33 + 0.43 * bmass^0.33)^0.5`
 
-Predict specific values of gut retention from body mass data. Just the EXTINCT MEGAFAUNA FRUGIVOROUS species.
+Predict specific values of gut retention from body mass data for just the EXTINCT MEGAFAUNA FRUGIVOROUS species, and using van Soest's equation modified for time- and digestion-limited herbivores.  
+The resulting dataset is `prediction`. With all the variables:  
+`family`, Label for family.  
+`genus`, Label for genus.  
+`species`, Label for species.   
+`bmass`, Body mass (kg).  
+`predgutcap`, Gut capacity (wet g), estimated from van Soest regression.  
+`predret.vanSoest`, Gut retention time (h), estimated from van Soest raw regression.  
+`predret.vanSoest.timelim`, Gut retention time (h), estimated from van Soest regression modified for time- and digestion-limited herbivores.  
+
+
 ```{r gut_retention_time_predict}
 predret= 0.57 + 6.95 * ((extinct.frug.megafauna$bmass/1000)^0.33) + 
          (0.33 + 0.43 * (extinct.frug.megafauna$bmass/1000^0.33))^0.5
