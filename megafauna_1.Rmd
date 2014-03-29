@@ -14,16 +14,16 @@ output:
 ##### Pedro. Sevilla, 18 Feb 2014.
 
 I used the body mass (g) dataset from:  
-Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. Ecology 84:3403–3403.   
+Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. _Ecology_ 84:3403–3403.   
 and from:  
-Fariña, R. A., S. F. Vizcaíno, and M. S. Bargo. 2004. Body mass estimations in Lujanian (late Pleistocene-early Holocene of South America) mammal megafauna. Mastozoología Neotropical 5:87–108.
+Fariña, R. A., S. F. Vizcaíno, and M. S. Bargo. 2004. Body mass estimations in Lujanian (late Pleistocene-early Holocene of South America) mammal megafauna. _Mastozoología Neotropical_ 5:87–108.
 
 Our objective is to fit gut capacity (wet weight of content, in g) and gut retention time (in h) to body mass across the full range of body mass for terrestrial mammals. Then we use both the confidence interval for slope and the prediction interval (95%) to estimate the value and range of expected gut capacity and gut retention time of extinct megafauna.  
 For these I used the regressions in van Soest (1996).
-Van Soest, P. J. 1982. Nutritional Ecology of the Ruminant. Cornell University Press, NY, USA.
+Van Soest, P. J. 1982. _Nutritional Ecology of the Ruminant_. Cornell University Press, NY, USA.
 
-Van Soest, P. J. 1996. Allometry and ecology of feeding behavior and digestive capacity in herbivores: A review. Zoo Biology 15:455–479.
-Owen-Smith, R. N. 1988. Megaherbivores. Cambridge University Press, Cambridge, UK.
+Van Soest, P. J. 1996. Allometry and ecology of feeding behavior and digestive capacity in herbivores: A review. _Zoo Biology_ 15:455–479.
+Owen-Smith, R. N. 1988. _Megaherbivores_. Cambridge University Press, Cambridge, UK.
 
 ```{r packages, message=FALSE,warning=FALSE}
 require(ggplot2)
@@ -36,12 +36,15 @@ require(dplyr)
 ### Body mass data summary. Extant and extinct taxa.
 #### Body mass data for extinct taxa.
 Body mass (g) of Late Quaternary mammals MOM database.  
-Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. Ecology 84:3403–3403.
+Smith, F., S. Lyons, S. Ernest, K. Jones, D. Kaufman, T. Dayan, P. Marquet, J. Brown, and J. Haskell. 2003. Body mass of late quaternary mammals. _Ecology_ 84:3403–3403.
 
 #### *Body mass in g.*
+I start by selecting the extinct taxa from Smith et al dataset, getting the body mass information. Then I estimate the regression equations refitting from van Soest's and add the estiamted values for gut capacity and gut retention time.
+Finally I use the PanTHERIA dataset to refit the regressions for home range size and population density and estimate the vakues for extinct megafauna. Everything is finally kept in the dataset `prediction`.
+
 ```{r data_bodymass}
 bmass_MOM <-read.table("./datasets/MOMv3.3.txt", header=TRUE, sep="\t",
-    dec=".",na.strings="-999")
+                       dec=".", na.strings="-999")
 
 # Body mass range up to 15000 kg
 extinct<- bmass_MOM %.%     # Selecting just the extinct taxa.
@@ -113,7 +116,7 @@ colnames(topredict)<- c("taxa","bmass") # Body mass in g!
 ### Digestive organ capacity. Extant and extinct taxa.
 #### Body mass data for extinct taxa.
 Body mass (kg) vs. digestive organ capacity (wet g).
-Dataset obtained from digitization of figure in van Soest (1982).
+Dataset obtained from digitization of figure in van Soest (1982) to fit a new regression equation.
 ___NOTE: Body mass in kg; digestive capacity in g wet content.___
 
 ```{r data_gut_capac}
@@ -130,7 +133,7 @@ summary(dig.organ)
 
 ```
 
-### Regressions.
+#### Regressions.
 #### Digestive organ capacity vs. body mass.
 _Linear model with log-transformed values._
 ```{r gut_capacity}
@@ -139,13 +142,16 @@ summary(lm_fit0)
 
 gut_with_pred<- data.frame(dig.organ,      # Predicted values for
                                            # plotting.
-    predict(lm_fit0, interval= 'prediction'))
+                           predict(lm_fit0, interval= 'prediction'))
 
 ```
 
 Numerical predictions of functional traits from body mass. We want predictions for the range of body masses between 1000 kg and 15000 kg for extinct megafauna; below this range we can use the regression fitted to the extant species.  
 I used the body mass data in Smith et al (2003) and Fariña et al. (2004).
 ___NOTE: The data for body mass are in g.___
+
+#### Regression equation. Digestive organ capacity vs. body mass.
+_Linear model with log-transformed values._
 
 The datatset generated is `prediction`, with body mass (g) and estimated gut capacity (wet g).  
 Just the EXTINCT MEGAFAUNA FRUGIVOROUS species. I also generate the predicted mean values for different families.
@@ -163,7 +169,7 @@ predfammean<- data.frame(topredict,
 
 ```
 
-## PLOTS. Body mass vs. digestive capacity.
+### PLOTS. Body mass vs. digestive capacity.
 #### Without log scales.
 ```{r gut_capac_plots}
 
@@ -217,6 +223,7 @@ head(mean.retention)
 
 ```
 
+#### Regression equation. Body mass (kg) vs. gut retention time (h).
 _Linear model with log-transformed values._
 ___Refitting with newly digitized data (7Mar2014).___
 
@@ -239,9 +246,9 @@ predretfit1=  1.0193 +
               0.2356 * log10(extinct.frug.megafauna$bmass)
 prediction<- data.frame(prediction, 10^predretfit1)
 
-head(prediction) # Now the dataset holds all variables.
 colnames(prediction)<- c("family","genus","species","bmass",
                          "predgutcap","predret") # Body mass in g!
+head(prediction) # Now the dataset holds all variables.
 
 ## PLOTS. Body mass (kg) vs. estimated retention time (h).
 #### Without log scales.
@@ -282,17 +289,6 @@ Datatset with body mass (g) and estimated gut capacity (wet g). Using van Soest 
 The regression equation for time- and digestion-limited herbivores is:
 `gutret.h= 0.57 + 6.95*bmass.kg^0.33 + (0.33 + 0.43 * bmass^0.33)^0.5`
 
-Predict specific values of gut retention from body mass data for just the EXTINCT MEGAFAUNA FRUGIVOROUS species, and using van Soest's equation modified for time- and digestion-limited herbivores.  
-The resulting dataset is `prediction`. With all the variables:  
-`family`, Label for family.  
-`genus`, Label for genus.  
-`species`, Label for species.   
-`bmass`, Body mass (kg).  
-`predgutcap`, Gut capacity (wet g), estimated from van Soest regression.  
-`predret.vanSoest`, Gut retention time (h), estimated from van Soest raw regression.  
-`predret.vanSoest.timelim`, Gut retention time (h), estimated from van Soest regression modified for time- and digestion-limited herbivores.  
-
-
 ```{r gut_retention_time_predict}
 predret= 0.57 + 6.95 * ((extinct.frug.megafauna$bmass/1000)^0.33) + 
          (0.33 + 0.43 * (extinct.frug.megafauna$bmass/1000^0.33))^0.5
@@ -301,11 +297,162 @@ prediction<- data.frame(prediction, predret)
 colnames(prediction)<-  c("family","genus","species","bmass",
     "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
 
-str(prediction) # Now the dataset holds all variables.
+str(prediction)     # Now the dataset holds all the anatomical variables.
+head(prediction)
 
+```
+
+Home range and population density estimates are obtained from the PanTHERIA dataset in the next sections. 
+
+### Dataset for prediction of home range size and population density, by taxon. 
+Using the PanTHERIA dataset.
+Jones, K. E., J. Bielby, M. Cardillo, S. A. Fritz, J. ODell, C. D. L. Orme, K. Safi, W. Sechrest, E. H. Boakes, C. Carbone, C. Connolly, M. J. Cutts, J. K. Foster, R. Grenyer, M. Habib, C. A. Plaster, S. A. Price, E. A. Rigby, J. Rist, A. Teacher, O. R. P. Bininda-Emonds, J. L. Gittleman, G. M. Mace, and A. Purvis. 2009. PanTHERIA: a species-level database of life history, ecology, and geography of extant and recently extinct mammals. _Ecology-Ecological Archives_ 90:2648.
+
+#### Body mass vs home range size (PanTHERIA dataset).
+Body mass (g) vs. home-range area ($km^2$). I have already trimmed the species with missing data.
+
+```{r data_homerange}
+pantheria.hr <-read.table("./datasets/mypantheria_hr.txt", 
+                    header=TRUE, sep="\t", dec=".", na.strings="-999")
+
+```
+
+#### Regression equation. Body mass (kg) vs. home range area ($km^2$).
+_Linear model with log-transformed values._
+Refitting with the trimmed data to exclude those species with `NA's`.
+
+```{r homerange_predict}
+lm_fit5<- lm(log10(homerangekm2) ~ 
+             log10(bmass/1000), 
+             data= pantheria.hr)
+summary(lm_fit5)
+
+hr_with_pred<- data.frame(pantheria.hr,   # Predicted values for plotting.
+                          predict(lm_fit5, interval= 'prediction'))
+# head(hr_with_pred)
+prediction<- data.frame(prediction, 
+                        predhomerange= 10^(-1.2070 + 
+                                1.0435*log10(prediction$bmass/1000)))
+# head(prediction)
+
+```
+
+#### Plots. Body mass (kg) vs. home range area ($km^2$).
+Log10-scaled axes. Confidence interval for the regression slope.
+
+```{r homerange_plots}
+## PLOTS. Body mass (kg) vs. home range area (km2).
+#### Without log scales.
+# New estimations. Log10-scaled axes. Confidence interval for both the 
+# regression slope and the prediction interval.
+p0<- ggplot(hr_with_pred, aes(x= log10(bmass/1000), 
+    y= log10(homerangekm2))) + 
+    geom_point(color="black", size=2) +
+    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
+    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
+        alpha= 0.2) +
+    scale_fill_manual('Interval', values= c('green', 'blue')) +
+    xlab("log10(Body mass) (kg)") +
+    ylab("log10(Home range area) (km2)") +
+    ggtitle("Home range area estimation for Megafauna frugivores") +
+    coord_cartesian(xlim= c(-2.5,5), ylim= c(-6,6)) +
+    theme(legend.position= c(0.20, 0.85))
+p0 # The plot
+
+p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
+    y= log10(prediction$predhomerange), 
+    color="white", size=4)) +
+    theme(legend.position = "none")
+p1
+
+```
+
+### Dataset for prediction of population density, by taxon. 
+I have already trimmed the species with missing data. Refitting with the trimmed data to exclude those species with `NA's`.
+Body mass (g) vs. population density (no. ind/km2).
+
+#### Regression equation. Body mass vs population density (PanTHERIA dataset).
+_Linear model with log-transformed values._
+
+```{r popdens_predict}
+pantheria.popdens <-read.table("./datasets/mypantheria_popdens.txt", 
+    header=TRUE, sep="\t", dec=".", na.strings="-999")
+
+# Regression equation.
+# Linear model with log-transformed values.
+lm_fit6<- lm(log10(popdens.n.km2) ~ 
+             log10(bmass/1000), 
+             data= pantheria.popdens)
+summary(lm_fit6)
+
+popdens_with_pred<- data.frame(pantheria.popdens,   
+                                    # Predicted values for plotting.
+                                predict(lm_fit6, interval= 'prediction'))
+# head(popdens_with_pred)
+
+prediction<- data.frame(prediction, 
+                        predpopdens= 10^(1.6767 + 
+                            -0.7976*log10(prediction$bmass/1000)))
+# head(prediction)
+
+```
+
+#### Plots. Body mass (kg) vs. Population density (ind/km).
+Log10-scaled axes. Confidence interval for the prediction and the regression slope.
+```{r popdens_plots}
+p0<- ggplot(popdens_with_pred, aes(x= log10(bmass/1000), 
+    y= log10(popdens.n.km2))) + 
+    geom_point(color="black", size=2) +
+    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
+    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
+        alpha= 0.2) +
+    scale_fill_manual('Interval', values= c('green', 'blue')) +
+    xlab("log10(Body mass) (kg)") +
+    ylab("log10(Population density) (n. ind km^-2)") +
+    ggtitle("Population density estimation for Megafauna frugivores") +
+    coord_cartesian(xlim= c(-2.5,5), ylim= c(-6,6)) +
+    theme(legend.position= c(0.15, 0.15))
+p0 # The plot
+
+p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
+    y= log10(prediction$predpopdens), 
+    color="white", size=4)) +
+    theme(legend.position = "none")
+p1
+
+```
+
+## Dataset with estimated values.
+This is the dataset with the estimated values of functional traits based on the body mass data.
+The `predict` dataset holds all the estiamted values based on body masses. 
+
+We predict specific values of gut capacity and gut retention from body mass data for just the EXTINCT MEGAFAUNA FRUGIVOROUS species, and using van Soest's equation modified for time- and digestion-limited herbivores.
+
+Then we predict home range area and population density, also from body mass data but using fits from the PanTHERIA dataset.
+
+The resulting dataset is `prediction`. With all the variables:  
+`family`, Label for family.  
+`genus`, Label for genus.  
+`species`, Label for species.   
+`bmass`, Body mass (kg).  
+`predgutcap`, Gut capacity (wet g), estimated from van Soest regression.  
+`predret.vanSoest`, Gut retention time (h), estimated from van Soest raw regression.  
+`predret.vanSoest.timelim`, Gut retention time (h), estimated from van Soest regression modified for time- and digestion-limited herbivores.  
+`predhomerange`, Home range area (km2), estimated from PanTHERIA.
+`predpopdens`, Population density (no. individuals/km2), estimated from PanTHERIA.
+
+```{r output_dataset}
+# Listing the data.
+# Output to a csv file.
+write.table(prediction, file = "pred_datatset.csv", sep = ",", 
+            quote= F, row.names= F, col.names = T, na= "NA")
+
+# Output to the console.
 prediction
 
 ```
+
+------------------------------------------
 
 ### CODE NOT RUN.
 ##### AVERAGED VALUES FOR FAMILIES. 
@@ -346,4 +493,3 @@ head(predfammean) # Now the dataset holds all variables.
 # -----------------------------------------------------------------------
 
 ```
-

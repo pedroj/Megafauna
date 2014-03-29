@@ -129,7 +129,7 @@ predfammean<- data.frame(topredict,
 # PLOTS
 # Without log scales
 ggplot(dig.organ, aes(bmass, gutcapac)) + 
-    stat_summary(fun.data= mean_cl_normal) + 
+ #   stat_summary(fun.data= mean_cl_normal) + 
     scale_x_log10() + scale_y_log10() +
     geom_smooth(method= 'lm')
 
@@ -374,6 +374,105 @@ predfammean<- data.frame(predfammean, predfamret, predfamrettimelim)
 colnames(predfammean)<-  c("family","genus","species","bmass",
     "predgutcap","predret.vanSoest","predret.vanSoest.timelim") 
 head(predfammean) # Now the dataset holds all variables.
-# -----------------------------------------------------------------------
 
+# -----------------------------------------------------------------------
+# Body mass vs home range size (PanTHERIA dataset).
+#-------------------------------------------------------------------------
+# Body mass (g) vs. home-range area (km2).
+# I have already trimmed the species with missing data.
+pantheria <-read.table("./datasets/mypantheria.txt", 
+                    header=TRUE, sep="\t", dec=".", na.strings="-999")
+
+# Regression equation.
+# Linear model with log-transformed values.
+lm_fit5<- lm(log10(homerangekm2) ~ 
+             log10(bmass/1000), 
+             data= pantheria)
+summary(lm_fit5)
+
+hr_with_pred<- data.frame(pantheria,   # Predicted values for plotting.
+                          predict(lm_fit5, interval= 'prediction'))
+head(hr_with_pred)
+
+prediction<- data.frame(prediction, 
+                        predhomerange= 10^(-1.2070 + 
+                                1.0435*log10(prediction$bmass/1000)))
+head(prediction)
+
+plot(pantheria$bmass/1000, pantheria$homerangekm2, log = "xy")
+
+# Plots
+# Log10-scaled axes. Confidence interval for the regression slope.
+p0<- ggplot(hr_with_pred, aes(x= log10(bmass/1000), 
+    y= log10(homerangekm2))) + 
+    geom_point(color="black", size=2) +
+    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
+    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
+        alpha= 0.2) +
+    scale_fill_manual('Interval', values= c('green', 'blue')) +
+    xlab("log10(Body mass) (kg)") +
+    ylab("log10(Home range area) (km2)") +
+    ggtitle("Home range area estimation for Megafauna frugivores") +
+    coord_cartesian(xlim= c(-2.5,5), ylim= c(-6,6)) +
+    theme(legend.position= c(0.20, 0.85))
+p0 # The plot
+
+p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
+    y= log10(prediction$predhomerange), 
+    color="white", size=4)) +
+    theme(legend.position = "none")
+p1
+
+prediction
+
+# -----------------------------------------------------------------------
+# Body mass vs population density (PanTHERIA dataset).
+#-------------------------------------------------------------------------
+# Body mass (g) vs. population density (no. ind/km2).
+# I have already trimmed the species with missing data.
+pantheria.popdens <-read.table("./datasets/mypantheria_popdens.txt", 
+    header=TRUE, sep="\t", dec=".", na.strings="-999")
+
+# Regression equation.
+# Linear model with log-transformed values.
+lm_fit6<- lm(log10(popdens.n.km2) ~ 
+             log10(bmass/1000), 
+             data= pantheria.popdens)
+summary(lm_fit6)
+
+popdens_with_pred<- data.frame(pantheria.popdens,   
+                                    # Predicted values for plotting.
+                                predict(lm_fit6, interval= 'prediction'))
+head(popdens_with_pred)
+
+prediction<- data.frame(prediction, 
+                        predpopdens= 10^(1.6767 + 
+                            -0.7976*log10(prediction$bmass/1000)))
+head(prediction)
+
+plot(pantheria.popdens$bmass/1000, pantheria.popdens$popdens.n.km2, log = "xy")
+
+# Plots
+# Log10-scaled axes. Confidence interval for the regression slope.
+p0<- ggplot(popdens_with_pred, aes(x= log10(bmass/1000), 
+    y= log10(popdens.n.km2))) + 
+    geom_point(color="black", size=2) +
+    geom_smooth(method= 'lm', aes(fill= 'confidence'), alpha= 0.5) +
+    geom_ribbon(aes(y= fit, ymin= lwr, ymax= upr, fill= 'prediction'),
+        alpha= 0.2) +
+    scale_fill_manual('Interval', values= c('green', 'blue')) +
+    xlab("log10(Body mass) (kg)") +
+    ylab("log10(Population density) (n. ind km^-2)") +
+    ggtitle("Population density estimation for Megafauna frugivores") +
+    coord_cartesian(xlim= c(-2.5,5), ylim= c(-6,6)) +
+    theme(legend.position= c(0.15, 0.15))
+p0 # The plot
+
+p1<-p0 + geom_point(data= prediction, aes(x= log10(prediction$bmass/1000), 
+    y= log10(prediction$predpopdens), 
+    color="white", size=4)) +
+    theme(legend.position = "none")
+p1
+
+prediction
 
