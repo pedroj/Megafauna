@@ -2,63 +2,72 @@
 # Combining Duminil et al. 2007 and our own compiliation for brazilian species.
 # Duminil, J., S. Fineschi, A. Hampe, P. Jordano, D. Salvini, G. G. Vendramin, and R. J. Petit. 2007. Can population genetic structure be predicted from life-history traits? The American Naturalist 169:662–672.
 #
+# We now use Rosanne Collevatti's dataset, updated August 2014, with many more
+# brazilian species.
 # Data input.
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
 library(dplyr)
 gst <-read.table("./datasets/gst.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
 str(gst)
-
+rosanne <-read.table("./datasets/rosanne.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+str(rosanne)
 # Differences among all syndromes
 m1<- lm(asin(gst$gst_nr)~ gst$syndr)
 summary(m1)
 
-# Box plots
-p <- ggplot(gst, aes(factor(syndr), gst_nr, na.rm = TRUE))
+R> table(rosanne$anacron)
+md  mi   n 
+62  21 352 
+m1<- lm(asin(rosanne$FST)~ rosanne$anacron)
+summary(m1)
+
+m2<- lm(asin(rosanne$mantel)~ rosanne$anacron)
+summary(m2)
+
+
+# Box plots - Rosanne Dataset
+p <- ggplot(rosanne, aes(factor(anacron), FST, na.rm = TRUE))
 p + geom_boxplot() +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
 
-ggplot(gst, aes(factor(syndr), gst_nr, fill=factor(syndr))) +
-#    stat_boxplot(geom ='errorbar')+
+ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
+    #    stat_boxplot(geom ='errorbar')+
     geom_boxplot()+
     scale_fill_manual(name= "Syndrome", 
-                      values=c("burlywood","lightblue",
-                               "lightblue","burlywood",
-                               "blue","burlywood",
-                               "burlywood"), 
-       labels = c("AA"= "Epizoochory", "AC"= "Synzoochory",
-                  "AI"="Endozoochory", G="Barochory",
-                  "M"= "Megafauna", "W"= "Anemochory")) +
+        values=c("burlywood","lightblue","blue"), 
+        labels = c("md"= "Megafauna dependent", "mi"= "Megafauna independent",
+            "n"="Other")) +
     xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation")
+    ylab("Population genetic differentiation, Fst")
+
 
 # Megafauna dependent, megafauna independent, extant frugivores
-ppz<- gst %.% 
-      filter(contr2=="Megafauna dependent" |contr2=="Megafauna independent" |contr2=="Zoochoric") %.%
-    select(gst$contr2, gst$gst_nr)
-m3<- lm(asin(pp1$gst_nr)~ pp1$contr2)
+ppz<- rosanne %.% 
+      filter(anacron=="md" |anacron=="mi") %.%
+      select(anacron, FST)
+m3<- lm(asin(ppz$FST)~ ppz$anacron)
 summary(m3)
 anova(m3)
 
 # Box plots
-p <- ggplot(pp1, aes(factor(contr2), gst_nr))
+p <- ggplot(ppz, aes(factor(anacron), FST))
 p + geom_boxplot()
 
-p <- ggplot(pp1[pp1$contr2!="NA",], 
-    aes(factor(contr2), gst_nr, fill=factor(contr2)))
+p <- ggplot(ppz[ppz$anacron!="NA",], 
+    aes(factor(anacron), FST, fill=factor(anacron)))
 p + geom_boxplot() +
     scale_fill_manual(name= "Syndrome", 
-        values=c("darkblue","blue","lightblue")) +
+        values=c("blue","lightblue")) +
     xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation")
+    ylab("Population genetic differentiation, Fst")
 
 # Just the zoochoric taxa
-pp<- gst %.%
-     filter(contr1=="Megafauna" |
-            contr1== "Zoochoric") %.%
-     select(contr1, gst_nr)
+He<- rosanne %.%
+     filter(anacron=="md" | anacron=="mi") %.%
+     select(anacron, He)
 
-m4<- lm(asin(pp$gst_nr)~ pp$contr1)
+m4<- lm(asin(He$He)~ He$anacron)
 summary(m4)
 anova(m4)
 
