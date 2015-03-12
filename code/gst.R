@@ -6,7 +6,7 @@
 # brazilian species.
 # Data input.
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
-library(dplyr)
+require(dplyr)
 gst <-read.table("./datasets/gst.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
 str(gst)
 rosanne <-read.table("./datasets/rosanne.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
