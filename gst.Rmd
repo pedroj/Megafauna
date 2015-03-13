@@ -23,7 +23,8 @@ The second dataset is the one we are using, based on Rosanne's dataset, thorough
 # Data input.
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
 
-require(dplyr)
+require(magrittr)
+
 gst <-read.table("./datasets/gst.txt", header=TRUE, sep="\t", dec=".", 
                  na.strings="NA")
 
@@ -39,9 +40,8 @@ names (rosanne)
 ```{r tables, eval=TRUE, message=FALSE}
 # Tables for group categories.
 table(rosanne$dispcode)     #1    
-table(rosanne$dispersal)    #2
-table(rosanne$anacron)      #3
-table(rosanne$contr_mf)     #4
+table(rosanne$anacron)      #2
+table(rosanne$contr_mf)     #3
 
 ```
 
@@ -71,7 +71,8 @@ p1 + geom_boxplot() +
     ylab("Population genetic differentiation, Fst")
 
 #-------------
-p2 <- ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
+p2 <- ggplot(rosanne, aes(factor(anacron), FST, na.rm=T, 
+             fill=factor(anacron))) +
     #    stat_boxplot(geom ='errorbar')+
     geom_boxplot()+
     scale_fill_manual(name= "Syndrome", 
@@ -83,21 +84,29 @@ p2 <- ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
     ylab("Population genetic differentiation, Fst")
 p2
 #-------------
-p3 <- ggplot(rosanne, aes(factor(contr_mf), FST, na.rm = TRUE))
-p3 + geom_boxplot() +
+p3 <- ggplot(rosanne, aes(factor(contr_mf), FST, na.rm=T, 
+             fill=factor(contr_mf))) +
+    #    stat_boxplot(geom ='errorbar')+
+    geom_boxplot()+
+    scale_fill_manual(name= "Syndrome", 
+        values=c("black", "darkgreen", "lightgreen", "burlywood",
+                 "grey", "lightblue","blue"), 
+        labels = c("au"= "Autochory", 
+                   "bat"= "Bats",
+                   "bi"= "Birds",  
+                   "hi"= "Hydrochory", 
+                   "md"= "Megafauna dependent", 
+                   "mi"= "Megafauna independent",
+                   "wi"="Wind")) +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation, Fst")
+p3 
 
 ```
 
 #### Tests and box plots on grouped data- Rosanne's Dataset
 
 ```{r boxplots2, eval=TRUE, message=FALSE, fig.width=5}
-
-```
-
-
-
 # Megafauna dependent, megafauna independent, extant frugivores
 ppz<- rosanne %.% 
       filter(anacron=="md" |anacron=="mi") %.%
@@ -118,16 +127,31 @@ p + geom_boxplot() +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation, Fst")
 
-# Just the zoochoric taxa
-He<- rosanne %.%
-     filter(anacron=="md" | anacron=="mi") %.%
-     select(anacron, He)
+```
 
-m4<- lm(asin(He$He)~ He$anacron)
-summary(m4)
+```{r boxplots3, eval=TRUE, message=FALSE, fig.width=5}
+# Zoochoric comparison.
+pp<- as.tbl(rosanne)
+
+pp %>%
+  dplyr::group_by(contr_mf) %>%
+  dplyr::select(contr_mf=="md", contr_mf=="mi", FST) %>%
+  dplyr::summarise(arr = mean(FST, na.rm = TRUE))
+
+pp1<- pp %>% 
+      dplyr::select(contr_mf, FST) %>%
+      dplyr::filter(contr_mf=="md" | contr_mf=="mi") 
+
+mm<- lm(asin(pp1$FST)~ pp1$contr_mf)
+summary(mm)
 anova(m4)
 
-# Zoochoric comparison.
+```
+
+
+
+
+
 
 
 
