@@ -18,7 +18,11 @@ summary(m1)
 # Zoochoric comparison.
 table(rosanne$anacron)
 md  mi   n 
-62  23 350 
+65  85 285 
+
+table(rosanne$contr_mf)
+au bat  bi  hi  md  mi  wi 
+23   2  71  17  65 101 156 
 
 table(rosanne$dispersal)
 autochory         bat       birds hidrochory      mammals       mixed 
@@ -30,13 +34,14 @@ table(rosanne$dispcode)
 au bat  bi  hi  ma mix  wi 
 23   2  71  17 163   3 156
 
-
 m1<- lm(asin(rosanne$FST)~ rosanne$anacron)
 summary(m1)
 
-m2<- lm(asin(rosanne$mantel)~ rosanne$anacron)
+m2<- lm(asin(rosanne$FST)~ rosanne$dispcode)
 summary(m2)
 
+m3<- lm(asin(rosanne$FST)~ rosanne$contr_mf)
+summary(m3)
 
 # Box plots - Rosanne Dataset
 p <- ggplot(rosanne, aes(factor(anacron), FST, na.rm = TRUE))
