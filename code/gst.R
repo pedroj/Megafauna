@@ -15,9 +15,22 @@ str(rosanne)
 m1<- lm(asin(gst$gst_nr)~ gst$syndr)
 summary(m1)
 
+# Zoochoric comparison.
 table(rosanne$anacron)
 md  mi   n 
-62  21 352 
+62  23 350 
+
+table(rosanne$dispersal)
+autochory         bat       birds hidrochory      mammals       mixed 
+23           2          71          17         163           3 
+wind 
+156 
+
+table(rosanne$dispcode)
+au bat  bi  hi  ma mix  wi 
+23   2  71  17 163   3 156
+
+
 m1<- lm(asin(rosanne$FST)~ rosanne$anacron)
 summary(m1)
 
@@ -71,14 +84,7 @@ m4<- lm(asin(He$He)~ He$anacron)
 summary(m4)
 anova(m4)
 
-p <- ggplot(pp[pp$contr1!="NA",], 
-            aes(factor(contr1), gst_nr, fill=factor(contr1)))
-p + geom_boxplot() +
-    scale_fill_manual(name= "Syndrome", 
-        values=c("lightblue","burlywood")) +
-    xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation")
-
+# Zoochoric comparison.
 
 
 
