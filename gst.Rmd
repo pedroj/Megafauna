@@ -22,120 +22,80 @@ The second dataset is the one we are using, based on Rosanne's dataset, thorough
 ```{r data, eval=TRUE, message=FALSE}
 # Data input.
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
+
 require(dplyr)
-gst <-read.table("./datasets/gst.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+gst <-read.table("./datasets/gst.txt", header=TRUE, sep="\t", dec=".", 
+                 na.strings="NA")
+
 str(gst)
-rosanne <-read.table("./datasets/rosanne.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+rosanne <-read.table("./datasets/rosanne.txt", header=TRUE, sep="\t", 
+                     dec=".", na.strings="NA")
 str(rosanne)
+names (rosanne)
 
 ```
 
-# Differences among all syndromes
-m1<- lm(asin(gst$gst_nr)~ gst$syndr)
+#### Codes for disperser groups
+```{r tables, eval=TRUE, message=FALSE}
+# Tables for group categories.
+table(rosanne$dispcode)     #1    
+table(rosanne$dispersal)    #2
+table(rosanne$anacron)      #3
+table(rosanne$contr_mf)     #4
+
+```
+
+#### Testing differences among groups. $F_{st}$
+
+```{r tests, eval=TRUE, message=FALSE}
+# Megafauna-dependent vs megafauna independent vs non-megafauna.
+m1<- lm(asin(rosanne$FST)~ rosanne$dispcode)
 summary(m1)
 
-# Zoochoric comparison.
-table(rosanne$anacron)
-md  mi   n 
-65  85 285 
-
-table(rosanne$contr_mf)
-au bat  bi  hi  md  mi  wi 
-23   2  71  17  65 101 156 
-
-table(rosanne$dispersal)
-autochory         bat       birds hidrochory      mammals       mixed 
-23           2          71          17         163           3 
-wind 
-156 
-
-table(rosanne$dispcode)
-au bat  bi  hi  ma mix  wi 
-23   2  71  17 163   3 156
-
-m1<- lm(asin(rosanne$FST)~ rosanne$anacron)
-summary(m1)
-Call:
-    lm(formula = asin(rosanne$FST) ~ rosanne$anacron)
-
-Residuals:
-    Min     1Q Median     3Q    Max 
--0.427 -0.292 -0.160  0.236  1.144 
-
-Coefficients:
-    Estimate Std. Error t value Pr(>|t|)
-(Intercept)         0.3380     0.0611    5.53  8.6e-08
-rosanne$anacronmi  -0.0279     0.0927   -0.30     0.76
-rosanne$anacronn    0.0887     0.0679    1.31     0.19
-
-Residual standard error: 0.382 on 232 degrees of freedom
-(200 observations deleted due to missingness)
-Multiple R-squared:  0.0148,    Adjusted R-squared:  0.00634 
-F-statistic: 1.75 on 2 and 232 DF,  p-value: 0.177
-
-
-m2<- lm(asin(rosanne$FST)~ rosanne$dispcode)
+# Megafauna-dependent vs megafauna independent vs non-megafauna.
+m2<- lm(asin(rosanne$FST)~ rosanne$anacron)
 summary(m2)
-Call:
-    lm(formula = asin(rosanne$FST) ~ rosanne$dispcode)
 
-Residuals:
-    Min     1Q Median     3Q    Max 
--0.615 -0.256 -0.111  0.198  1.091 
-
-Coefficients:
-    Estimate Std. Error t value Pr(>|t|)
-(Intercept)            0.635      0.103    6.15  3.4e-09
-rosanne$dispcodebi    -0.363      0.119   -3.05   0.0026
-rosanne$dispcodehi    -0.222      0.161   -1.38   0.1694
-rosanne$dispcodema    -0.319      0.112   -2.85   0.0048
-rosanne$dispcodemix   -0.412      0.238   -1.73   0.0854
-rosanne$dispcodewi    -0.155      0.110   -1.41   0.1594
-
-Residual standard error: 0.372 on 229 degrees of freedom
-(200 observations deleted due to missingness)
-Multiple R-squared:  0.0757,    Adjusted R-squared:  0.0555 
-F-statistic: 3.75 on 5 and 229 DF,  p-value: 0.00278
-
+# Magafauna-dependent vs megafauna independent vs other syndromes.
 m3<- lm(asin(rosanne$FST)~ rosanne$contr_mf)
 summary(m3)
-Call:
-    lm(formula = asin(rosanne$FST) ~ rosanne$contr_mf)
 
-Residuals:
-    Min     1Q Median     3Q    Max 
--0.615 -0.258 -0.121  0.198  1.091 
+```
 
-Coefficients:
-    Estimate Std. Error t value Pr(>|t|)
-(Intercept)           0.635      0.103    6.16  3.3e-09
-rosanne$contr_mfbi   -0.363      0.119   -3.05   0.0026
-rosanne$contr_mfhi   -0.222      0.161   -1.38   0.1692
-rosanne$contr_mfmd   -0.297      0.119   -2.49   0.0134
-rosanne$contr_mfmi   -0.350      0.120   -2.92   0.0038
-rosanne$contr_mfwi   -0.155      0.110   -1.41   0.1592
+#### Box plots - Rosanne's Dataset
 
-Residual standard error: 0.372 on 229 degrees of freedom
-(200 observations deleted due to missingness)
-Multiple R-squared:  0.0765,    Adjusted R-squared:  0.0564 
-F-statistic:  3.8 on 5 and 229 DF,  p-value: 0.00254
-
-
-# Box plots - Rosanne Dataset
-p <- ggplot(rosanne, aes(factor(anacron), FST, na.rm = TRUE))
-p + geom_boxplot() +
+```{r boxplots1, eval=TRUE, message=FALSE, fig.width=5}
+p1 <- ggplot(rosanne, aes(factor(dispcode), FST, na.rm = TRUE))
+p1 + geom_boxplot() +
     xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation")
+    ylab("Population genetic differentiation, Fst")
 
-ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
+#-------------
+p2 <- ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
     #    stat_boxplot(geom ='errorbar')+
     geom_boxplot()+
     scale_fill_manual(name= "Syndrome", 
         values=c("burlywood","lightblue","blue"), 
-        labels = c("md"= "Megafauna dependent", "mi"= "Megafauna independent",
-            "n"="Other")) +
+        labels = c("md"= "Megafauna dependent", 
+                   "mi"= "Megafauna independent",
+                   "n"="Other")) +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation, Fst")
+p2
+#-------------
+p3 <- ggplot(rosanne, aes(factor(contr_mf), FST, na.rm = TRUE))
+p3 + geom_boxplot() +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation, Fst")
+
+```
+
+#### Tests and box plots on grouped data- Rosanne's Dataset
+
+```{r boxplots2, eval=TRUE, message=FALSE, fig.width=5}
+
+```
+
 
 
 # Megafauna dependent, megafauna independent, extant frugivores
