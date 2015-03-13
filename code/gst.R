@@ -15,7 +15,7 @@ str(rosanne)
 m1<- lm(asin(gst$gst_nr)~ gst$syndr)
 summary(m1)
 
-R> table(rosanne$anacron)
+table(rosanne$anacron)
 md  mi   n 
 62  21 352 
 m1<- lm(asin(rosanne$FST)~ rosanne$anacron)
