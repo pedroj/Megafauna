@@ -2,7 +2,9 @@
 # Combining Duminil et al. 2007 and our own compiliation for brazilian species.
 # Duminil, J., S. Fineschi, A. Hampe, P. Jordano, D. Salvini, G. G. Vendramin, and R. J. Petit. 2007. Can population genetic structure be predicted from life-history traits? The American Naturalist 169:662–672.
 #
-# Data input.
+library(dplyr)
+#
+# Data input. --------------------------------------------------------------
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
 # 
 # First, just the Duminil et al dataset.
@@ -10,7 +12,7 @@ library(dplyr)
 gst_full <-read.table("./datasets/gst_full.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
 str(gst)
 
-# Differences among all syndromes
+# Differences among all syndromes ------------------------------------------
 m1<- lm(asin(gst_full$genetdiff)~ gst_full$dispersal)
 summary(m1)
 
@@ -35,46 +37,30 @@ ggplot(gst_full, aes(factor(dispersal), genetdiff, fill=factor(dispersal))) +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
 
-# Megafauna dependent, megafauna independent, extant frugivores
-ppz<- gst %.% 
-    filter(contr2=="Megafauna dependent" |contr2=="Megafauna independent" |contr2=="Zoochoric") %.%
-    select(gst$contr2, gst$gst_nr)
-m3<- lm(asin(pp1$gst_nr)~ pp1$contr2)
+# Megafauna dependent, megafauna independent, extant frugivores ------------
+ppz<- gst_full %>% 
+               dplyr::filter(anacron=="md" |
+                      anacron=="mi"|
+                      anacron=="b") %>% 
+               dplyr::select(anacron, genetdiff)
+
+m3<- lm(asin(ppz$genetdiff)~ ppz$anacron)
 summary(m3)
 anova(m3)
 
-# Box plots
-p <- ggplot(pp1, aes(factor(contr2), gst_nr))
+# Box plots. Just the zoochoric taxa.
+p <- ggplot(ppz, aes(factor(anacron), genetdiff))
 p + geom_boxplot()
 
-p <- ggplot(pp1[pp1$contr2!="NA",], 
-    aes(factor(contr2), gst_nr, fill=factor(contr2)))
+p <- ggplot(ppz[ppz$anacron!="NA",], 
+    aes(factor(anacron), genetdiff, fill=factor(anacron)))
 p + geom_boxplot() +
     scale_fill_manual(name= "Syndrome", 
         values=c("darkblue","blue","lightblue")) +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
 
-# Just the zoochoric taxa
-pp<- gst %.%
-    filter(contr1=="Megafauna" |
-            contr1== "Zoochoric") %.%
-    select(contr1, gst_nr)
-
-m4<- lm(asin(pp$gst_nr)~ pp$contr1)
-summary(m4)
-anova(m4)
-
-p <- ggplot(pp[pp$contr1!="NA",], 
-    aes(factor(contr1), gst_nr, fill=factor(contr1)))
-p + geom_boxplot() +
-    scale_fill_manual(name= "Syndrome", 
-        values=c("lightblue","burlywood")) +
-    xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation")
-
-#---------------------------------------------------------------------------
-# Just Rosanne's dataset.
+# Just Rosanne's dataset. --------------------------------------------------
 #
 # Data input.
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
@@ -111,12 +97,12 @@ ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
     ylab("Population genetic differentiation")
 
 #---------------------------------------------------------------------------
-# Combining Duminil et al. 2007 and our own compiliation for brazilian species. Added Rosane's dataset.
+# POOLED ANALYSIS WITH ALL DATA. -------------------------------------------
+# Combining Duminil et al. 2007 and our own compiliation for brazilian species. Added Rosanne's dataset.
 #
 # Data input.
 # NOTE: genetdiff as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
-library(dplyr)
-gst_full <-read.table("./datasets/megafauna-genetics datasets_Rosane/gst_full.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+#
 
 str(gst_full)
 'data.frame':	615 obs. of  24 variables:
@@ -185,14 +171,10 @@ ggplot(gst_full, aes(factor(anacron), genetdiff, fill=factor(anacron))) +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
 
-Contr <- contrast(m3, a=list(anacron=c("ab","b","mi")), 
-    b=list(anacron="md"), type = "average")
-print(Contrs2, X=TRUE)
-
 #---------------------------------------------------------------------------
 # SUBSETS
-#
 # Only Trees.
+#
 str(gst_full)
 test1 <- gst_full %>%
     dplyr::filter(gst_full$lifeform=="Tree")
@@ -227,10 +209,11 @@ test1 %>%
         N= n())
 
 #---------------------------------------------------------------------------
-# Megafauna dependent, megafauna independent, extant frugivores
-ppz<- test1 %.% 
-    filter(anacron=="md" |anacron=="mi") %.%
-    select(anacron, genetdiff)
+# Megafauna dependent vs megafauna independent plus extant frugivores.
+ppz<- gst_full %>%
+    dplyr::filter(lifeform=="Tree") %>% 
+    dplyr::filter(anacron=="md" | anacron=="mi") %>%
+    dplyr::select(anacron, genetdiff)
 m3<- lm(asin(ppz$genetdiff)~ ppz$anacron)
 summary(m3)
 anova(m3)
