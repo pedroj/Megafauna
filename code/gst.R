@@ -2,108 +2,95 @@
 # Combining Duminil et al. 2007 and our own compiliation for brazilian species.
 # Duminil, J., S. Fineschi, A. Hampe, P. Jordano, D. Salvini, G. G. Vendramin, and R. J. Petit. 2007. Can population genetic structure be predicted from life-history traits? The American Naturalist 169:662–672.
 #
-# We now use Rosanne Collevatti's dataset, updated August 2014, 
-# with many more brazilian species.
 # Data input.
 # NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
-require(dplyr)
-gst <-read.table("./datasets/gst.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+# 
+# First, just the Duminil et al dataset.
+library(dplyr)
+gst <-read.table("./datasets/megafauna-genetics datasets_Rosane/gst.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
 str(gst)
-rosanne <-read.table("./datasets/rosanne.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
-str(rosanne)
+
 # Differences among all syndromes
 m1<- lm(asin(gst$gst_nr)~ gst$syndr)
 summary(m1)
 
-# Zoochoric comparison.
-table(rosanne$anacron)
-md  mi   n 
-65  85 285 
+# Box plots
+p <- ggplot(gst, aes(factor(syndr), gst_nr, na.rm = TRUE))
+p + geom_boxplot() +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
 
-table(rosanne$contr_mf)
-au bat  bi  hi  md  mi  wi 
-23   2  71  17  65 101 156 
+ggplot(gst, aes(factor(syndr), gst_nr, fill=factor(syndr))) +
+    #    stat_boxplot(geom ='errorbar')+
+    geom_boxplot()+
+    scale_fill_manual(name= "Syndrome", 
+        values=c("burlywood","lightblue",
+            "lightblue","burlywood",
+            "blue","burlywood",
+            "burlywood"), 
+        labels = c("AA"= "Epizoochory", "AC"= "Synzoochory",
+            "AI"="Endozoochory", G="Barochory",
+            "M"= "Megafauna", "W"= "Anemochory")) +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
 
-table(rosanne$dispersal)
-autochory         bat       birds hidrochory      mammals       mixed 
-23           2          71          17         163           3 
-wind 
-156 
-
-table(rosanne$dispcode)
-au bat  bi  hi  ma mix  wi 
-23   2  71  17 163   3 156
-
-m1<- lm(asin(rosanne$FST)~ rosanne$anacron)
-summary(m1)
-Call:
-    lm(formula = asin(rosanne$FST) ~ rosanne$anacron)
-
-Residuals:
-    Min     1Q Median     3Q    Max 
--0.427 -0.292 -0.160  0.236  1.144 
-
-Coefficients:
-    Estimate Std. Error t value Pr(>|t|)
-(Intercept)         0.3380     0.0611    5.53  8.6e-08
-rosanne$anacronmi  -0.0279     0.0927   -0.30     0.76
-rosanne$anacronn    0.0887     0.0679    1.31     0.19
-
-Residual standard error: 0.382 on 232 degrees of freedom
-(200 observations deleted due to missingness)
-Multiple R-squared:  0.0148,    Adjusted R-squared:  0.00634 
-F-statistic: 1.75 on 2 and 232 DF,  p-value: 0.177
-
-
-m2<- lm(asin(rosanne$FST)~ rosanne$dispcode)
-summary(m2)
-Call:
-    lm(formula = asin(rosanne$FST) ~ rosanne$dispcode)
-
-Residuals:
-    Min     1Q Median     3Q    Max 
--0.615 -0.256 -0.111  0.198  1.091 
-
-Coefficients:
-    Estimate Std. Error t value Pr(>|t|)
-(Intercept)            0.635      0.103    6.15  3.4e-09
-rosanne$dispcodebi    -0.363      0.119   -3.05   0.0026
-rosanne$dispcodehi    -0.222      0.161   -1.38   0.1694
-rosanne$dispcodema    -0.319      0.112   -2.85   0.0048
-rosanne$dispcodemix   -0.412      0.238   -1.73   0.0854
-rosanne$dispcodewi    -0.155      0.110   -1.41   0.1594
-
-Residual standard error: 0.372 on 229 degrees of freedom
-(200 observations deleted due to missingness)
-Multiple R-squared:  0.0757,    Adjusted R-squared:  0.0555 
-F-statistic: 3.75 on 5 and 229 DF,  p-value: 0.00278
-
-m3<- lm(asin(rosanne$FST)~ rosanne$contr_mf)
+# Megafauna dependent, megafauna independent, extant frugivores
+ppz<- gst %.% 
+    filter(contr2=="Megafauna dependent" |contr2=="Megafauna independent" |contr2=="Zoochoric") %.%
+    select(gst$contr2, gst$gst_nr)
+m3<- lm(asin(pp1$gst_nr)~ pp1$contr2)
 summary(m3)
-Call:
-    lm(formula = asin(rosanne$FST) ~ rosanne$contr_mf)
+anova(m3)
 
-Residuals:
-    Min     1Q Median     3Q    Max 
--0.615 -0.258 -0.121  0.198  1.091 
+# Box plots
+p <- ggplot(pp1, aes(factor(contr2), gst_nr))
+p + geom_boxplot()
 
-Coefficients:
-    Estimate Std. Error t value Pr(>|t|)
-(Intercept)           0.635      0.103    6.16  3.3e-09
-rosanne$contr_mfbi   -0.363      0.119   -3.05   0.0026
-rosanne$contr_mfhi   -0.222      0.161   -1.38   0.1692
-rosanne$contr_mfmd   -0.297      0.119   -2.49   0.0134
-rosanne$contr_mfmi   -0.350      0.120   -2.92   0.0038
-rosanne$contr_mfwi   -0.155      0.110   -1.41   0.1592
+p <- ggplot(pp1[pp1$contr2!="NA",], 
+    aes(factor(contr2), gst_nr, fill=factor(contr2)))
+p + geom_boxplot() +
+    scale_fill_manual(name= "Syndrome", 
+        values=c("darkblue","blue","lightblue")) +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
 
-Residual standard error: 0.372 on 229 degrees of freedom
-(200 observations deleted due to missingness)
-Multiple R-squared:  0.0765,    Adjusted R-squared:  0.0564 
-F-statistic:  3.8 on 5 and 229 DF,  p-value: 0.00254
+# Just the zoochoric taxa
+pp<- gst %.%
+    filter(contr1=="Megafauna" |
+            contr1== "Zoochoric") %.%
+    select(contr1, gst_nr)
+
+m4<- lm(asin(pp$gst_nr)~ pp$contr1)
+summary(m4)
+anova(m4)
+
+p <- ggplot(pp[pp$contr1!="NA",], 
+    aes(factor(contr1), gst_nr, fill=factor(contr1)))
+p + geom_boxplot() +
+    scale_fill_manual(name= "Syndrome", 
+        values=c("lightblue","burlywood")) +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
+
+#---------------------------------------------------------------------------
+# Just Rosanne's dataset.
+#
+# Data input.
+# NOTE: gst as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
+library(dplyr)
+rosanne <-read.table("./datasets/megafauna-genetics datasets_Rosane/rosanne.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+str(rosanne)
+
+# Differences among all syndromes
+m1<- lm(asin(rosanne$FST)~ rosanne$disp)
+summary(m1)
+
+m2<- lm(asin(rosanne$FST)~ rosanne$anacron)
+summary(m2)
 
 
-# Box plots - Rosanne Dataset
-p <- ggplot(rosanne, aes(factor(anacron), FST, na.rm = TRUE))
+# Box plots
+p <- ggplot(rosanne, aes(factor(disp), FST, na.rm = TRUE))
 p + geom_boxplot() +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
@@ -112,44 +99,136 @@ ggplot(rosanne, aes(factor(anacron), FST, fill=factor(anacron))) +
     #    stat_boxplot(geom ='errorbar')+
     geom_boxplot()+
     scale_fill_manual(name= "Syndrome", 
-        values=c("burlywood","lightblue","blue"), 
-        labels = c("md"= "Megafauna dependent", "mi"= "Megafauna independent",
-            "n"="Other")) +
+        values=c("burlywood","lightblue",
+            "lightblue","burlywood",
+            "blue","burlywood",
+            "burlywood"), 
+        labels = c("AA"= "Epizoochory", "AC"= "Synzoochory",
+            "AI"="Endozoochory", G="Barochory",
+            "M"= "Megafauna", "W"= "Anemochory")) +
     xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation, Fst")
+    ylab("Population genetic differentiation")
 
+#---------------------------------------------------------------------------
+# Combining Duminil et al. 2007 and our own compiliation for brazilian species. Added Rosane's dataset.
+#
+# Data input.
+# NOTE: genetdiff as for 3Mar mixes Gst and Fst data and different nuclear markers (SSR, isozymes, etc.).
+library(dplyr)
+gst_full <-read.table("./datasets/megafauna-genetics datasets_Rosane/gst_full.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
 
-# Megafauna dependent, megafauna independent, extant frugivores
-ppz<- rosanne %.% 
-      filter(anacron=="md" |anacron=="mi") %.%
-      select(anacron, FST)
-m3<- lm(asin(ppz$FST)~ ppz$anacron)
+str(gst_full)
+'data.frame':	615 obs. of  24 variables:
+    $ id             : Factor w/ 481 levels "10","100","105",..: 127...
+$ idpaper        : int  248 248 248 248 248 248 2 23 23 15 ...
+$ data           : Factor w/ 3 levels "duminil","galetti",..: 3 3 ...
+$ fam            : Factor w/ 82 levels "Acanthaceae",..: 1 1 1 1 ...
+$ sp             : Factor w/ 369 levels "Abies alba","Abies fraseri",..: 32
+$ spcode         : Factor w/ 225 levels "ACACUL","ACCAVE",..: 18 18 ...
+$ marker         : Factor w/ 14 levels "AFLP","cAFLP",..: 9 3 14 9 3 14 ...
+$ lifeform       : Factor w/ 8 levels "Cact","Creeper",..: 8 8 8 8 8 ...
+$ dispersal      : Factor w/ 8 levels "ants","autochory",..: 5 5 5 5 ...
+$ dispcode       : Factor w/ 8 levels "ant","au","bi",..: 5 5 5 ...
+$ anacron        : Factor w/ 5 levels "ab","b","md",..: 1 1 1 1 ...
+$ pollinator     : Factor w/ 12 levels "bat","beetle",..: 10 10 10 10 ...
+$ pollicode      : Factor w/ 11 levels "bat","beet","bi",..: 9 9 9 ...
+$ distgeo        : Factor w/ 2 levels "restric","wide": 2 2 2 2 2 2...
+$ habitat        : Factor w/ 23 levels "A","AE","Andean",..: 10 10 ...
+$ diverhaplot    : Factor w/ 59 levels "0.00000","0.01680",..:  NA NA ...
+$ divernucleot   : num  NA NA NA NA NA NA ...
+$ genetdiff      : num  0.57 NA 0.49 0.57 NA 0.49 NA 0.16 0.97 0.04 ...
+$ AllelesLocus   : num  NA NA NA NA NA ...
+$ Porcpoliloci   : num  NA NA NA NA NA NA NA NA NA 61.5 ...
+$ AllelicRichness: num  NA NA 1.68 NA NA 3.77 1.45 6.46 NA NA ...
+$ FIS            : num  NA NA 0.22 NA NA 0.01 0.317 0.077 NA -0.156 ...
+$ phi_FT         : num  NA NA NA NA NA NA NA NA NA NA ...
+$ seedwt         : num  NA NA NA NA NA NA NA NA NA NA ...
+
+# Tables
+table(gst_full$dispersal)
+table(gst_full$dispcode)
+table(gst_full$anacron)
+
+# Differences among all syndromes
+library(contrast)
+m1<- lm(asin(gst_full$genetdiff)~ gst_full$dispersal)
+summary(m1)
+
+m2<- lm(asin(gst_full$genetdiff)~ gst_full$dispcode)
+summary(m2)
+
+m3<- lm(asin(gst_full$genetdiff)~ gst_full$anacron)
 summary(m3)
-anova(m3)
 
 # Box plots
-p <- ggplot(ppz, aes(factor(anacron), FST))
-p + geom_boxplot()
-
-p <- ggplot(ppz[ppz$anacron!="NA",], 
-    aes(factor(anacron), FST, fill=factor(anacron)))
+p <- ggplot(gst_full, aes(factor(dispersal), genetdiff, na.rm = TRUE))
 p + geom_boxplot() +
-    scale_fill_manual(name= "Syndrome", 
-        values=c("blue","lightblue")) +
     xlab("Seed dispersal syndrome") +
-    ylab("Population genetic differentiation, Fst")
+    ylab("Population genetic differentiation")
 
-# Just the zoochoric taxa
-He<- rosanne %.%
-     filter(anacron=="md" | anacron=="mi") %.%
-     select(anacron, He)
+p <- ggplot(gst_full, aes(factor(anacron), genetdiff, na.rm = TRUE))
+p + geom_boxplot() +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
 
-m4<- lm(asin(He$He)~ He$anacron)
-summary(m4)
-anova(m4)
+ggplot(gst_full, aes(factor(anacron), genetdiff, fill=factor(anacron))) +
+    #    stat_boxplot(geom ='errorbar')+
+    geom_boxplot()+
+    scale_fill_manual(name= "Syndrome", 
+        values=c("burlywood","lightblue",
+            "lightblue","burlywood",
+            "blue","burlywood",
+            "burlywood"), 
+        labels = c("ab"= "Abiotic", "b"= "Biotic",
+            "md"="Megafauna dep.", mi="Megafauna indep.")) +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
 
-# Zoochoric comparison.
+Contr <- contrast(m3, a=list(anacron=c("ab","b","mi")), 
+    b=list(anacron="md"), type = "average")
+print(Contrs2, X=TRUE)
 
+#---------------------------------------------------------------------------
+# SUBSETS
+#
+# Only Trees.
+str(gst_full)
+test1 <- gst_full %>%
+    dplyr::filter(gst_full$lifeform=="Tree")
+m1<- lm(asin(test1$genetdiff)~ test1$dispersal)
+summary(m1)
+
+m2<- lm(asin(test1$genetdiff)~ test1$dispcode)
+summary(m2)
+
+m3<- lm(asin(test1$genetdiff)~ test1$anacron)
+summary(m3)
+
+ggplot(test1, aes(factor(anacron), genetdiff, fill=factor(anacron))) +
+    #    stat_boxplot(geom ='errorbar')+
+    geom_boxplot()+
+    scale_fill_manual(name= "Syndrome", 
+        values=c("burlywood","lightblue",
+            "lightblue","burlywood",
+            "blue","burlywood",
+            "burlywood"), 
+        labels = c("ab"= "Abiotic", "b"= "Biotic",
+            "md"="Megafauna dep.", mi="Megafauna indep.")) +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation")
+
+test1 %>% 
+    group_by(anacron) %>%
+    summarise(avg= mean(genetdiff, na.rm= T), 
+        SD= sd(genetdiff, na.rm= T),
+        min= min(genetdiff, na.rm= T), 
+        max= max(genetdiff, na.rm= T),
+        N= n())
+
+
+#===========================================================================
+# dplyr NOTES
+# 
 
 
 

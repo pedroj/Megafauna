@@ -1,0 +1,617 @@
+id	idpaper	data	fam	sp	spcode	marker	lifeform	dispersal	dispcode 	anacron	pollinator	pollicode	distgeo	habitat	diverhaplot	divernucleot	genetdiff	AllelesLocus	Porcpoliloci 	AllelicRichness	FIS 	phi_FT	seedwt
+246	248	rosanne	Acanthaceae	Avicennia bicolor	AVBICO	nucl	Tree	hidrochory 	hi	ab	small bees	sbe	wide	Mangrooves	NA	NA	0.570	NA	NA	NA	NA	NA	NA
+247	248	rosanne	Acanthaceae	Avicennia bicolor	AVBICO	chlorop	Tree	hidrochory 	hi	ab	small bees	sbe	wide	Mangrooves	NA	NA	NA	NA	NA	NA	NA	NA	NA
+248	248	rosanne	Acanthaceae	Avicennia bicolor	AVBICO	ssrnuc	Tree	hidrochory 	hi	ab	small bees	sbe	wide	Mangrooves	NA	NA	0.490	NA	NA	1.680	0.220	NA	NA
+249	248	rosanne	Acanthaceae	Avicennia germinans	AVGERM	nucl	Tree	hidrochory 	hi	ab	small bees	sbe	wide	Mangrooves	NA	NA	0.570	NA	NA	NA	NA	NA	NA
+250	248	rosanne	Acanthaceae	Avicennia germinans	AVGERM	chlorop	Tree	hidrochory 	hi	ab	small bees	sbe	wide	Mangrooves	NA	NA	NA	NA	NA	NA	NA	NA	NA
+251	248	rosanne	Acanthaceae	Avicennia germinans	AVGERM	ssrnuc	Tree	hidrochory 	hi	ab	small bees	sbe	wide	Mangrooves	NA	NA	0.490	NA	NA	3.770	0.010	NA	NA
+185	2	rosanne	Anacardiaceae	Myracrodruon urundeuva	MYURUN	isoz	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	1.450	0.317	NA	NA
+244	23	rosanne	Anacardiaceae	Myracrodruon urundeuva	MYURUN	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.160	18.750	NA	6.460	0.077	NA	NA
+245	23	rosanne	Anacardiaceae	Myracrodruon urundeuva	MYURUN	chlorop	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.970	NA	NA	NA	NA	NA	NA
+403	15	rosanne	Anacardiaceae	Myracrodruon urundeuva	MYURUN	isoz	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.040	2.330	61.500	NA	-0.156	NA	NA
+NA	78	rosanne	Anarcadiaceae	Myracrodruon urundeuva	MYURUN	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	79	rosanne	Anarcadiaceae	Myracrodruon urundeuva	MYURUN	AFLP	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+107	10	rosanne	Anacardiaceae	Spondias mombin	SPMOMB	nucl	Tree	mammals	ma	md	small bees	sbe	wide	rainforest	0.95800	0.02047	NA	NA	NA	NA	NA	NA	NA
+107	10	rosanne	Anacardiaceae	Spondias mombin	SPMOMB	chlorop	Tree	mammals	ma	md	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	199	rosanne	Anacardiaceae	Spondias mombin	SPMOMB	isoz	Tree	mammals	ma	md	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	221	rosanne	Anacardiaceae	Spondias mombin	SPMOMB	isoz	Tree	mammals	ma	md	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+108	10	rosanne	Anacardiaceae	Spondias purpurea	SPPURP	nucl	Tree	mammals	ma	md	small bees	sbe	wide	sdtf	0.95800	0.02047	NA	NA	NA	NA	NA	NA	NA
+108	10	rosanne	Anacardiaceae	Spondias purpurea	SPPURP	chlorop	Tree	mammals	ma	md	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+224	239	rosanne	Anacardiaceae	Spondias purpurea	SPPURP	AFLP	Tree	mammals	ma	md	small bees	sbe	wide	sdtf	NA	NA	0.360	NA	79.800	NA	0.990	NA	NA
+122	179	rosanne	Annonaceae	Annona cherimola	ANCHER	ssrnuc	Tree	mammals	ma	mi	beetle	beet	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+123	8	rosanne	Annonaceae	Annona crassiflora	ANCRAS	isoz	Tree	mammals	ma	mi	beetle	beet	wide	savanna	NA	NA	0.130	NA	80.000	NA	0.017	NA	NA
+NA	NA	rosanne	Annonaceae	Annona crassiflora	ANCRAS	ssrnuc	Tree	mammals	ma	mi	beetle	beet	wide	savanna	NA	NA	NA	16.000	NA	15.200	0.057	NA	NA
+NA	NA	rosanne	Annonaceae	Annona crassiflora	ANCRAS	ssrnuc	Tree	mammals	ma	mi	beetle	beet	wide	savanna	NA	NA	NA	14.200	NA	13.500	0.173	NA	NA
+NA	NA	rosanne	Annonaceae	Annona crassiflora	ANCRAS	ssrnuc	Tree	mammals	ma	mi	beetle	beet	wide	savanna	NA	NA	0.240	15.100	NA	14.300	0.132	NA	NA
+53	272	rosanne	Apiaceae	Mulinum spinosum	MUSPIN	chlorop	Shrub	autochory	au	ab	small bees	sbe	restric	dry areas	0.81500	0.00227	0.020	NA	NA	NA	NA	NA	NA
+179	150	rosanne	Apocynaceae	Mandevilla velutina	MAVELU	RAPD	Creeper	wind	wi	ab	large bees	lbe	restric	savanna	NA	NA	0.190	NA	81.080	NA	NA	NA	NA
+124	253	rosanne	Araceae	Anthurium pentaphyllum	ANPENT	AFLP	Epiphyte	birds	bi	b	flies	flies	wide	rainforest	NA	NA	0.160	NA	51.920	NA	0.990	NA	NA
+125	253	rosanne	Araceae	Anthurium sinuatum	ANSINU	AFLP	Epiphyte	birds	bi	b	flies	flies	wide	rainforest	NA	NA	0.160	NA	48.810	NA	0.985	NA	NA
+184	229	rosanne	Araceae	Monstera adansonii 	MOADAN	AFLP	Epiphyte	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	0.190	NA	88.790	NA	NA	NA	NA
+154	90	rosanne	Araliaceae	Dendropanax arboreus	DEARBO	RAPD	Tree	birds	bi	b	small bees	sbe	restric	sdtf	NA	NA	0.030	NA	NA	NA	NA	NA	NA
+117	157	rosanne	Arecaceae	Acrocomia aculeata	ACACUL	RAPD	Palm	mammals	ma	md	small bees	sbe	wide	sdtf	NA	NA	0.170	4.200	79.150	6.130	NA	NA	NA
+326	211	rosanne	Arecaceae	Acrocomia aculeata	ACACUL	ssrnuc	Palm	mammals	ma	md	small bees	sbe	wide	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+417	291	rosanne	Arecaceae	Attalea phalerata	ATPHAL	ssrnuc	Palm	mammals	ma	md	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+129	120	rosanne	Arecaceae	Bactris gasipaes	BAGASI	ssrnuc	Palm	mammals	ma	md	small bees	sbe	restric	rainforest	NA	NA	NA	9.350	NA	NA	NA	NA	NA
+130	147	rosanne	Arecaceae	Bactris gasipaes 	BAGASI	AFLP	Palm	mammals	ma	md	small bees	sbe	restric	rainforest	NA	NA	0.020	NA	70.900	NA	NA	NA	NA
+131	149	rosanne	Arecaceae	Bactris gasipaes 	BAGASI	ssrnuc	Palm	mammals	ma	md	small bees	sbe	restric	rainforest	NA	NA	0.020	13.090	NA	NA	0.182	NA	NA
+NA	177	rosanne	Arecaceae	Butia eriospatha	BUERIO	ssrnuc	Palm	mammals	ma	md	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+133	45	rosanne	Arecaceae	Butia lallemantii	BULALLE	ISSR	Palm	mammals	ma	md	small bees	sbe	restric	Grasslands	NA	NA	0.060	NA	95.800	NA	NA	NA	NA
+134	45	rosanne	Arecaceae	Butia paraguayensis	BUPARA	ISSR	Palm	mammals	ma	md	small bees	sbe	restric	Grasslands	NA	NA	0.060	NA	95.800	NA	NA	NA	NA
+135	45	rosanne	Arecaceae	Butia yatay	BUYATA	ISSR	Palm	mammals	ma	md	small bees	sbe	restric	Grasslands	NA	NA	0.060	NA	95.800	NA	NA	NA	NA
+23	69	rosanne	Arecaceae	Ceroxylon echinulatum 	CEECHI	ssrnuc	Palm	birds	bi	b	small bees	sbe	restric	Andean	NA	NA	0.540	NA	NA	2.350	NA	NA	NA
+144	64	rosanne	Arecaceae	Chamaedorea elatior	CHELAT	isoz	Palm	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.030	2.890	86.430	1.576	0.501	NA	NA
+382	204	rosanne	Arecaceae	Chamaedorea elatior	CHELAT	isoz	Palm	birds	bi	b	small bees	sbe	wide	sdtf	NA	NA	NA	11.000	NA	NA	NA	NA	NA
+145	194	rosanne	Arecaceae	Chamaedorea ernesti-augusti	CHERNE	ssrnuc	Palm	birds	bi	b	small bees	sbe	wide	sdtf	NA	NA	0.080	6.900	NA	NA	0.384	NA	NA
+146	64	rosanne	Arecaceae	Chamaedorea tepejilote	CHTEPE	isoz	Palm	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.150	3.110	93.830	1.833	0.443	NA	NA
+383	203	rosanne	Arecaceae	Chamaedorea tepejilote	CHTEPE	isoz	Palm	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	7.000	NA	NA	NA	NA	NA
+161	148	rosanne	Arecaceae	Euterpe edulis	EUEDUL	AFLP	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	0.430	NA	92.070	NA	NA	NA	NA
+162	135	rosanne	Arecaceae	Euterpe edulis	EUEDUL	ssrnuc	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	NA	14.430	NA	NA	0.111	NA	NA
+69	154	rosanne	Arecaceae	Euterpe edulis	EUEDUL	isoz	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	NA	2.600	62.500	NA	0.050	NA	NA
+394	206	rosanne	Arecaceae	Euterpe edulis	EUEDUL	isoz	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	NA	NA	100.000	NA	-0.265	NA	NA
+332	58	rosanne	Arecaceae	Euterpe edulis	EUEDUL	ssrnuc	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	0.060	0.750	NA	NA	0.120	NA	NA
+333	164	rosanne	Arecaceae	Euterpe edulis	EUEDUL	isoz	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	0.020	3.100	NA	NA	0.002	NA	NA
+333	164	rosanne	Arecaceae	Euterpe edulis	EUEDUL	ssrnuc	Palm	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	0.020	14.460	NA	NA	0.008	NA	NA
+165	133	rosanne	Arecaceae	Geonoma schottiana	GESCHO	isoz	Palm	birds	bi	b	small bees	sbe	restric	sdtf	NA	NA	0.140	2.000	100.000	NA	-0.343	NA	NA
+423	82	rosanne	Arecaceae	Iriartea deltoidea	IRDELT	AFLP	Palm	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+183	155	rosanne	Arecaceae	Mauritia flexuosa	MAFLEX	AFLP	Palm	mammals	ma	md	small bees	sbe	wide	wetlands	NA	NA	0.230	NA	86.400	NA	NA	NA	NA
+NA	NA	rosanne	Arecaceae	Mauritia flexuosa 	MAFLEX	chlorop	Palm	mammals	ma	md	small bees	sbe	wide	wetlands	0.78600	0.00370	0.880	NA	NA	NA	NA	NA	NA
+54	312	rosanne	Asparagaceae	Nolina parviflora	NOPARV	nucl	Tree	wind	wi	ab	moth	moth	restric	sdtf	0.84700	NA	0.300	NA	NA	NA	NA	NA	NA
+54	312	rosanne	Asparagaceae	Nolina parviflora	NOPARV	chlorop	Tree	wind	wi	ab	moth	moth	restric	sdtf	NA	NA	0.700	NA	NA	NA	NA	NA	NA
+128	208	rosanne	Asteraceae	Baccharis concinna 	BACONC	RAPD	Shrub	wind	wi	ab	small bees	sbe	restric	rockysavanna	NA	NA	NA	NA	91.160	NA	NA	NA	NA
+156	103	rosanne	Asteraceae	Eremanthus erythropappus	ERERYT	RAPD	Tree	wind	wi	ab	small bees	sb	wide	savanna	NA	NA	0.140	NA	89.900	NA	NA	NA	NA
+168	115	rosanne	Asteraceae	Hypochaeris acaulis	HYACAU	AFLP	Herb	wind	wi	ab	small bees	sbe	restric	steppe	NA	NA	0.040	NA	24.000	NA	NA	NA	NA
+46	275	rosanne	Asteraceae	Hypochaeris incana	HYINCA	AFLP	Herb	wind	wi	ab	moth	moth	restric	Grasslands	NA	NA	0.480	NA	20.100	NA	NA	NA	NA
+46	275	rosanne	Asteraceae	Hypochaeris incana	HYINCA	chlorop	Herb	wind	wi	ab	moth	moth	restric	Grasslands	NA	0.00120	0.670	NA	NA	NA	NA	NA	NA
+47	276	rosanne	Asteraceae	Hypochaeris palustris	HYPALU	AFLP	Herb	wind	wi	ab	small bees	sbe	restric	Andean	NA	NA	0.780	NA	83.000	NA	NA	NA	NA
+169	256	rosanne	Asteraceae	Hypochaeris tenuifolia	HYTENU	AFLP	Herb	wind	wi	ab	small bees	sbe	restric	Grasslands	NA	NA	0.240	NA	85.000	NA	NA	NA	NA
+49	31	rosanne	Asteraceae	Lychnophora ericoides	LYERIC	nucl	Shrub	wind	wi	ab	butterflies	but	restric	rockysavanna	0.72600	0.00300	NA	NA	NA	NA	NA	NA	NA
+49	31	rosanne	Asteraceae	Lychnophora ericoides	LYERIC	chlorop	Shrub	wind	wi	ab	butterflies	but	restric	rockysavanna	0.39500	0.00450	NA	NA	NA	NA	NA	NA	NA
+187	269	rosanne	Asteraceae	Nassauvia lagascae 	NALAGA	AFLP	Herb	birds	bi	b	small bees	sbe	restric	Grasslands	NA	NA	0.130	NA	97.700	NA	NA	NA	NA
+215	1	rosanne	Asteraceae	Proteopsis argentea	PRARGE	isoz	Herb	wind	wi	ab	birds	bi	restric	rockyfields	NA	NA	NA	1.300	19.200	NA	0.127	NA	NA
+113	84	rosanne	Asteraceae	Wunderlichia mirabilis	WUMIRA	nucl	Tree	wind	wi	ab	bat	bat	restric	rockysavanna	NA	NA	0.180	NA	NA	NA	NA	NA	NA
+113	84	rosanne	Asteraceae	Wunderlichia mirabilis	WUMIRA	chlorop	Tree	wind	wi	ab	bat	bat	restric	rockysavanna	NA	NA	0.110	NA	NA	NA	NA	NA	NA
+7	302	rosanne	Begoniaceae	Begonia heracleifolia	BEHERA	ssrcp	Herb	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	0.740	NA	NA	NA	NA	NA	NA
+NA	183	rosanne	Begoniaceae	Begonia hirsuta	BEHIRS	isoz	Herb	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+8	302	rosanne	Begoniaceae	Begonia nelumbiifolia	BENELU	ssrcp	Herb	wind	wi	ab	small bees	sbe	wide	rainforest	0.00000	NA	0.000	NA	NA	NA	NA	NA	NA
+NA	183	rosanne	Begoniaceae	Begonia semiovata	BESEMI	isoz	Herb	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+121	158	rosanne	Bignoniaceae	Anemopaegma arvense	ANARVE	RAPD	Shrub	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	0.280	1.720	72.800	NA	NA	NA	NA
+281	309	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	0.060	9.440	NA	5.450	0.003	NA	NA
+282	301	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	chlorop	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	0.29000	NA	1.000	NA	NA	NA	NA	NA	NA
+283	301	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	0.100	NA	NA	NA	NA	NA	NA
+284	301	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	ssrcp	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	0.840	NA	NA	NA	NA	NA	NA
+397	14	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	9.360	NA	NA	NA	NA	NA
+398	216	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	RAPD	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	116	rosanne	Bignoniaceae	Jacaranda copaia	JACOPA	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	11.750	NA	NA	NA	NA	NA
+171	174	rosanne	Bignoniaceae	Jacaranda decurrens	JADECU	RAPD	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	0.300	1.690	69.200	NA	NA	NA	NA
+171	174	rosanne	Bignoniaceae	Jacaranda decurrens	JADECU	AFLP	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	0.260	1.460	46.340	NA	NA	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia aurea	TAAURE	nucl	Tree	wind	wi	ab	large bees	lbe	wide	savanna	0.08900	0.00100	0.790	NA	NA	NA	NA	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia aurea	TAAURE	chlorop	Tree	wind	wi	ab	large bees	lbe	wide	savanna	0.22000	0.00900	0.790	NA	NA	NA	NA	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia aurea	TAAURE	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	0.010	36.200	NA	3.200	0.210	NA	NA
+NA	99	rosanne	Bignoniaceae	Tabebuia aurea	TAAURE	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	NA	36.000	NA	NA	0.178	0.1770	NA
+110	173	rosanne	Bignoniaceae	Tabebuia impetiginosa	TAIMPE	nucl	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	0.97100	0.03560	0.810	NA	NA	NA	NA	NA	NA
+110	173	rosanne	Bignoniaceae	Tabebuia impetiginosa	TAIMPE	chlorop	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	0.97500	0.01820	0.890	NA	NA	NA	NA	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia impetiginosa	TAIMPE	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	11.800	NA	6.790	0.199	NA	NA
+413	42	rosanne	Bignoniaceae	Tabebuia ochracea 	TAOCHR	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	0.030	4.130	NA	NA	0.230	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia chrysotricha	TACHRY	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	NA	15.000	NA	7.550	0.021	NA	NA
+NA	80	rosanne	Bignoniaceae	Tabebuia roseoalba	TAROSE	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	14.900	NA	NA	0.394	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia roseoalba	TAROSE	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	14.800	NA	7.700	0.043	NA	NA
+NA	NA	rosanne	Bignoniaceae	Tabebuia serratifolia	TASER	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	mixed	NA	NA	NA	17.200	NA	6.770	0.245	NA	NA
+243	59	rosanne	Bignoniaceae	Zeyheria montana	ZEMONT	RAPD	Shrub	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	0.160	NA	60.000	NA	NA	NA	NA
+25	321	rosanne	Boraginaceae	Cordia alliodora	COALLI	nucl	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+25	321	rosanne	Boraginaceae	Cordia alliodora	COALLI	chlorop	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	0.00000	0.00000	0.000	NA	NA	NA	NA	NA	NA
+25	321	rosanne	Boraginaceae	Cordia alliodora	COALLI	ssrcp	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	0.19900	NA	0.620	NA	38.200	1.290	NA	NA	NA
+149	191	rosanne	Boraginaceae	Cordia alliodora	COALLI	isoz	Tree	wind	wi	ab	moth	moth	wide	mix	NA	NA	0.120	NA	44.180	1.230	NA	NA	NA
+NA	192	rosanne	Boraginaceae	Cordia alliodora	COALLI	isoz	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	193	rosanne	Boraginaceae	Cordia alliodora	COALLI	isoz	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+118	189	rosanne	Bromeliaceae	Alcantarea geniculata	ALGENI	ssrnuc	Herb	wind	wi	ab	bat	bat	restric	rainforest	NA	NA	0.110	4.900	NA	5.250	0.094	NA	NA
+374	290	rosanne	Bromeliaceae	Alcantarea geniculata	ALGENI	ssrnuc	rupicola	wind	wi	ab	bat	bat	restric	rainforest	NA	NA	NA	NA	NA	NA	0.192	NA	NA
+375	290	rosanne	Bromeliaceae	Alcantarea glaziouana	ALGLAZ	ssrnuc	rupicola	wind	wi	ab	bat	bat	restric	rainforest	NA	NA	NA	NA	NA	NA	0.247	NA	NA
+119	189	rosanne	Bromeliaceae	Alcantarea imperialis	ALIMPE	ssrnuc	Herb	wind	wi	ab	bat	bat	restric	rainforest	NA	NA	0.430	6.500	NA	6.250	0.099	NA	NA
+376	290	rosanne	Bromeliaceae	Alcantarea imperialis	ALIMPE	ssrnuc	rupicola	wind	wi	ab	bat	bat	restric	rainforest	NA	NA	NA	NA	NA	NA	0.061	NA	NA
+377	290	rosanne	Bromeliaceae	Alcantarea regina	ALREGI	ssrnuc	rupicola	wind	wi	ab	bat	bat	restric	rainforest	NA	NA	NA	NA	NA	NA	-0.044	NA	NA
+132	125	rosanne	Bromeliaceae	Billbergia zebrina	BIZEBR	AFLP	Epiphyte	birds	bi	b	birds	bi	wide	rainforest	NA	NA	NA	56.170	NA	NA	NA	NA	NA
+330	160	rosanne	Bromeliaceae	Dyckia ibiramensis	DYIBIR	isoz	Epiphyte	birds	bi	b	birds	bi	restric	rainforest	NA	NA	0.670	2.000	NA	1.250	0.642	NA	NA
+286	207	rosanne	Bromeliaceae	Pitcairnia albiflos	PIALBI	ssrnuc	Epiphyte	wind	wi	ab	moth	moth	restric	rockyfields	NA	NA	0.650	NA	NA	3.200	0.109	NA	NA
+287	207	rosanne	Bromeliaceae	Pitcairnia albiflos	PIALBI	ssrcp	Epiphyte	wind	wi	ab	moth	moth	restric	rockyfields	NA	NA	0.610	NA	NA	NA	NA	NA	NA
+288	207	rosanne	Bromeliaceae	Pitcairnia corcovadensis	PICORC	ssrnuc	Epiphyte	wind	wi	ab	birds	bi	restric	rockyfields	NA	NA	NA	NA	NA	NA	NA	NA	NA
+289	207	rosanne	Bromeliaceae	Pitcairnia corcovadensis	PICORC	ssrcp	Epiphyte	wind	wi	ab	birds	bi	restric	rockyfields	NA	NA	0.610	NA	NA	NA	NA	NA	NA
+290	207	rosanne	Bromeliaceae	Pitcairnia flammea	PIFLAM	ssrnuc	Epiphyte	wind	wi	ab	birds	bi	restric	rockyfields	NA	NA	NA	NA	NA	NA	NA	NA	NA
+291	207	rosanne	Bromeliaceae	Pitcairnia flammea	PIFLAM	ssrcp	Epiphyte	wind	wi	ab	birds	bi	restric	rockyfields	NA	NA	NA	NA	NA	NA	NA	NA	NA
+292	207	rosanne	Bromeliaceae	Pitcairnia staminea	PISTAM	ssrnuc	Epiphyte	wind	wi	ab	butterfly	but	restric	rockyfields	NA	NA	0.650	NA	NA	3.710	0.240	NA	NA
+293	207	rosanne	Bromeliaceae	Pitcairnia staminea	PISTAM	ssrcp	Epiphyte	wind	wi	ab	butterfly	but	restric	rockyfields	NA	NA	0.610	NA	NA	NA	NA	NA	NA
+10	303	rosanne	Burseraceae	Bursera simaruba	BUSIMA	nucl	Tree	birds	bi	b	small bees	sbe	wide	sdtf	NA	0.00397	0.160	NA	NA	NA	NA	NA	NA
+10	303	rosanne	Burseraceae	Bursera simaruba	BUSIMA	chlorop	Tree	birds	bi	b	small bees	sbe	wide	sdtf	NA	0.00427	0.340	NA	NA	NA	NA	NA	NA
+253	111	rosanne	Burseraceae	Bursera simaruba	BUSIMA	AFLP	Tree	birds	bi	b	small bees	sbe	wide	sdtf	NA	NA	0.240	NA	33.000	NA	NA	NA	NA
+99	323	rosanne	Burseraceae	Protium alvarezianum	PRALVA	nucl	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+216	90	rosanne	Burseraceae	Protium glabrum	PRGLAB	RAPD	Tree	birds	bi	b	small bees	sbe	restric	rainforest	NA	NA	0.000	NA	NA	NA	NA	NA	NA
+217	293	rosanne	Burseraceae	Protium spruceanum	PRSPRU	isoz	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.030	2.000	100.000	NA	-0.103	NA	NA
+407	76	rosanne	Burseraceae	Protium spruceanum	PRSPRU	isoz	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.030	NA	NA	NA	NA	NA	NA
+408	141	rosanne	Burseraceae	Protium spruceanum	PRSPRU	isoz	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	-0.159	NA	NA
+100	323	rosanne	Burseraceae	Protium subserratum	PRSUBS	nucl	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.670	NA	NA	NA	NA	NA	NA
+335	250	rosanne	Cactaceae	Polaskia chichipe	POCHIC	ssrnuc	Cact	birds	bi	b	birds	bi	restric	desert	NA	NA	0.020	8.400	NA	NA	0.003	NA	NA
+225	314	rosanne	Cactaceae	Stenocereus stellatus	STSTEL	ssrnuc	Cact	mammals	ma	mi	bat	bat	restric	steppe	NA	NA	NA	NA	NA	3.060	0.110	NA	NA
+12	126	rosanne	Calceolariaceae	Calceolaria polyrhiza	CAPOLY	chlorop	Shrub	autochory	au	ab	large bees	lbe	restric	steppe	0.76000	0.04900	0.400	NA	NA	NA	NA	NA	NA
+173	322	rosanne	Calophyllaceae	Kielmeyera coriacea	KICORI	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	NA	19.750	NA	NA	NA	NA	NA
+174	322	rosanne	Calophyllaceae	Kielmeyera grandiflora	KIGRAN	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	NA	21.750	NA	NA	NA	NA	NA
+48	270	rosanne	Caricaceae	Jacaratia mexicana	JAMEXI	nucl	Tree	mammals	ma	mi	moth	moth	wide	sdtf	0.61100	0.00140	NA	NA	NA	NA	NA	NA	NA
+48	270	rosanne	Caricaceae	Jacaratia mexicana	JAMEXI	chlorop	Tree	mammals	ma	mi	moth	moth	wide	sdtf	0.91100	0.00880	NA	NA	NA	NA	NA	NA	NA
+172	246	rosanne	Caricaceae	Jacaratia mexicana	JAMEXI	RAPD	Tree	mammals	ma	mi	moth	moth	restric	sdtf	NA	NA	0.160	NA	92.600	NA	NA	NA	NA
+16	12	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	chlorop	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	NA	NA	NA	NA	NA	NA	NA
+16	12	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	ssrcp	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	0.980	NA	NA	NA	NA	NA	NA
+17	330	rosanne	Caryocaraceae	Caryocar brasiliense	CABRAS	chlorop	Tree	mammals	ma	md	bat	bat	wide	savanna	0.17700	0.00500	NA	NA	NA	NA	NA	NA	NA
+140	226	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	isoz	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	0.120	2.800	72.010	NA	0.106	NA	NA
+141	89	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	0.080	10.600	NA	NA	0.110	NA	NA
+381	70	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	NA	14.000	NA	NA	0.114	NA	NA
+NA	66	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	NA	7.900	NA	NA	NA	NA	NA
+NA	94	rosanne	Caryocaraceae	Caryocar brasiliense	CRBRAS	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	NA	16.100	NA	NA	0.131	NA	NA
+261	13	rosanne	Caryocaraceae	Caryocar microcarpum	CRMICRO	chlorop	Tree	mammals	ma	md	bat	bat	wide	rainforest	0.90500	0.07450	0.790	NA	NA	NA	NA	NA	NA
+262	13	rosanne	Caryocaraceae	Caryocar microcarpum	CRMICRO	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	rainforest	NA	NA	0.050	16.600	NA	NA	0.119	NA	NA
+263	13	rosanne	Caryocaraceae	Caryocar villosum	CRVILLO	chlorop	Tree	mammals	ma	md	bat	bat	wide	rainforest	0.00000	0.00000	0.000	NA	NA	NA	NA	NA	NA
+264	13	rosanne	Caryocaraceae	Caryocar villosum	CRVILLO	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	rainforest	NA	NA	0.000	13.000	NA	NA	-0.002	NA	NA
+NA	221	rosanne	Clusiaceae	Calophyllum longifolium	CALONG	isoz	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+67	4	rosanne	Clusiaceae	Calophyllum brasiliense	CABRAS	isoz	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	1.640	42.860	NA	0.240	NA	NA
+402	216	rosanne	Clusiaceae	Moronobea coccinea	MOCOCC	RAPD	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+232	262	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	0.110	18.300	NA	6.420	0.131	NA	NA
+305	105	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	nucl	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+306	105	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	chlorop	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+307	105	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	0.140	15.930	NA	8.240	0.087	NA	NA
+308	309	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	0.120	9.025	NA	4.697	0.064	NA	NA
+412	216	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	NA	NA	NA	0.170	NA	NA
+412	216	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	RAPD	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+426	300	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	NA	NA	NA	0.191	0.1540	NA
+427	299	rosanne	Clusiaceae	Symphonia globulifera	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	22.500	NA	8.590	0.160	0.2050	NA
+NA	65	rosanne	Clusiaceae	Symphonia globulifera 	SYGLOB	ssrnuc	Tree	mammals	ma	mi	birds	bi	wide	rainforest	NA	NA	NA	24.000	NA	NA	0.137	NA	NA
+233	52	rosanne	Combretaceae	Terminalia amazonia	TEAMAZ	RAPD	Tree	wind	wi	ab	small bees	sbe	restric	rainforest	NA	NA	0.090	NA	NA	NA	NA	NA	NA
+120	90	rosanne	Euphorbiaceae	Alchornea latifolia	ALLATI	RAPD	Tree	birds	bi	b	small bees	sbe	restric	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+177	61	rosanne	Euphorbiaceae	Mabea fistulifera	MAFIST	RAPD	Tree	autochory	au	ab	bat	bat	wide	sdtf	NA	NA	0.090	8.600	63.000	NA	NA	NA	NA
+116	68	rosanne	Fabaceae	Acacia caven	ACCAVE	AFLP	Tree	wind	wi	ab	large bees	lbe	wide	mixed	NA	NA	0.320	NA	99.100	NA	NA	NA	NA
+325	304	rosanne	Fabaceae	Acacia visco	ACVISC	AFLP	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	0.190	NA	NA	NA	0.045	NA	NA
+66	329	rosanne	Fabaceae	Amburana cearensis 	AMCEAR	RAPD	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	NA	NA	NA	3.910	NA	NA	NA	NA	NA
+5	320	rosanne	Fabaceae	Anarthrophyllum desideratum	ANDESI	chlorop	Shrub	autochory	au	ab	birds	bi	restric	steppe	0.89850	0.00370	NA	NA	NA	NA	NA	NA	NA
+NA	97	rosanne	Fabaceae	Caesalpinia echinata	CAECHI	isoz	Tree	wind	wi	ab	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+136	258	rosanne	Fabaceae	Caesalpinia echinata 	CAECHI	RAPD	Tree	autochory	au	ab	large bees	lbe	wide	rainforest	NA	NA	0.580	NA	95.700	NA	NA	NA	NA
+137	170	rosanne	Fabaceae	Caesalpinia echinata 	CAECHI	AFLP	Tree	autochory	au	ab	large bees	lbe	wide	rainforest	NA	NA	0.040	NA	97.500	NA	NA	NA	NA
+254	153	rosanne	Fabaceae	Caesalpinia echinata 	CAECHI	ssrcp	Tree	autochory	au	ab	large bees	lbe	wide	rainforest	NA	NA	0.910	NA	NA	NA	NA	NA	NA
+NA	40	rosanne	Fabaceae	Caesalpinia epifanioi	CAEPIF	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	1.00000	0.00200	NA	NA	NA	NA	NA	NA	NA
+11	40	rosanne	Fabaceae	Caesalpinia hintonii	CAHINT	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	0.78700	0.00200	0.020	NA	NA	NA	NA	NA	NA
+NA	40	rosanne	Fabaceae	Caesalpinia macvaughii	CAMACV	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	0.90500	0.00600	0.260	NA	NA	NA	NA	NA	NA
+NA	40	rosanne	Fabaceae	Caesalpinia melanadenia	CAMELA	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	1.00000	0.00100	NA	NA	NA	NA	NA	NA	NA
+NA	40	rosanne	Fabaceae	Caesalpinia oyamae	CAOYAM	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	0.98000	0.00600	0.640	NA	NA	NA	NA	NA	NA
+NA	40	rosanne	Fabaceae	Caesalpinia pannosa	CAPANN	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	1.00000	0.00400	NA	NA	NA	NA	NA	NA	NA
+147	3	rosanne	Fabaceae	Copaifera langsdorffii	COLANG	isoz	Tree	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	0.180	NA	72.700	NA	0.098	NA	NA
+148	166	rosanne	Fabaceae	Copaifera langsdorffii	COLANG	isoz	Tree	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	0.130	2.400	80.660	NA	-0.001	NA	NA
+NA	17	rosanne	Fabaceae	Copaifera langsdorffii	COLANG	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	NA	19.120	NA	9.910	NA	NA	NA
+NA	92	rosanne	Fabaceae	Copaifera langsdorffii	COLANG	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+153	237	rosanne	Fabaceae	Dalbergia nigra	DANIGR	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	0.090	13.800	NA	7.300	0.023	NA	NA
+386	143	rosanne	Fabaceae	Dalbergia nigra	DANIGR	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	NA	8.600	NA	NA	0.080	NA	NA
+26	34	rosanne	Fabaceae	Dalbergia nigra 	DANIGR	chlorop	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	0.75250	0.00089	0.620	NA	NA	NA	NA	NA	NA
+27	85	rosanne	Fabaceae	Dicorynia guianensis	DIGUIA	cRFLP	Tree	wind	wi	ab	moth	moth	wide	rainforest	NA	NA	0.410	NA	NA	3.600	NA	NA	NA
+NA	73	rosanne	Fabaceae	Dicorynia guianensis	DIGUIA	ssrnuc	Tree	wind	wi	ab	moth	moth	wide	rainforest	NA	NA	NA	NA	NA	NA	0.012	NA	NA
+387	216	rosanne	Fabaceae	Dicorynia guianensis 	DIGUIA	isoz	Tree	wind	wi	ab	moth	moth	restric	rainforest	NA	NA	NA	NA	NA	NA	-0.199	NA	NA
+387	216	rosanne	Fabaceae	Dicorynia guianensis 	DIGUIA	ssrnuc	Tree	wind	wi	ab	moth	moth	restric	rainforest	NA	NA	NA	NA	NA	NA	0.005	NA	NA
+387	216	rosanne	Fabaceae	Dicorynia guianensis 	DIGUIA	RAPD	Tree	wind	wi	ab	moth	moth	restric	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	277	rosanne	Fabaceae	Dinizia excelsa	DIEXCE	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	NA	20.880	NA	NA	NA	NA	NA
+267	328	rosanne	Fabaceae	Dipteryx alata	DIALAT	ssrnuc	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.270	2.835	NA	2.609	0.171	NA	NA
+388	131	rosanne	Fabaceae	Dipteryx alata	DIALAT	RAPD	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.150	NA	58.520	NA	NA	NA	NA
+389	176	rosanne	Fabaceae	Dipteryx alata	DIALAT	RAPD	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.160	0.155	88.900	NA	0.067	NA	NA
+420	169	rosanne	Fabaceae	Dipteryx alata	DIALAT	ssrnuc	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.800	4.780	96.300	NA	0.122	NA	NA
+NA	NA	rosanne	Fabaceae	Dipteryx alata	DIALAT	ssrnuc	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	NA	3.000	NA	NA	-0.224	NA	NA
+421	86	rosanne	Fabaceae	Dipteryx panamensis 	DIPANA	ssrnuc	Tree	mammals	ma	md	large bees	lbe	restric	rainforest	NA	NA	0.250	NA	NA	5.137	NA	NA	NA
+390	104	rosanne	Fabaceae	Enterolobium cyclocarpum	ENCYCL	isoz	Tree	mammals	ma	md	large bees	lbe	wide	sdtf	NA	NA	0.210	NA	85.700	NA	-0.070	NA	NA
+391	216	rosanne	Fabaceae	Eperua grandiflora	EPGRAN	isoz	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	-0.297	NA	NA
+391	216	rosanne	Fabaceae	Eperua grandiflora	EPGRAN	RAPD	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+391	216	rosanne	Fabaceae	Eperua grandiflora	EPGRAN	AFLP	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+166	134	rosanne	Fabaceae	Gliricidia sepium	GLSEPI	RAPDmit	Tree	autochory	au	ab	large bees	lbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	201	rosanne	Fabaceae	Gliricidia sepium	GLSEPI	ssrnuc	Tree	autochory	au	ab	large bees	lbe	wide	sdtf	NA	NA	NA	6.000	NA	NA	NA	NA	NA
+NA	319	rosanne	Fabaceae	Guibourtia chodatiana	GUCHOD	isoz	Tree	birds	bi	b	large bees	lbe	restric	sdtf	NA	NA	NA	NA	NA	NA	0.040	NA	NA
+43	113	rosanne	Fabaceae	Hymenaea courbaril	HYCOUR	chlorop	Tree	mammals	ma	md	bat	bat	wide	sdtf	0.80000	0.00300	0.600	NA	NA	NA	NA	NA	NA
+396	20	rosanne	Fabaceae	Hymenaea courbaril 	HYCOUR	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	sdtf	NA	NA	NA	20.110	NA	3.510	0.167	NA	NA
+44	113	rosanne	Fabaceae	Hymenaea stigonocarpa	HYSTIG	chlorop	Tree	mammals	ma	md	bat	bat	wide	savanna	0.80400	0.00300	0.690	NA	NA	NA	NA	NA	NA
+45	32	rosanne	Fabaceae	Hymenaea stigonocarpa	HYSTIG	chlorop	Tree	mammals	ma	md	bat	bat	wide	savanna	0.80400	0.00300	0.690	NA	NA	NA	NA	NA	NA
+NA	87	rosanne	Fabaceae	Hymenaea stigonocarpa	HYSTIG	ssrnuc	Tree	mammals	ma	md	bat	bat	wide	savanna	NA	NA	NA	10.300	NA	NA	0.023	NA	NA
+170	90	rosanne	Fabaceae	Inga thibaudiana	INTHIB	RAPD	Tree	mammals	ma	mi	birds	bi	restric	rainforest	NA	NA	0.010	NA	NA	NA	NA	NA	NA
+178	102	rosanne	Fabaceae	Machaerium villosum	MAVILLO	isoz	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	0.060	2.400	93.330	NA	-0.194	NA	NA
+401	22	rosanne	Fabaceae	Machaerium villosum	MAVILLO	isoz	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+202	49	rosanne	Fabaceae	Plathymenia reticulata	PLRETI	RAPD	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.120	NA	70.800	NA	NA	NA	NA
+95	37	rosanne	Fabaceae	Plathymenia reticulata 	PLRETI	chlorop	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	0.90000	0.00250	0.930	NA	NA	9.270	NA	NA	NA
+NA	326	rosanne	Fabaceae	Platypodium elegans	PLELEG	ssrnuc	Tree	wind	wi	ab	large bees	lbe	wide	sdtf	NA	NA	NA	13.310	NA	NA	0.041	NA	NA
+210	125	rosanne	Fabaceae	Prosopis alba	PRALBA	isoz	Tree	mammals	ma	md	small bees	sbe	restric	mixed	0.29000	NA	0.340	1.700	46.700	NA	NA	NA	NA
+210	125	rosanne	Fabaceae	Prosopis alba	PRALBA	RAPD	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.410	1.400	37.400	NA	NA	NA	NA
+211	125	rosanne	Fabaceae	Prosopis flexuosa	PRFLEX	isoz	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.290	1.900	60.900	NA	NA	NA	NA
+211	125	rosanne	Fabaceae	Prosopis flexuosa	PRFLEX	RAPD	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.410	1.500	48.200	NA	NA	NA	NA
+212	125	rosanne	Fabaceae	Prosopis nigra	PRNIGR	isoz	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.290	1.900	63.000	NA	NA	NA	NA
+212	125	rosanne	Fabaceae	Prosopis nigra	PRNIGR	RAPD	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.410	1.300	33.900	NA	NA	NA	NA
+213	125	rosanne	Fabaceae	Prosopis ruscifolia	PRRUSC	isoz	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.290	1.800	61.950	NA	NA	NA	NA
+213	125	rosanne	Fabaceae	Prosopis ruscifolia	PRRUSC	RAPD	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.410	1.450	45.500	NA	NA	NA	NA
+214	125	rosanne	Fabaceae	Prosopis vinalillo	PRVINA	isoz	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.290	2.000	65.200	NA	NA	NA	NA
+214	125	rosanne	Fabaceae	Prosopis vinalillo	PRVINA	RAPD	Tree	mammals	ma	md	small bees	sbe	restric	mixed	NA	NA	0.300	1.400	39.300	NA	NA	NA	NA
+294	36	rosanne	Fabaceae	Pterocarpus officinalis	PTOFFI	AFLP	Tree	wind	wi	ab	large bees	lbe	restric	wetlands	NA	NA	0.120	NA	68.000	NA	NA	NA	NA
+NA	18	rosanne	Fabaceae	Samanea saman	SASAMA	isoz	Tree	wind	wi	ab	butterflies	but	wide	sdtf	NA	NA	NA	NA	NA	NA	0.024	NA	NA
+105	71	rosanne	Fabaceae	Schizolobium parahyba	SCPARA	nucl	Tree	wind	wi	ab	large bees	lbe	wide	rainforest	0.69400	0.00826	0.980	NA	NA	NA	NA	NA	NA
+105	71	rosanne	Fabaceae	Schizolobium parahyba	SCPARA	chlorop	Tree	wind	wi	ab	large bees	lbe	wide	rainforest	0.90700	0.00239	0.850	NA	NA	NA	NA	NA	NA
+115	336	rosanne	Fabaceae	Schizolobium parahyba	SCPARA	nucl	Tree	wind	wi	ab	large bees	lbe	wide	rainforest	0.69400	0.00826	0.980	NA	NA	NA	NA	NA	NA
+115	336	rosanne	Fabaceae	Schizolobium parahyba	SCPARA	chlorop	Tree	wind	wi	ab	large bees	lbe	wide	rainforest	0.90700	0.00239	0.850	NA	NA	NA	NA	NA	NA
+NA	77	rosanne	Fabaceae	Senna multijuga	SEMULT	isoz	Tree	autochory	au	ab	large bees	lbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+226	257	rosanne	Fabaceae	Stylosanthes humilis	STHUMI	AFLP	Herb	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	0.150	NA	75.000	NA	NA	NA	NA
+227	257	rosanne	Fabaceae	Stylosanthes viscosa	STVISC	AFLP	Herb	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	0.080	NA	83.000	NA	NA	NA	NA
+338	195	rosanne	Fabaceae	Tachigali versicolor	TAVERS	isoz	Tree	wind	wi	ab	large bees	lbe	wide	rainforest	NA	NA	0.070	1.330	41.900	NA	0.187	NA	NA
+112	109	rosanne	Fabaceae	Vouacapoua americana	VOAMER	cRFLP	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+112	109	rosanne	Fabaceae	Vouacapoua americana	VOAMER	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	4.100	NA	NA	NA	NA	NA
+240	44	rosanne	Fabaceae	Vouacapoua americana	VOAMER	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.080	NA	NA	4.100	0.025	NA	NA
+241	11	rosanne	Fabaceae	Vouacapoua americana	VOAMER	cRFLP	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.890	NA	NA	NA	NA	NA	NA
+415	216	rosanne	Fabaceae	Vouacapoua americana	VOAMER	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.111	NA	NA
+415	216	rosanne	Fabaceae	Vouacapoua americana	VOAMER	RAPD	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+428	28	rosanne	Fabaceae	Vouacapoua americana	VOAMER	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.110	4.080	NA	NA	0.330	NA	NA
+NA	43	rosanne	Gomortegaceae	Gomortega keule	GOKEUL	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	restric	sdtf	NA	NA	0.080	NA	NA	NA	0.070	NA	NA
+395	288	rosanne	Heliconiaceae	Heliconia metallica	HEMETA	AFLP	Herb	birds	bi	b	birds	bi	wide	rainforest	NA	NA	0.060	NA	NA	NA	NA	NA	NA
+NA	51	rosanne	Lauraceae	Aniba rosaeodora	ANROSA	RAPD	Tree	birds	bi	b	small bees	sbe	restric	rainforest	NA	NA	NA	NA	77.500	NA	NA	NA	NA
+150	129	rosanne	Lauraceae	Cryptocarya aschersoniana	CRASCH	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.340	NA	NA	NA	0.112	NA	NA
+151	128	rosanne	Lauraceae	Cryptocarya moschata	CRMOSC	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.290	2.970	100.000	2.280	0.352	NA	NA
+152	223	rosanne	Lauraceae	Cryptocarya moschata	CRMOSC	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.110	NA	NA	NA	-0.021	NA	NA
+385	27	rosanne	Lauraceae	Cryptocarya moschata	CRMOSC	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	130	rosanne	Lauraceae	Cryptocarya moschata	CRMOSC	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.326	NA	NA
+406	30	rosanne	Lauraceae	Ocotea catharinensis	OCCATH	isoz	Tree	birds	bi	b	large bees	lbe	restric	rainforest	NA	NA	0.120	2.200	83.300	NA	0.133	NA	NA
+410	216	rosanne	Lauraceae	Sextonia rubra	SERUBR	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.094	NA	NA
+410	216	rosanne	Lauraceae	Sextonia rubra	SERUBR	RAPD	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	74	rosanne	Lauraceae	Sextonia rubra	SERUBR	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	0.0640	NA
+NA	227	rosanne	Lecythidaceae	Bertholletia excelsa	BEEXCE	isoz	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	98	rosanne	Lecythidaceae	Eschweilera ovata	ESOVAT	isoz	Tree	mammals	ma	mi	large bees	lbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.066	NA	NA
+NA	219	rosanne	Malvaceae	Cavanillesia platanifolia	CAPLAT	isoz	Tree	wind	wi	ab	bat	bat	wide	sdtf	NA	NA	NA	NA	25.100	NA	NA	NA	NA
+NA	222	rosanne	Malvaceae	Cavanillesia platanifolia	CAPLAT	isoz	Tree	wind	wi	ab	bat	bat	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+329	313	rosanne	Malvaceae	Ceiba aesculifolia 	CEAESC	isoz	Tree	wind	wi	ab	bat	bat	restric	sdtf	NA	NA	0.220	NA	NA	NA	NA	NA	NA
+22	48	rosanne	Malvaceae	Ceiba pentandra	CEPENT	nucl	Tree	wind	wi	ab	bat	bat	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+22	48	rosanne	Malvaceae	Ceiba pentandra	CEPENT	chlorop	Tree	wind	wi	ab	bat	bat	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+31	235	rosanne	Malvaceae	Gossypium aridum	GOARID	cAFLP	Shrub	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.900	NA	73.900	NA	NA	NA	NA
+32	235	rosanne	Malvaceae	Gossypium davidsonii	GODAVI	cAFLP	Shrub	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.900	NA	48.200	NA	NA	NA	NA
+33	285	rosanne	Malvaceae	Gossypium hirsutum	GOHIRS	ssrcp	Tree	wind	wi	ab	birds	bi	restric	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+34	235	rosanne	Malvaceae	Gossypium klotzschianum	GOKLOT	cAFLP	Shrub	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.900	NA	27.600	NA	NA	NA	NA
+35	235	rosanne	Malvaceae	Gossypium laxum	GOLAXU	cAFLP	Shrub	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.900	NA	80.100	NA	NA	NA	NA
+36	235	rosanne	Malvaceae	Gossypium lobatum	GOLOBA	cAFLP	Shrub	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.900	NA	23.900	NA	NA	NA	NA
+37	235	rosanne	Malvaceae	Gossypium schwendimanii	GOSCHW	cAFLP	Shrub	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.900	NA	50.300	NA	NA	NA	NA
+NA	100	rosanne	Malvaceae	Helicteres brevispira	HEBREV	isoz	Shrub	wind	wi	ab	hummingbirds	bi	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	107	rosanne	Malvaceae	Helicteres sacarolha	HESACA	isoz	Shrub	wind	wi	ab	hummingbirds	bi	wide	savanna	NA	NA	NA	NA	NA	NA	NA	NA	NA
+285	309	rosanne	Malvaceae	Luehea seemannii	LUSEEM	ssrnuc	Tree	wind	wi	ab	large bees	lbe	restric	sdtf	NA	NA	0.080	5.538	NA	2.748	0.012	NA	NA
+NA	219	rosanne	Malvaceae	Quararibea asterolepis	QUASTE	isoz	Tree	mammals	ma	md	moth	moth	restric	sdtf	NA	NA	NA	NA	56.700	NA	NA	NA	NA
+234	298	rosanne	Malvaceae	Theobroma grandiflorum 	THGRAN	ssrnuc	Tree	mammals	ma	md	large bees	lbe	wide	rainforest	NA	NA	0.300	5.380	NA	NA	0.192	NA	NA
+70	122	rosanne	Melastomataceae	Henriettea tuberculosa	HETUBE	isoz	Tree	birds	bi	b	large bees	lbe	restric	rainforest	NA	NA	NA	1.330	25.000	NA	NA	NA	NA
+111	33	rosanne	Melastomataceae	Tibouchina papyrus	TIPAPY	ssrnuc	Tree	wind	wi	ab	large bees	lbe	restric	rockysavanna	NA	NA	0.710	NA	NA	1.800	0.127	NA	NA
+111	33	rosanne	Melastomataceae	Tibouchina papyrus	TIPAPY	chlorop	Tree	wind	wi	ab	large bees	lbe	restric	rockysavanna	NA	0.00290	0.680	NA	NA	NA	NA	NA	NA
+235	136	rosanne	Melastomataceae	Tibouchina papyrus	TIPAPY	RAPD	Tree	wind	wi	ab	large bees	lbe	restric	rockysavanna	NA	NA	0.340	NA	89.000	NA	NA	NA	NA
+NA	NA	rosanne	Melastomataceae	Tibouchina papyrus	TIPAPY	ssrnuc	Tree	wind	wi	ab	large bees	lbe	restric	rockysavanna	NA	NA	NA	2.000	NA	NA	-0.168	NA	NA
+139	283	rosanne	Meliaceae	Carapa guianensis	CAGUIA	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.060	8.160	NA	4.180	NA	NA	NA
+255	294	rosanne	Meliaceae	Carapa guianensis	CAGUIA	chlorop	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	0.29000	NA	0.650	NA	NA	NA	NA	NA	NA
+256	294	rosanne	Meliaceae	Carapa guianensis	CAGUIA	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.360	13.570	NA	NA	NA	NA	NA
+257	294	rosanne	Meliaceae	Carapa guianensis	CAGUIA	ssrcp	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.840	4.570	NA	NA	NA	NA	NA
+419	121	rosanne	Meliaceae	Carapa guianensis	CAGUIA	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	9.320	NA	7.800	0.029	0.0490	NA
+NA	74	rosanne	Meliaceae	Carapa guianensis	CAGUIA	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.029	0.0530	NA
+328	225	rosanne	Meliaceae	Carapa guianensis 	CAGUIA	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.050	NA	35.000	1.180	NA	NA	NA
+379	216	rosanne	Meliaceae	Carapa procera	CAPROC	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.143	NA	NA
+379	216	rosanne	Meliaceae	Carapa procera	CAPROC	RAPD	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+380	47	rosanne	Meliaceae	Carapa procera	CAPROC	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	1.750	67.000	1.300	NA	NA	NA
+258	294	rosanne	Meliaceae	Carapa surinamensis	CASURI	chlorop	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	0.56000	NA	NA	NA	NA	NA	NA	NA	NA
+259	294	rosanne	Meliaceae	Carapa surinamensis	CASURI	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	0.360	13.570	NA	NA	NA	NA	NA
+260	294	rosanne	Meliaceae	Carapa surinamensis	CASURI	ssrcp	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	4.570	NA	NA	NA	NA	NA
+18	81	rosanne	Meliaceae	Cedrela fissilis	CEFISS	nucl	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+18	81	rosanne	Meliaceae	Cedrela fissilis	CEFISS	chlorop	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+19	5	rosanne	Meliaceae	Cedrela odorata	CEODOR	cAFLP	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.890	NA	93.800	NA	NA	NA	NA
+19	5	rosanne	Meliaceae	Cedrela odorata	CEODOR	cRFLP	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.980	NA	NA	NA	NA	NA	NA
+20	6	rosanne	Meliaceae	Cedrela odorata	CEODOR	cRAPD	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	0.70000	NA	0.960	NA	NA	NA	NA	NA	NA
+21	305	rosanne	Meliaceae	Cedrela odorata	CEODOR	chlorop	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.720	NA	NA	NA	NA	NA	NA
+21	305	rosanne	Meliaceae	Cedrela odorata	CEODOR	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.190	NA	NA	NA	NA	NA	NA
+21	305	rosanne	Meliaceae	Cedrela odorata	CEODOR	ssrcp	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+142	251	rosanne	Meliaceae	Cedrela odorata	CEODOR	RAPD	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.000	NA	NA	NA	NA	NA	NA
+265	9	rosanne	Meliaceae	Cedrela odorata	CEODOR	cAFLP	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.960	NA	NA	NA	NA	NA	NA
+266	9	rosanne	Meliaceae	Cedrela odorata	CEODOR	cRFLP	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.960	NA	NA	NA	NA	NA	NA
+228	60	rosanne	Meliaceae	Swietenia humilis	SWHUMI	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	0.030	11.200	97.500	3.305	0.223	NA	NA
+NA	19	rosanne	Meliaceae	Swietenia humilis	SWHUMI	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	NA	8.817	NA	NA	NA	0.2000	NA
+NA	67	rosanne	Meliaceae	Swietenia humilis	SWHUMI	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+109	117	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrcp	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.630	8.430	NA	NA	NA	NA	NA
+229	144	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.180	13.000	NA	NA	0.149	NA	NA
+230	190	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.150	9.500	NA	NA	0.038	NA	NA
+231	287	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.060	3.360	NA	2.320	0.016	NA	NA
+425	142	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.240	NA	NA	NA	0.240	NA	NA
+425	142	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	AFLP	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	0.380	NA	50.200	NA	NA	NA	NA
+NA	41	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	14.200	NA	NA	0.085	NA	NA
+NA	110	rosanne	Meliaceae	Swietenia macrophylla	SWMACRO	ssrnuc	Tree	wind	wi	ab	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	0.018	NA	NA
+418	295	rosanne	Moraceae	Bagassa guianensis	BAGUIA	ssrnuc	Tree	mammals	ma	md	small bees	sbe	wide	rainforest	NA	NA	NA	5.910	NA	2.660	-0.047	0.0810	NA
+9	303	rosanne	Moraceae	Brosimum alicastrum	BRALIC	chlorop	Tree	mammals	ma	mi	small bees	sbe	wide	sdtf	NA	0.00432	0.550	NA	NA	NA	NA	NA	NA
+252	111	rosanne	Moraceae	Brosimum alicastrum	BRALIC	AFLP	Tree	mammals	ma	mi	small bees	sbe	wide	sdtf	NA	NA	0.440	NA	36.000	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus  perforata	FIPERF	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus  pertusa	FIPERT	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	212	rosanne	Moraceae	Ficus arpazusa	FIARPA	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	-0.138	NA	NA
+NA	199	rosanne	Moraceae	Ficus citrifolia	FICITRI	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus citrifolia	FICITRI	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	220	rosanne	Moraceae	Ficus citrifolia	FICITRI	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	199	rosanne	Moraceae	Ficus dugandii	FIDUGA	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus dugandii	FIDUGA	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+30	303	rosanne	Moraceae	Ficus insipida	FIINSI	chlorop	Tree	mammals	ma	mi	wasps	wasp	wide	sdtf	NA	0.00297	0.600	NA	NA	NA	NA	NA	NA
+278	111	rosanne	Moraceae	Ficus insipida	FIINSI	AFLP	Tree	mammals	ma	mi	wasps	wasp	restric	sdtf	NA	NA	0.140	NA	41.000	NA	NA	NA	NA
+30	303	rosanne	Moraceae	Ficus insipida	FIINSI	chlorop	Tree	mammals	ma	mi	wasps	wasp	wide	sdtf	0.00000	0.00000	0.000	NA	NA	NA	NA	NA	NA
+NA	199	rosanne	Moraceae	Ficus nymphaeifolia	FINYMP	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus nymphaeifolia	FINYMP	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	220	rosanne	Moraceae	Ficus nymphaeifolia	FINYMP	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	199	rosanne	Moraceae	Ficus obtusifolia	FIOBTU	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus obtusifolia	FIOBTU	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	220	rosanne	Moraceae	Ficus obtusifolia	FIOBTU	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	199	rosanne	Moraceae	Ficus popenoei	FIPOPE	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	217	rosanne	Moraceae	Ficus popenoei	FIPOPE	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	220	rosanne	Moraceae	Ficus popenoei	FIPOPE	isoz	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+98	62	rosanne	Moraceae	Poulsenia armata 	POARMA	RAPD	Tree	mammals	ma	mi	wasps	wasp	wide	rainforest	NA	NA	0.110	NA	NA	NA	NA	NA	NA
+223	213	rosanne	Moraceae	Sorocea bonplandii	SOBONP	AFLP	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.030	NA	68.000	NA	NA	NA	NA
+414	216	rosanne	Myristicaceae	Virola michelii	VIAMER	AFLP	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.214	NA	NA
+414	216	rosanne	Myristicaceae	Virola michelii	VIAMER	RAPD	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	0.036	NA	NA
+157	132	rosanne	Myrtaceae	Eugenia dysenterica	EUDYSE	isoz	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	NA	NA	NA	NA	NA	NA	NA
+392	7	rosanne	Myrtaceae	Eugenia dysenterica	EUDYSE	isoz	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	NA	NA	NA	NA	NA	NA	NA
+393	39	rosanne	Myrtaceae	Eugenia dysenterica	EUDYSE	isoz	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	NA	NA	NA	NA	0.243	NA	NA
+158	54	rosanne	Myrtaceae	Eugenia dysenterica 	EUDYSE	ssrnuc	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.250	NA	NA	10.430	-0.037	NA	NA
+159	55	rosanne	Myrtaceae	Eugenia dysenterica 	EUDYSE	RAPD	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.270	NA	NA	NA	NA	NA	NA
+331	56	rosanne	Myrtaceae	Eugenia dysenterica 	EUDYSE	RAPD	Tree	mammals	ma	md	large bees	lbe	wide	savanna	NA	NA	0.090	NA	85.160	NA	0.192	NA	NA
+29	138	rosanne	Myrtaceae	Eugenia uniflora	EUUNIF	AFLP	Tree	mammals	ma	mi	large bees	lbe	wide	mixed	NA	NA	0.210	NA	78.050	NA	NA	NA	NA
+29	138	rosanne	Myrtaceae	Eugenia uniflora	EUUNIF	ssrcp	Tree	mammals	ma	mi	large bees	lbe	wide	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+29	138	rosanne	Myrtaceae	Eugenia uniflora	EUUNIF	cRFLP	Tree	mammals	ma	mi	large bees	lbe	wide	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+160	175	rosanne	Myrtaceae	Eugenia uniflora	EUUNIF	AFLP	Tree	mammals	ma	mi	large bees	lbe	wide	mixed	NA	NA	0.040	NA	91.400	NA	NA	NA	NA
+404	26	rosanne	Myrtaceae	Myrcia splendens	MYSPLE	ISSR	Tree	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+186	210	rosanne	Myrtaceae	Myrciaria floribunda	MYFLOR	isoz	Tree	birds	bi	b	large bees	lbe	wide	rainforest	NA	NA	0.100	2.000	83.330	1.630	0.062	NA	NA
+269	318	rosanne	Orchidaceae	Epidendrum denticulatum 	EPDENT	ssrnuc	Epiphyte	wind	wi	ab	butterfly	but	wide	rainforest	NA	NA	0.170	NA	NA	NA	0.107	NA	NA
+270	318	rosanne	Orchidaceae	Epidendrum denticulatum 	EPDENT	ssrcp	Epiphyte	wind	wi	ab	butterfly	but	wide	rainforest	0.36400	NA	0.570	NA	NA	NA	NA	NA	NA
+271	318	rosanne	Orchidaceae	Epidendrum denticulatum 	EPDENT	SNP	Epiphyte	wind	wi	ab	butterfly	but	wide	rainforest	NA	NA	0.750	NA	NA	NA	NA	NA	NA
+272	260	rosanne	Orchidaceae	Epidendrum fulgens	EPFULG	ssrnuc	Epiphyte	wind	wi	ab	butterfly	but	wide	rainforest	NA	NA	0.240	15.330	NA	6.290	0.050	NA	NA
+273	260	rosanne	Orchidaceae	Epidendrum fulgens	EPFULG	ssrcp	Epiphyte	wind	wi	ab	butterfly	but	wide	rainforest	0.01680	NA	NA	15.330	NA	NA	NA	NA	NA
+274	271	rosanne	Orchidaceae	Epidendrum fulgens	EPFULG	ssrnuc	Epiphyte	wind	wi	ab	butterfly	but	restric	rainforest	NA	NA	0.100	NA	NA	5.800	0.086	NA	NA
+275	271	rosanne	Orchidaceae	Epidendrum fulgens	EPFULG	ssrcp	Epiphyte	wind	wi	ab	butterfly	but	restric	rainforest	0.16500	NA	0.610	NA	NA	NA	NA	NA	NA
+276	261	rosanne	Orchidaceae	Epidendrum puniceoluteum	EPPUNI	ssrnuc	Epiphyte	wind	wi	ab	butterfly	but	restric	rainforest	NA	NA	0.260	7.780	NA	2.340	0.065	NA	NA
+277	261	rosanne	Orchidaceae	Epidendrum puniceoluteum	EPPUNI	ssrcp	Epiphyte	wind	wi	ab	butterfly	but	restric	rainforest	0.04000	NA	NA	7.780	NA	NA	NA	NA	NA
+279	261	rosanne	Orchidaceae	Híbrido: Epidendrum fulgens X Epidendrum puniceoluteum	NA	ssrnuc	Epiphyte	wind	wi	ab	butterflies	but	restric	rainforest	NA	NA	0.140	14.220	NA	8.010	0.017	NA	NA
+280	261	rosanne	Orchidaceae	Híbrido: Epidendrum fulgens X Epidendrum puniceoluteum	NA	ssrcp	Epiphyte	wind	wi	ab	butterflies	but	restric	rainforest	NA	NA	NA	14.220	NA	NA	NA	NA	NA
+175	184	rosanne	Orchidaceae	Laelia rubescens	LARUBE	cRFLP	Epiphyte	wind	wi	ab	birds	bi	restric	sdtf	0.54200	NA	NA	NA	NA	NA	NA	NA	NA
+175	184	rosanne	Orchidaceae	Laelia rubescens	LARUBE	isoz	Epiphyte	wind	wi	ab	birds	bi	restric	sdtf	0.09100	NA	0.250	2.550	73.000	NA	0.087	NA	NA
+399	215	rosanne	Orchidaceae	Laelia rubescens	LARUBE	isoz	Epiphyte	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.020	2.130	83.300	1.410	NA	NA	NA
+NA	180	rosanne	Orchidaceae	Laelia rubescens	LARUBE	isoz	Epiphyte	wind	wi	ab	birds	bi	restric	sdtf	NA	NA	0.420	NA	NA	NA	NA	NA	NA
+199	151	rosanne	Orchidaceae	Phragmipedium longifolium	PHLONG	AFLP	Epiphyte	wind	wi	ab	large bees	lbe	wide	wetlands	NA	NA	0.200	NA	51.500	NA	NA	NA	NA
+41	168	rosanne	Papaveraceae	Hunnemannia fumariifolia	HUFUMA	chlorop	Herb	wind	wi	ab	large bees	lbe	restric	steppe	0.09530	NA	0.910	NA	NA	NA	NA	NA	NA
+72	35	rosanne	Passifloraceae	Passiflora actinia	PAACTI	nucl	Creeper	mammals	ma	mi	bat	bat	wide	rainforest	NA	0.00600	NA	NA	NA	NA	NA	NA	NA
+72	35	rosanne	Passifloraceae	Passiflora actinia	PAACTI	chlorop	Creeper	mammals	ma	mi	bat	bat	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+73	35	rosanne	Passifloraceae	Passiflora elegans 	PAELEG	nucl	Creeper	mammals	ma	mi	bat	bat	restric	rainforest	NA	0.00200	NA	NA	NA	NA	NA	NA	NA
+73	35	rosanne	Passifloraceae	Passiflora elegans 	PAELEG	chlorop	Creeper	mammals	ma	mi	bat	bat	restric	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+198	88	rosanne	Pellicieraceae	Pelliciera  rhizophorae	PERHIZ	AFLP	Tree	hidrochory 	hi	ab	birds	bi	restric	Mangroves	NA	NA	0.030	NA	69.000	NA	NA	NA	NA
+209	307	rosanne	Piperaceae	Pothomorphe umbellata	POUMBE	RAPD	Herb	mammals	ma	mi	small bees	sbe	wide	sdtf	NA	NA	0.350	5.200	96.150	1.571	NA	NA	NA
+38	186	rosanne	Poaceae	Hordeum comosum	HOCOMO	chlorop	Herb	wind	wi	ab	wind	wi	restric	steppe	0.71000	NA	0.130	NA	NA	NA	NA	NA	NA
+39	186	rosanne	Poaceae	Hordeum patagonicum	HOPATA	chlorop	Herb	wind	wi	ab	wind	wi	restric	steppe	0.90000	NA	0.230	NA	NA	NA	NA	NA	NA
+40	186	rosanne	Poaceae	Hordeum pubiflorum	HOPUBI	chlorop	Herb	wind	wi	ab	wind	wi	restric	Grasslands	0.85000	NA	0.230	NA	NA	NA	NA	NA	NA
+176	165	rosanne	Poaceae	Lolium multiflorum	LOMULT	RAPD	Herb	wind	wi	ab	wind	wi	restric	sdtf	NA	NA	0.020	NA	89.020	NA	NA	NA	NA
+236	197	rosanne	Poaceae	Trachypogon plumosus	TRPLUM	isoz	Herb	wind	wi	ab	wind	wi	wide	savanna	NA	NA	0.280	NA	NA	NA	NA	NA	NA
+28	265	rosanne	Proteaceae	Embothrium coccineum	EMCOCC	chlorop	Tree	wind	wi	ab	birds	bi	restric	temprainforest	0.90500	0.00057	0.590	NA	NA	NA	NA	NA	NA
+268	254	rosanne	Proteaceae	Embothrium coccineum 	EMCOCC	isoz	Tree	wind	wi	ab	birds	bi	restric	steppe	NA	NA	0.200	1.840	51.500	1.340	NA	NA	NA
+295	266	rosanne	Rhizophoraceae	Rhizophora harrisonii	RHHARRI	chlorop	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	0.69500	0.00500	NA	NA	NA	NA	NA	NA	NA
+296	266	rosanne	Rhizophoraceae	Rhizophora harrisonii	RHHARRI	FMR	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	0.86700	0.01300	NA	NA	NA	NA	NA	NA	NA
+297	266	rosanne	Rhizophoraceae	Rhizophora harrisonii	RHHARRI	ssrnuc	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	NA	NA	0.450	13.000	NA	NA	NA	NA	NA
+298	266	rosanne	Rhizophoraceae	Rhizophora mangle	RHMANG	chlorop	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	0.69500	0.00500	NA	NA	NA	NA	NA	NA	NA
+299	266	rosanne	Rhizophoraceae	Rhizophora mangle	RHMANG	FMR	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	0.86700	0.01300	NA	NA	NA	NA	NA	NA	NA
+300	266	rosanne	Rhizophoraceae	Rhizophora mangle	RHMANG	ssrnuc	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	NA	NA	0.480	13.000	NA	NA	NA	NA	NA
+301	266	rosanne	Rhizophoraceae	Rhizophora racemosa	RHRACE	chlorop	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	0.69500	0.00500	NA	NA	NA	NA	NA	NA	NA
+302	266	rosanne	Rhizophoraceae	Rhizophora racemosa	RHRACE	FMR	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	0.86700	0.01300	NA	NA	NA	NA	NA	NA	NA
+303	266	rosanne	Rhizophoraceae	Rhizophora racemosa	RHRACE	ssrnuc	Tree	hidrochory 	hi	ab	large bees	lbe	wide	Mangrooves	NA	NA	0.350	13.000	NA	NA	NA	NA	NA
+138	255	rosanne	Rubiaceae	Calycophyllum spruceanum	CASPRU	AFLP	Tree	hidrochory 	hi	ab	moth	moth	wide	rainforest	NA	NA	0.120	NA	NA	NA	NA	NA	NA
+14	241	rosanne	Rubiaceae	Carapichea ipecacuanha	CAIPEC	nucl	Tree	birds	bi	b	small bees	sbe	wide	sdtf	NA	0.01560	NA	NA	NA	NA	NA	NA	NA
+15	263	rosanne	Rubiaceae	Carapichea ipecacuanha	CAIPEC	nucl	Shrub	birds	bi	b	small bees	sbe	wide	sdtf	0.80100	0.01033	NA	NA	NA	NA	NA	NA	NA
+15	263	rosanne	Rubiaceae	Carapichea ipecacuanha	CAIPEC	chlorop	Shrub	birds	bi	b	small bees	sbe	wide	sdtf	0.61700	0.00107	NA	NA	NA	NA	NA	NA	NA
+197	146	rosanne	Rubiaceae	Palicourea coriacea	PACORI	RAPD	Shrub	birds	bi	b	birds	bi	wide	savanna	NA	NA	0.230	NA	NA	NA	0.980	NA	NA
+71	118	rosanne	Rubiaceae	Palicourea padifolia	PAPADI	chlorop	Shrub	birds	bi	b	birds	bi	wide	rainforest	0.45300	0.00046	0.780	NA	NA	NA	NA	NA	NA
+218	244	rosanne	Rubiaceae	Psychotria ipecacuanha	PSIPEC	ISSR	Shrub	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	0.680	NA	97.400	NA	0.751	NA	NA
+73	122	rosanne	Rubiaceae	Psychotria officinalis	PSOFFI	isoz	Shrub	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	NA	1.790	57.100	NA	NA	NA	NA
+409	202	rosanne	Rubiaceae	Psychotria officinalis	PSOFFI	isoz	Shrub	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	0.100	1.750	51.440	NA	0.055	NA	NA
+74	122	rosanne	Rubiaceae	Psychotria suerrensis	PSSUER	isoz	Shrub	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	NA	1.670	33.300	NA	NA	NA	NA
+24	181	rosanne	Sapotaceae	Chrysophyllum cainito	CHCAIN	nucl	Tree	mammals	ma	mi	small bees	sbe	wide	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+24	181	rosanne	Sapotaceae	Chrysophyllum cainito	CHCAIN	chlorop	Tree	mammals	ma	mi	small bees	sbe	wide	mixed	NA	NA	NA	NA	NA	NA	NA	NA	NA
+384	216	rosanne	Sapotaceae	Chrysophyllum sanguinolentum	CHSANG	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	-0.005	NA	NA
+384	216	rosanne	Sapotaceae	Chrysophyllum sanguinolentum	CHSANG	RAPD	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+384	216	rosanne	Sapotaceae	Chrysophyllum sanguinolentum	CHSANG	AFLP	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+424	162	rosanne	Sapotaceae	Manilkara huberi	MAHUBE	ssrnuc	Tree	mammals	ma	mi	small bees	sbe	wide	rainforest	NA	NA	NA	20.570	NA	NA	0.222	0.1450	NA
+222	167	rosanne	Simaroubaceae	Simarouba amara	SIAMAR	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.250	13.600	NA	5.380	NA	NA	NA
+304	309	rosanne	Simaroubaceae	Simarouba amara	SIAMAR	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	0.160	5.289	NA	2.914	0.117	NA	NA
+411	95	rosanne	Simaroubaceae	Simarouba amara	SIAMAR	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	8.000	NA	3.086	0.134	NA	NA
+411	95	rosanne	Simaroubaceae	Simarouba amara	SIAMAR	AFLP	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+NA	53	rosanne	Simaroubaceae	Simarouba amara	SIAMAR	ssrnuc	Tree	birds	bi	b	small bees	sbe	wide	rainforest	NA	NA	NA	NA	NA	NA	NA	NA	NA
+143	310	rosanne	Solanaceae	Cestrum miradorense 	CEMIRA	isoz	Shrub	birds	bi	b	butterflies	but	wide	rainforest	NA	NA	0.060	NA	99.600	NA	-0.578	NA	NA
+74	236	rosanne	Solanaceae	Petunia altiplana	PEALTI	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	Grasslands	0.80990	0.00160	0.720	NA	NA	NA	NA	NA	NA
+75	238	rosanne	Solanaceae	Petunia axillaris	PEAXIL	chlorop	Herb	autochory	au	ab	birds	bi	restric	Grasslands	0.78400	0.00110	NA	NA	NA	NA	NA	NA	NA
+76	236	rosanne	Solanaceae	Petunia bonjardinensis	PEBONJ	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	rockyfields	0.82200	0.00150	0.770	NA	NA	NA	NA	NA	NA
+77	238	rosanne	Solanaceae	Petunia exserta	PEEXSE	chlorop	Herb	autochory	au	ab	moth	moth	restric	Grasslands	0.60900	0.00040	0.880	NA	NA	NA	NA	NA	NA
+78	236	rosanne	Solanaceae	Petunia guarapuavensis	PEGUAR	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	Grasslands	0.74750	0.00160	0.960	NA	NA	NA	NA	NA	NA
+79	236	rosanne	Solanaceae	Petunia mantiqueirensis	PEMANT	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	Grasslands	NA	NA	NA	NA	NA	NA	NA	NA	NA
+80	236	rosanne	Solanaceae	Petunia reitzii	PEREIT	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	Grasslands	0.41560	0.00080	NA	NA	NA	NA	NA	NA	NA
+81	236	rosanne	Solanaceae	Petunia saxicola	PESAXI	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	rockyfields	0.34420	0.00060	NA	NA	NA	NA	NA	NA	NA
+82	236	rosanne	Solanaceae	Petunia scheideana	PESCHE	chlorop	Herb	autochory	au	ab	large bees	lbe	restric	Grasslands	NA	NA	NA	NA	NA	NA	NA	NA	NA
+336	137	rosanne	Solanaceae	Solanum lycocarpum	SOLYCO	ssrnuc	Tree	mixed	ma	mi	large bees	lbe	wide	savanna	NA	NA	NA	3.900	NA	2.320	0.125	NA	NA
+336	137	rosanne	Solanaceae	Solanum lycocarpum	SOLYCO	ssrcp	Tree	mixed	ma	mi	large bees	lbe	wide	savanna	0.94700	NA	NA	NA	NA	NA	NA	NA	NA
+106	282	rosanne	Solanaceae	Solanum pimpinellifolium 	SOPIMP	nucl	Herb	mixed	ma	mi	large bees	lbe	wide	sdtf	0.84100	0.00640	0.470	NA	NA	NA	0.780	NA	NA
+NA	221	rosanne	Staphyleaceae	Turpinia occidentalis	TUOCCI	isoz	Tree	mammals	ma	mi	small bees	sbe	wide	sdtf	NA	NA	NA	NA	NA	NA	NA	NA	NA
+237	311	rosanne	Velloziaceae	Vellozia compacta	VECOMPA	ISSR	Shrub	wind	wi	ab	large bees	lbe	restric	rockyfields	NA	NA	0.560	NA	95.000	NA	NA	NA	NA
+238	101	rosanne	Velloziaceae	Vellozia epidendroides	VEEPID	isoz	Shrub	wind	wi	ab	large bees	lbe	restric	rockyfields	NA	NA	0.100	2.240	96.000	NA	0.202	NA	NA
+239	101	rosanne	Velloziaceae	Vellozia leptopetala	VELEPT	isoz	Shrub	wind	wi	ab	large bees	lbe	restric	rockyfields	NA	NA	0.030	1.600	60.000	NA	0.412	NA	NA
+400	46	rosanne	Verbenaceae	Lippia origanoides 	LIORIG	ISSR	Shrub	birds	bi	b	small bees	sbe	restric	andes	NA	NA	0.030	NA	86.210	NA	NA	NA	NA
+219	25	rosanne	Vochysiaceae	Qualea parviflora	QUPARV	RAPD	Tree	wind	wi	ab	large bees	lbe	wide	savanna	NA	NA	0.160	NA	59.420	NA	NA	NA	NA
+422	205	rosanne	Zygophyllaceae	Guaiacum sanctum	GUSANC	isoz	Tree	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	NA	2.710	NA	2.000	NA	NA	NA
+NA	21	rosanne	Zygophyllaceae	Guaiacum sanctum	GUSANC	isoz	Tree	birds	bi	b	large bees	lbe	wide	sdtf	NA	NA	NA	NA	NA	2.000	NA	NA	NA
+a1	1	duminil	Pinaceae	Abies alba	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0880	NA	NA	NA	NA	NA	76.800
+a3	2	duminil	Pinaceae	Abies fraseri	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0020	NA	NA	NA	NA	NA	7.100
+a4	3	duminil	Pinaceae	Abies mariesii	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1440	NA	NA	NA	NA	NA	29.810
+a5	4	duminil	Pinaceae	Abies sachalinensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0150	NA	NA	NA	NA	NA	9.320
+a6	5	duminil	Fabaceae	Acacia acuminata	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1010	NA	NA	NA	NA	NA	16.200
+a7	6	duminil	Alliaceae	Allium vineale	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.3900	NA	NA	NA	NA	NA	1.000
+a8	7	duminil	Betulaceae	Alnus cordata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1240	NA	NA	NA	NA	NA	6.800
+a9	8	duminil	Betulaceae	Alnus glutinosa	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2000	NA	NA	NA	NA	NA	2.100
+a10	9	duminil	Orchidaceae	Anacamptis palustris	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1790	NA	NA	NA	NA	NA	0.001
+a11	10	duminil	Brassicaceae	Arabidopsis thaliana	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.6163	NA	NA	NA	NA	NA	0.020
+a12	11	duminil	Sapotaceae	Argania spinosa	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1800	NA	NA	NA	NA	NA	3000.000
+a13	12	duminil	Burseraceae	Aucoumea klaineana	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1400	NA	NA	NA	NA	NA	98.000
+a14	13	duminil	Chenopodiaceae	Beta vulgaris	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1000	NA	NA	NA	NA	NA	5.000
+a15	14	duminil	Betulaceae	Betula pendula	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0320	NA	NA	NA	NA	NA	0.250
+a16	15	duminil	Fabaceae	Caesalpinia echinata	NA	NA	Tree	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.5800	NA	NA	NA	NA	NA	303.000
+a17	16	duminil	Ericaceae	Calluna vulgaris	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0470	NA	NA	NA	NA	NA	0.030
+a18	17	duminil	Betulaceae	Carpinus betulus	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0740	NA	NA	NA	NA	NA	35.500
+a19	18	duminil	Caryocaraceae	Caryocar brasiliensis	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2900	NA	NA	NA	NA	NA	50.270
+a20	19	duminil	Fagaceae	Castanea sativa	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1970	NA	NA	NA	NA	NA	9944.000
+a21	20	duminil	Meliaceae	Cedrela odorata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.5500	NA	NA	NA	NA	NA	17.000
+a22	21	duminil	Asteraceae	Coreopsis grandiflora	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0720	NA	NA	NA	NA	NA	2.580
+a23	22	duminil	Asteraceae	Coreopsis nuecensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1000	NA	NA	NA	NA	NA	1.221
+a24	23	duminil	Betulaceae	Corylus avellana	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1970	NA	NA	NA	NA	NA	1262.400
+a25	24	duminil	Taxodiaceae	Cunninghamia konishii	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.0290	NA	NA	NA	NA	NA	11.430
+a26	25	duminil	Taxodiaceae	Cunninghamia lanceolata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0600	NA	NA	NA	NA	NA	4.830
+a27	26	duminil	Poaceae	Dactylis glomerata	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.2300	NA	NA	NA	NA	NA	0.850
+a28	27	duminil	Orchidaceae	Dactylorhiza maculata	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0990	NA	NA	NA	NA	NA	0.001
+a29	28	duminil	Fabaceae	Dicorynia guaianensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0430	NA	NA	NA	NA	NA	500.000
+a30	29	duminil	Boraginaceae	Eritrichium nanum	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.1870	NA	NA	NA	NA	NA	NA
+a31	30	duminil	Myrtaceae	Eucalyptus angustissima complex	NA	NA	Tree	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.1060	NA	NA	NA	NA	NA	1.500
+a32	31	duminil	Myrtaceae	Eucalyptus brownii	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0520	NA	NA	NA	NA	NA	0.560
+a33	32	duminil	Myrtaceae	Eucalyptus kochii	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0450	NA	NA	NA	NA	NA	2.220
+a34	33	duminil	Myrtaceae	Eucalyptus nitens	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3000	NA	NA	NA	NA	NA	2.800
+a35	34	duminil	Myrtaceae	Eugenia uniflora	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.2110	NA	NA	NA	NA	NA	4.000
+a36	35	duminil	Fagaceae	Fagus crenata	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.0380	NA	NA	NA	NA	NA	178.570
+a37	36	duminil	Fagaceae	Fagus sylvatica	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.0590	NA	NA	NA	NA	NA	274.100
+a38	37	duminil	Oleaceae	Fraxinus excelsior	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0870	NA	NA	NA	NA	NA	76.300
+a39	38	duminil	Fabaceae	Gliricidia sepium	NA	NA	Creeper	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.1700	NA	NA	NA	NA	NA	103.000
+a40	39	duminil	Fabaceae	Glycine soja	NA	NA	Creeper	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.4760	NA	NA	NA	NA	NA	48.019
+a41	40	duminil	Orchidaceae	Gymnadenia conopsea	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.4500	NA	NA	NA	NA	NA	0.008
+a42	41	duminil	Asteraceae	Helianthus annuus	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.1590	NA	NA	NA	NA	NA	44.500
+a43	42	duminil	Asteraceae	Helianthus deserticola	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.2490	NA	NA	NA	NA	NA	5.300
+a44	43	duminil	Asteraceae	Helianthus petiolaris	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.1940	NA	NA	NA	NA	NA	2.000
+a45	44	duminil	Saxifragaceae	Heuchera grossularifolia	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.6710	NA	NA	NA	NA	NA	0.049
+a46	45	duminil	Poaceae	Hordeum spontaneum	NA	NA	Herb	epizoochory	ep	ab	NA	NA	NA	NA	NA	NA	0.4840	NA	NA	NA	NA	NA	41.900
+a47	46	duminil	Polemoniaceae	Ipomopsis aggregata cplx	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.1450	NA	NA	NA	NA	NA	2.071
+a48	47	duminil	Cupressaceae	Juniperus thurifera	NA	NA	Tree	mixed	mix	b	NA	NA	NA	NA	NA	NA	0.3900	NA	NA	NA	NA	NA	126.700
+a49	48	duminil	Rhizophoraceae	Kandelia candel	NA	NA	Tree	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.0640	NA	NA	NA	NA	NA	NA
+a50	49	duminil	Proteaceae	Lambertia orbifolia	NA	NA	Tree	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.4410	NA	NA	NA	NA	NA	20.000
+a51	50	duminil	Pinaceae	Larix sibirica	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0820	NA	NA	NA	NA	NA	9.600
+a52	51	duminil	Araceae	Lemna minor	NA	NA	Shrub	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.4070	NA	NA	NA	NA	NA	NA
+a53	52	duminil	Magnoliaceae	Liriodendron tulipifera	NA	NA	Tree	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.2110	NA	NA	NA	NA	NA	65.600
+a54	53	duminil	Poaceae	Lolium perenne	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.1100	NA	NA	NA	NA	NA	1.790
+a55	54	duminil	Poaceae	Lolium rigidum	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.1700	NA	NA	NA	NA	NA	2.280
+a56	55	duminil	Myrtaceae	Melaleuca alternifolia cplx	NA	NA	Shrub	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1200	NA	NA	NA	NA	NA	0.590
+a57	56	duminil	Magnoliaceae	Michelia formosana	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.4710	NA	NA	NA	NA	NA	119.183
+#a58	57	duminil	Brassicaceae	Microthlaspi perfoliatum	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	1.0000	NA	NA	NA	NA	NA	0.400
+a59	58	duminil	Fagaceae	Nothofagus nervosa	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0830	NA	NA	NA	NA	NA	16.460
+a60	59	duminil	Oleaceae	Olea europaea	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.2470	NA	NA	NA	NA	NA	221.000
+a61	60	duminil	Saxifragaceae	Parnassia palustris	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.1600	NA	NA	NA	NA	NA	0.030
+a62	61	duminil	Hydrophyllaceae	Phacelia dubia	NA	NA	Herb	birds	bi	b	NA	NA	NA	NA	NA	NA	0.0200	NA	NA	NA	NA	NA	0.800
+a63	62	duminil	Pinaceae	Picea abies	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0520	NA	NA	NA	NA	NA	7.443
+a64	63	duminil	Pinaceae	Picea glauca	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0370	NA	NA	NA	NA	NA	3.645
+a65	64	duminil	Pinaceae	Picea mariana	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0590	NA	NA	NA	NA	NA	1.300
+a66	65	duminil	Pinaceae	Pinus albicaulis	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0610	NA	NA	NA	NA	NA	147.800
+a67	66	duminil	Pinaceae	Pinus banksiana	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0180	NA	NA	NA	NA	NA	3.600
+a68	67	duminil	Pinaceae	Pinus brutia	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1560	NA	NA	NA	NA	NA	47.360
+a69	68	duminil	Pinaceae	Pinus canariensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0910	NA	NA	NA	NA	NA	170.940
+a70	69	duminil	Pinaceae	Pinus chiapensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2257	NA	NA	NA	NA	NA	42.800
+a71	70	duminil	Pinaceae	Pinus contorta	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0930	NA	NA	NA	NA	NA	4.400
+a72	71	duminil	Pinaceae	Pinus densata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0860	NA	NA	NA	NA	NA	42.800
+a73	72	duminil	Pinaceae	Pinus flexilis	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0940	NA	NA	NA	NA	NA	81.600
+a74	73	duminil	Pinaceae	Pinus halepensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3790	NA	NA	NA	NA	NA	23.700
+a75	74	duminil	Pinaceae	Pinus leucodermis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0540	NA	NA	NA	NA	NA	22.620
+a76	75	duminil	Pinaceae	Pinus monticola	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1480	NA	NA	NA	NA	NA	19.300
+a77	76	duminil	Pinaceae	Pinus mugo	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0134	NA	NA	NA	NA	NA	6.000
+a78	77	duminil	Pinaceae	Pinus muricata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.4500	NA	NA	NA	NA	NA	13.680
+a79	78	duminil	Pinaceae	Pinus parviflora	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0440	NA	NA	NA	NA	NA	94.700
+a80	79	duminil	Pinaceae	Pinus pinaster	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1670	NA	NA	NA	NA	NA	53.520
+a81	80	duminil	Pinaceae	Pinus radiata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1620	NA	NA	NA	NA	NA	31.900
+a82	81	duminil	Pinaceae	Pinus resinosa	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0000	NA	NA	NA	NA	NA	8.400
+a83	82	duminil	Pinaceae	Pinus sylvestris	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0330	NA	NA	NA	NA	NA	6.000
+a84	83	duminil	Potamogetonaceae	Potamogeton pectinatus	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.4960	NA	NA	NA	NA	NA	0.618
+a85	84	duminil	Rosaceae	Prunus avium	NA	NA	Tree	mixed	mix	b	NA	NA	NA	NA	NA	NA	0.0520	NA	NA	NA	NA	NA	118.200
+a86	85	duminil	Pinaceae	Pseudotsuga menziesii	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2310	NA	NA	NA	NA	NA	11.000
+a87	86	duminil	Fagaceae	Quercus alba complex	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0300	NA	NA	NA	NA	NA	3173.000
+a88	87	duminil	Fagaceae	Quercus ilex	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.1020	NA	NA	NA	NA	NA	2311.000
+a89	88	duminil	Fagaceae	Quercus petraea	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0320	NA	NA	NA	NA	NA	2577.200
+a90	89	duminil	Fagaceae	Quercus pubescens	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0270	NA	NA	NA	NA	NA	2560.056
+a91	90	duminil	Fagaceae	Quercus robur	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0240	NA	NA	NA	NA	NA	3817.000
+a92	91	duminil	Fagaceae	Quercus rubra	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0920	NA	NA	NA	NA	NA	2981.000
+a93	92	duminil	Fagaceae	Quercus suber	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.1100	NA	NA	NA	NA	NA	2609.000
+a94	93	duminil	Fagaceae	Quercus glauca	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0560	NA	NA	NA	NA	NA	526.320
+a95	94	duminil	Brassicaceae	Raphanus sativus	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.0330	NA	NA	NA	NA	NA	10.750
+a96	95	duminil	Polygonaceae	Rumex nivalis	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.2097	NA	NA	NA	NA	NA	1.000
+a97	96	duminil	Santalaceae	Santalum spicatum	NA	NA	Shrub	birds	bi	b	NA	NA	NA	NA	NA	NA	0.0870	NA	NA	NA	NA	NA	234.000
+a98	97	duminil	Saxifragaceae	Saxifraga oppositifolia	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1520	NA	NA	NA	NA	NA	0.089
+a99	98	duminil	Asteraceae	Senecio gallicus	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.1510	NA	NA	NA	NA	NA	0.446
+a100	99	duminil	Asteraceae	Senecio glaucus	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.1200	NA	NA	NA	NA	NA	0.446
+a101	100	duminil	Asteraceae	Senecio leucanthemifolius	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3000	NA	NA	NA	NA	NA	0.446
+a102	101	duminil	Asteraceae	Senecio vernalis	NA	NA	Herb	epizoochory	ep	b	NA	NA	NA	NA	NA	NA	0.0410	NA	NA	NA	NA	NA	0.446
+a103	102	duminil	Caryophyllaceae	Silene alba	NA	NA	Herb	birds	bi	b	NA	NA	NA	NA	NA	NA	0.1280	NA	NA	NA	NA	NA	0.930
+a104	103	duminil	Caryophyllaceae	Silene hifacensis	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.5813	NA	NA	NA	NA	NA	0.500
+a105	104	duminil	Caryophyllaceae	Silene paradoxa	NA	NA	Herb	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.4000	NA	NA	NA	NA	NA	1.000
+a106	105	duminil	Caryophyllaceae	Silene vulgaris	NA	NA	Herb	birds	bi	b	NA	NA	NA	NA	NA	NA	0.2200	NA	NA	NA	NA	NA	1.800
+a107	106	duminil	Rosaceae	Sorbus aucuparia	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.0600	NA	NA	NA	NA	NA	34.000
+a108	107	duminil	Rosaceae	Sorbus torminalis	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.1530	NA	NA	NA	NA	NA	5.500
+a109	108	duminil	Bignoniaceae	Tabebuia heterophylla	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3648	NA	NA	NA	NA	NA	48.414
+a110	109	duminil	Saxifragaceae	Tellima grandiflora	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2880	NA	NA	NA	NA	NA	0.036
+a111	110	duminil	Lamiaceae	Thymus vulgaris	NA	NA	Shrub	autochory	au	ab	NA	NA	NA	NA	NA	NA	0.0380	NA	NA	NA	NA	NA	1.000
+a112	111	duminil	Saxifragaceae	Tolmeia menziesii	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3890	NA	NA	NA	NA	NA	NA
+a113	112	duminil	Asteraceae	Tragopogon dubius	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.4840	NA	NA	NA	NA	NA	18.713
+a114	113	duminil	Melanthiaceae	Trillium grandiflorum	NA	NA	Herb	mixed	mix	b	NA	NA	NA	NA	NA	NA	0.3500	NA	NA	NA	NA	NA	10.700
+a115	114	duminil	Pinaceae	Tsuga canadensis	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1400	NA	NA	NA	NA	NA	2.700
+a116	115	duminil	Vitaceae	Vitis vinifera	NA	NA	Creeper	birds	bi	b	NA	NA	NA	NA	NA	NA	0.1370	NA	NA	NA	NA	NA	36.300
+a117	116	duminil	Fabaceae	Vouacapoua americana	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.0800	NA	NA	NA	NA	NA	6260.000
+a118	117	duminil	Caesalpinoideae	Copaifera langsdorffii	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.0350	NA	NA	NA	NA	NA	NA
+a119	118	duminil	Arecaceae	Euterpe edulis	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.4200	NA	NA	NA	NA	NA	NA
+a120	119	duminil	Meliaceae	Trichilia pallida	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+a121	120	duminil	Papilionoideae	Dipteryx alata	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1900	NA	NA	NA	NA	NA	NA
+a122	121	duminil	Caryocaraceae	Caryocar brasiliensis	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2600	NA	NA	NA	NA	NA	NA
+a123	122	duminil	Sterculiaceae	Theobroma grandiflorum	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.3000	NA	NA	NA	NA	NA	NA
+a124	123	duminil	Fabaceae	Hymenaea stigonocarpa	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.6900	NA	NA	NA	NA	NA	NA
+a125	124	duminil	Myrtaceae	Eugenia dysenterica	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1500	NA	NA	NA	NA	NA	NA
+a126	125	duminil	Annonaceae	Annona crassiflora	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1900	NA	NA	NA	NA	NA	NA
+a127	126	duminil	Myrtaceae	Eugenia dysenterica	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2600	NA	NA	NA	NA	NA	NA
+a128	127	duminil	Solanaceae	Solanum lycocarpum	NA	NA	Herb	mammals	ma	mi	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+a129	128	duminil	Myrtaceae	Myrciaria floribunda	NA	NA	Tree	birds	ma	b	NA	NA	NA	NA	NA	NA	0.0970	NA	NA	NA	NA	NA	NA
+a130	129	duminil	Bignoniaceae	Zeyheria montana	NA	NA	Creeper	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1600	NA	NA	NA	NA	NA	NA
+a131	130	duminil	Mimosoidae	Plathymenia reticulata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1600	NA	NA	NA	NA	NA	NA
+a132	131	duminil	Asteraceae	Baccharis coccinna	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1700	NA	NA	NA	NA	NA	NA
+a133	132	duminil	Annonaceae	Annona crassiflora	NA	NA	Shrub	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1270	NA	NA	NA	NA	NA	NA
+a134	133	duminil	Caryocaraceae	Caryocar brasiliensis	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.0700	NA	NA	NA	NA	NA	NA
+a135	134	duminil	NA	Copaifera langsdorffii	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+a136	135	duminil	Bombacaceae	Chorisia speciosa	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2730	NA	NA	NA	NA	NA	NA
+a137	136	duminil	Papilionoideae	Dipteryx alata	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.1610	NA	NA	NA	NA	NA	NA
+a138	137	duminil	NA	Dipteryx alata	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.4700	NA	NA	NA	NA	NA	NA
+a139	138	duminil	Asteraceae 	Eremanthus erythropappus	NA	NA	Herb	wind	wi	ab	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+a140	139	duminil	Myrtaceae	Eugenia dysenterica	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2500	NA	NA	NA	NA	NA	NA
+a141	140	duminil	NA	Hancornia speciosa	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.1967	NA	NA	NA	NA	NA	NA
+a142	141	duminil	NA	Mauritia flexuosa	NA	NA	Palm	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.1230	NA	NA	NA	NA	NA	NA
+a143	142	duminil	Vochysiaceae	Qualea grandiflora	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+a144	143	duminil	Solanaceae	Solanum crinitum	NA	NA	Shrub	birds	bi	mi	NA	NA	NA	NA	NA	NA	0.0080	NA	NA	NA	NA	NA	NA
+a145	144	duminil	Solanaceae	Solanum lycocarpum	NA	NA	Herb	birds	bi	mi	NA	NA	NA	NA	NA	NA	0.0530	NA	NA	NA	NA	NA	NA
+b1	145	galetti	NA	Tabebuia ochracea	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0320	NA	NA	NA	NA	NA	NA
+b2	146	galetti	NA	Tibouchina papyrus	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.7120	NA	NA	NA	NA	NA	NA
+b3	147	galetti	NA	Dimorphandra mollis	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.1030	NA	NA	NA	NA	NA	NA
+b4	148	galetti	NA	Bowdichia virgiloides	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0692	NA	NA	NA	NA	NA	NA
+b5	149	galetti	Arecaceae	Acrocomia aculeata	NA	NA	Palm	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2500	NA	NA	NA	NA	NA	NA
+b6	150	galetti	Fabaceae	Enterolobium contortisiliquum	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+b7	151	galetti	Arecaceae	Euterpe edulis	NA	NA	Palm	birds	bi	b	NA	NA	NA	NA	NA	NA	0.1160	NA	NA	NA	NA	NA	NA
+b8	152	galetti	Rhamnaceae	Zizyphus joazeiro	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.3802	NA	NA	NA	NA	NA	NA
+b9	153	galetti	Fabaceae	Cassia grandis	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+b10	154	galetti	Arecaceae	Acrocomia aculeata	NA	NA	Palm	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.1720	NA	NA	NA	NA	NA	NA
+b11	155	galetti	Arecaceae	Syagrus oleracea	NA	NA	Palm	mammals	ma	md	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+b12	156	galetti	Araucariaceae	Araucaria angustifolia	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.1500	NA	NA	NA	NA	NA	NA
+b13	157	galetti	NA	Chrysophyllum gonocarpum	NA	NA	Tree	mammals	ma	b	NA	NA	NA	NA	NA	NA	0.3020	NA	NA	NA	NA	NA	NA
+b14	158	galetti	NA	Anemopaegma arvense	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2830	NA	NA	NA	NA	NA	NA
+b15	159	galetti	NA	Gossypium mustelinum	NA	NA	Shrub	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3270	NA	NA	NA	NA	NA	NA
+b16	160	galetti	NA	Eschweilera ovata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.0250	NA	NA	NA	NA	NA	NA
+b17	161	galetti	NA	Bertoletia excelsa	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1533	NA	NA	NA	NA	NA	NA
+b18	162	galetti	NA	Xylopia brasiliensis	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.0920	NA	NA	NA	NA	NA	NA
+b19	163	galetti	Lauraceae	Cryptocarya aschersoniana	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.4150	NA	NA	NA	NA	NA	NA
+b20	164	galetti	NA	Schizolobium parahyba	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1049	NA	NA	NA	NA	NA	NA
+b21	165	galetti	Myristicaceae	Virola officinalis	NA	NA	Tree	birds	bi	b	NA	NA	NA	NA	NA	NA	0.0750	NA	NA	NA	NA	NA	NA
+b22	166	galetti	Papilionoideae	Dipteryx alata	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.1500	NA	NA	NA	NA	NA	NA
+b23	167	galetti	Papilionoideae	Dipteryx alata	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2560	NA	NA	NA	NA	NA	NA
+b24	168	galetti	NA	Acrocomia aculeata	NA	NA	Palm	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2029	NA	NA	NA	NA	NA	NA
+b25	169	galetti	NA	Anacardium humile	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.0640	NA	NA	NA	NA	NA	NA
+b26	170	galetti	Annonaceae	Annona crassiflora	NA	NA	Shrub	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1880	NA	NA	NA	NA	NA	NA
+b27	171	galetti	Annonaceae	Annona crassiflora	NA	NA	Shrub	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.2260	NA	NA	NA	NA	NA	NA
+b28	172	galetti	Myrtaceae	Eugenia dysenterica	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.1540	NA	NA	NA	NA	NA	NA
+b29	173	galetti	Fabaceae	Hymenaea courbaril	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.6500	NA	NA	NA	NA	NA	NA
+b30	174	galetti	NA	Lychnophora ericoides	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3570	NA	NA	NA	NA	NA	NA
+b31	175	galetti	NA	Mandevilla velutina	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1880	NA	NA	NA	NA	NA	NA
+b32	176	galetti	Arecaceae	Mauritia flexuosa	NA	NA	Palm	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2300	NA	NA	NA	NA	NA	NA
+b33	177	galetti	Mimosoidae	Palicourea coriacea	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.2300	NA	NA	NA	NA	NA	NA
+b34	178	galetti	Mimosoidae	Plathymenia reticulata	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.1230	NA	NA	NA	NA	NA	NA
+b35	179	galetti	Solanaceae	Solanum lycocarpum	NA	NA	Tree	mammals	ma	mi	NA	NA	NA	NA	NA	NA	0.1470	NA	NA	NA	NA	NA	NA
+b36	180	galetti	NA	Stryphnodendron adstringens	NA	NA	Tree	mammals	ma	md	NA	NA	NA	NA	NA	NA	0.2906	NA	NA	NA	NA	NA	NA
+b37	181	galetti	NA	Tibouchina papyrus	NA	NA	Tree	wind	wi	ab	NA	NA	NA	NA	NA	NA	0.3439	NA	NA	NA	NA	NA	NA
