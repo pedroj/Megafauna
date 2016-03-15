@@ -7,30 +7,31 @@
 # 
 # First, just the Duminil et al dataset.
 library(dplyr)
-gst <-read.table("./datasets/megafauna-genetics datasets_Rosane/gst.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
+gst_full <-read.table("./datasets/gst_full.txt", header=TRUE, sep="\t", dec=".", na.strings="NA")
 str(gst)
 
 # Differences among all syndromes
-m1<- lm(asin(gst$gst_nr)~ gst$syndr)
+m1<- lm(asin(gst_full$genetdiff)~ gst_full$dispersal)
 summary(m1)
 
 # Box plots
-p <- ggplot(gst, aes(factor(syndr), gst_nr, na.rm = TRUE))
+p <- ggplot(gst_full, aes(factor(dispersal), genetdiff, na.rm = TRUE))
 p + geom_boxplot() +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
 
-ggplot(gst, aes(factor(syndr), gst_nr, fill=factor(syndr))) +
+ggplot(gst_full, aes(factor(dispersal), genetdiff, fill=factor(dispersal))) +
     #    stat_boxplot(geom ='errorbar')+
     geom_boxplot()+
     scale_fill_manual(name= "Syndrome", 
         values=c("burlywood","lightblue",
             "lightblue","burlywood",
-            "blue","burlywood",
+            "blue","lightblue",
             "burlywood"), 
-        labels = c("AA"= "Epizoochory", "AC"= "Synzoochory",
-            "AI"="Endozoochory", G="Barochory",
-            "M"= "Megafauna", "W"= "Anemochory")) +
+        labels = c("autochory"= "Autochory", "birds"= "Birds",
+            "epizoochory"="Epizoochory", "hidrochory"="Hidrochory",
+            "mammals"= "Mammals", "mixed"= "Birds and Mammals", 
+            "wind"= "Anemochory")) +
     xlab("Seed dispersal syndrome") +
     ylab("Population genetic differentiation")
 
@@ -224,6 +225,27 @@ test1 %>%
         min= min(genetdiff, na.rm= T), 
         max= max(genetdiff, na.rm= T),
         N= n())
+
+#---------------------------------------------------------------------------
+# Megafauna dependent, megafauna independent, extant frugivores
+ppz<- test1 %.% 
+    filter(anacron=="md" |anacron=="mi") %.%
+    select(anacron, genetdiff)
+m3<- lm(asin(ppz$genetdiff)~ ppz$anacron)
+summary(m3)
+anova(m3)
+
+# Box plots
+p <- ggplot(ppz, aes(factor(anacron), FST))
+p + geom_boxplot()
+
+p <- ggplot(ppz[ppz$anacron!="NA",], 
+    aes(factor(anacron), FST, fill=factor(anacron)))
+p + geom_boxplot() +
+    scale_fill_manual(name= "Syndrome", 
+        values=c("blue","lightblue")) +
+    xlab("Seed dispersal syndrome") +
+    ylab("Population genetic differentiation, Fst")
 
 
 #===========================================================================
